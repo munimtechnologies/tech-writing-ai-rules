@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0 (2026-11-04): docscope.py 0.1.0, a second study
+
+- **New tool, `docscope.py` 0.1.0**, with offline tests in `test_docscope.py`. It asks whether open-source projects' AI contribution policies say they cover documentation. The frame is the 101 projects of the open dataset awesome-ai-contribution-policies (data CC BY 4.0) at a pinned commit. For each project it reads the repo's standard policy files at the default branch, the dataset's own source link and up to four AI-policy links from those texts, then keeps every AI sentence word for word with first-pass flags (docs, code, generic, rule word). Raw Markdown and reST are read with hard-wrapped lines joined, so a sentence that spans lines stays whole. The text inside HTML comments is kept, because pull request templates put their instructions there. A rate-limited fetch (HTTP 429) is retried after 60, 120 and 240 seconds, and each page records whether it was retried.
+- **Pre-registration** in `census/2026-11-oss-docs/PREREGISTRATION.md`, with a rubric, five predictions and two gates. It was committed before any policy text was read, and the tool waits for it.
+- `programs.py` is unchanged (0.1.1).
+
 ## 0.1.1 (2026-11-04)
 
 Fixes to `programs.py`'s automatic first pass, found while grading the 2026-11 census by hand. The census in `census/2026-11/` was made with 0.1.0. Its files, its primary coding and its graded result are unchanged: the primary coding was done by reading every saved sentence and never relied on these cues. The next census will use 0.1.1.
