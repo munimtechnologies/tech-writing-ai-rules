@@ -22,6 +22,11 @@ published.
 Writes census.json, sentences.csv, status.csv, frame.csv and CENSUS_AUTO.md to --out-dir (and pages/*.txt
 with --save-text). Standard library only. Made by MV2 of Munim, Inc., with AI agents working in his name.
 Apache-2.0.
+
+0.1.1 (see CHANGELOG.md): curly apostrophes are matched like straight ones; status cues also catch "not
+looking for new writers" and "positions filled"; each page records whether it redirected to a home page or
+elsewhere; the detector flag no longer fires on AI sentences about detecting fraud, and a separate flag
+records whether a detection tool is named.
 """
 import argparse
 import csv
@@ -37,7 +42,7 @@ import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 USER_AGENT = ("tech-writing-ai-rules-census/%s (+https://github.com/munimtechnologies/"
               "tech-writing-ai-rules)" % VERSION)
 REPO_API = "https://api.github.com/repos/munimtechnologies/tech-writing-ai-rules/commits"
@@ -65,12 +70,28 @@ ASSIST_CUE = re.compile(r"assist\w*|aided|\bany (?:use|form|kind)|\btools?\b|in 
 ALLOW_CUE = re.compile(r"\b(allow\w*|permit\w*|welcome\w*|may use|can use|accept\w*|disclos\w*|declar\w*|"
                        r"acknowledg\w*)\b", re.I)
 TRAIN_CUE = re.compile(r"\btrain(?:s|ing|ed)?\b|\bscrap\w*|\bdatasets?\b|\bmachine learning\b", re.I)
-DETECTOR_CUE = re.compile(r"\bdetect\w*|originality\.ai|\bgptzero\b|\bcopyleaks\b|\bzerogpt\b|\bturnitin\b",
-                          re.I)
+
+# 0.1.1: a named AI-writing detector (or "AI detector", "AI detection tool"). Recorded as names_detector_tool.
+DETECTOR_TOOL = re.compile(
+    r"originality\.ai|\bgptzero\b|\bcopyleaks\b|\bzerogpt\b|\bturnitin\b|"
+    r"\bAI[\s-]+(?:content[\s-]+|text[\s-]+|writing[\s-]+)?detect(?:or|ors|ion)[\s-]+"
+    r"(?:tools?|software|services?|checkers?)\b|"
+    r"\bAI[\s-]+detectors?\b", re.I)
+# 0.1.1: detection of AI writing, named tool or not. 0.1.0 matched any "detect" word, so an AI sentence
+# such as "we use AI to detect fraud" in a privacy policy counted.
+DETECTOR_CUE = re.compile(
+    DETECTOR_TOOL.pattern + r"|"
+    r"\bAI[\s-]+(?:content[\s-]+|text[\s-]+|writing[\s-]+)?detect\w*|"
+    r"\bdetect\w*\s+(?:\w+[\s-]+){0,3}?(?:AI|machine)[\s-]+"
+    r"(?:generated|written|assisted|drafts?|content|text|writing)\b|"
+    r"\bdetect\w*\s+(?:the\s+)?(?:use of\s+)?(?:AI|ChatGPT|LLMs?|generative AI)\b", re.I)
 
 CLOSED_CUE = re.compile(
     r"\bnot (?:currently |presently |actively )?(?:accepting|taking|open)\b|"
+    r"\bnot (?:currently |presently |actively )?(?:looking for|hiring|seeking) (?:new |more |any )?"
+    r"(?:writers|authors|contributors|submissions|guest posts|articles)\b|"
     r"\bno longer (?:accept\w*|pay\w*|tak\w*|runn?\w*|open|available|offer\w*)|"
+    r"\bpositions? (?:are |have been )?filled\b|"
     r"\b(?:paused|on hold|suspended|discontinued|closed)\b", re.I)
 PAY_CUE = re.compile(r"[$€£]\s?\d|\bUSD\b|\bper (?:article|post|piece|tutorial|word)\b|"
                      r"\bhonorari(?:um|a)\b|\bpaid\b|\bpay(?:s|ment|ments|out|outs)?\b", re.I)
@@ -90,6 +111,13 @@ SPACE = re.compile(r"\s+")
 
 ENTRY = re.compile(r"^- \[(?P<name>[^\]]+)\]\((?P<url>[^)\s]+)\)(?P<rest>.*)$")
 HEADING = re.compile(r"^##\s+(?P<title>.*?)\s*$")
+
+APOSTROPHES = str.maketrans({"’": "'", "‘": "'", "ʼ": "'"})
+
+
+def norm(s):
+    """Curly apostrophes to straight ones, for cue matching only; sentences are always kept as found."""
+    return s.translate(APOSTROPHES)
 
 
 def parse_listing(md):
@@ -206,13 +234,31 @@ def ai_sentences(text, limit=800):
     return matching_sentences(text, mentions_ai, limit)
 
 
+def is_closed(sentence):
+    return bool(CLOSED_CUE.search(norm(sentence)))
+
+
 def status_sentences(text, limit=400, most=30):
-    return matching_sentences(text, lambda s: bool(CLOSED_CUE.search(s) or PAY_CUE.search(s)), limit, most)
+    return matching_sentences(text, lambda s: bool(is_closed(s) or PAY_CUE.search(s)), limit, most)
 
 
 def host(url):
     h = urllib.parse.urlsplit(url).hostname or ""
     return h[4:] if h.startswith("www.") else h
+
+
+def redirect_kind(listed, final):
+    """'' if the final URL is the listed page (scheme, 'www.' and a trailing slash ignored); 'home' if it is
+    a home page while the listed page is not; 'elsewhere' for any other move (another path or site)."""
+    if not final:
+        return ""
+    pa = urllib.parse.urlsplit(listed).path.rstrip("/")
+    pb = urllib.parse.urlsplit(final).path.rstrip("/")
+    if host(listed) == host(final) and pa == pb:
+        return ""
+    if pb == "" and pa != "":
+        return "home"
+    return "elsewhere"
 
 
 def follow_links(base_url, links, limit=MAX_FOLLOW):
@@ -243,7 +289,8 @@ def classify(pages, sents):
     ban          an AI sentence (not about training) has a prohibition cue; scope 'assisted' if a banning
                  sentence also mentions assistance, tools, editing or any use, else 'generated'
     allow_or_conditional  no ban cue, but an allow/disclose cue     other_mention  anything else
-    """
+
+    Cues are matched on norm(sentence), so "can’t" counts like "can't" (0.1.1)."""
     read = [p for p in pages if p.get("chars") is not None]
     if not read:
         return "unreachable", None
@@ -251,7 +298,7 @@ def classify(pages, sents):
         if all(p["chars"] < MIN_CHARS for p in read):
             return "unreadable", None
         return "silent", None
-    rule = [s for s in sents if not TRAIN_CUE.search(s)]
+    rule = [norm(s) for s in sents if not TRAIN_CUE.search(s)]
     if not rule:
         return "training_only", None
     bans = [s for s in rule if BAN_CUE.search(s)]
@@ -330,7 +377,8 @@ def census(programs, fetcher=fetch, pause=1.0):
             done.add(url)
             got = get(url)
             entry = {"url": url, "final_url": got["final_url"], "status": got["status"], "tls": got["tls"],
-                     "error": got["error"], "chars": None, "followed": url != row["url"]}
+                     "error": got["error"], "chars": None, "followed": url != row["url"],
+                     "redirect": redirect_kind(url, got["final_url"])}
             if got["text"] is not None:
                 text, links = extract(got["text"])
                 entry["chars"] = len(text)
@@ -358,11 +406,13 @@ def census(programs, fetcher=fetch, pause=1.0):
         results.append({"id": row["id"], "name": row["name"], "url": row["url"], "section": row["section"],
                         "pay_listed": row["pay"], "listing_mentions_ai": mentions_ai(row["description"]),
                         "main_status": pages[0]["status"] if pages else None,
+                        "main_redirect": pages[0]["redirect"] if pages else "",
                         "pages": pages, "documents_not_read": docs, "ai_sentences": unique,
                         "status_sentences": stat_unique, "auto_label": label, "auto_scope": scope,
                         "mentions_training": any(TRAIN_CUE.search(s["sentence"]) for s in unique),
                         "mentions_detector": any(DETECTOR_CUE.search(s["sentence"]) for s in unique),
-                        "closed_cue": any(CLOSED_CUE.search(s["sentence"]) for s in stat_unique)})
+                        "names_detector_tool": any(DETECTOR_TOOL.search(s["sentence"]) for s in unique),
+                        "closed_cue": any(is_closed(s["sentence"]) for s in stat_unique)})
     return results, texts
 
 
@@ -411,16 +461,22 @@ def report(results, started, finished, prereg, listing_url):
     bans = [r for r in results if r["auto_label"] == "ban"]
     lines += ["", "Ban scope (auto): assisted %d, generated only %d." % (
         sum(1 for r in bans if r["auto_scope"] == "assisted"), sum(1 for r in bans if r["auto_scope"] == "generated")),
-        "Programs whose AI sentences mention detection tools: %d." % sum(1 for r in results if r["mentions_detector"]),
+        "Programs whose AI sentences mention detecting AI writing: %d (naming a detection tool: %d)." % (
+            sum(1 for r in results if r["mentions_detector"]),
+            sum(1 for r in results if r["names_detector_tool"])),
         "Programs with a closed/paused cue in a status sentence: %d." % sum(1 for r in results if r["closed_cue"]),
-        "", "| id | program | listed as | main page HTTP | auto label | scope | pages read | AI sentences | "
-        "detector | closed cue |", "|---|---|---|---|---|---|---|---|---|---|"]
+        "Listed pages that redirect to a home page: %d; elsewhere: %d." % (
+            sum(1 for r in results if r["main_redirect"] == "home"),
+            sum(1 for r in results if r["main_redirect"] == "elsewhere")),
+        "", "| id | program | listed as | main page HTTP | redirect | auto label | scope | pages read | "
+        "AI sentences | detector | closed cue |", "|---|---|---|---|---|---|---|---|---|---|---|"]
     for r in results:
         read = sum(1 for p in r["pages"] if p["chars"] is not None)
-        lines.append("| %s | %s | %s | %s | %s | %s | %d/%d | %d | %s | %s |" % (
-            r["id"], r["name"].replace("|", "/"), r["section"], r["main_status"], r["auto_label"],
-            r["auto_scope"] or "", read, len(r["pages"]), len(r["ai_sentences"]),
-            "yes" if r["mentions_detector"] else "", "yes" if r["closed_cue"] else ""))
+        lines.append("| %s | %s | %s | %s | %s | %s | %s | %d/%d | %d | %s | %s |" % (
+            r["id"], r["name"].replace("|", "/"), r["section"], r["main_status"], r["main_redirect"],
+            r["auto_label"], r["auto_scope"] or "", read, len(r["pages"]), len(r["ai_sentences"]),
+            "tool" if r["names_detector_tool"] else "yes" if r["mentions_detector"] else "",
+            "yes" if r["closed_cue"] else ""))
     lines += ["", "Made by MV2 of Munim, Inc., with AI agents working in his name. Data CC BY 4.0, code Apache-2.0.",
               ""]
     return "\n".join(lines)

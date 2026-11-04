@@ -43,6 +43,8 @@ ALPHA = ("<html><body><nav><a href=\"/guidelines\">Writer guidelines</a> "
 ALPHA_GUIDE = "<html><body><p>You may use Grammarly or other AI tools for editing.</p></body></html>"
 GAMMA = ("<html><body><p>We are not accepting new applications at this time.</p><p>"
          + "Developer stories and community. " * 20 + "</p></body></html>")
+CAPS_NOTICE = ("POSITIONS FILLED: CURRENTLY, WE ARE NOT LOOKING FOR NEW WRITERS, BUT YOU CAN SUBMIT YOUR "
+               "APPLICATION FOR FUTURE CONSIDERATION.")
 
 
 def page(text, status=200, url=None):
@@ -97,6 +99,15 @@ class Sentences(unittest.TestCase):
         self.assertEqual(programs.status_sentences("We are no longer paying for articles. Read our blog."),
                          ["We are no longer paying for articles."])
 
+    def test_status_all_caps_notice(self):
+        # 0.1.1: missed by 0.1.0, which had no "not looking for writers" or "positions filled" cue.
+        self.assertEqual(programs.status_sentences(CAPS_NOTICE + " Read our blog."), [CAPS_NOTICE])
+        self.assertEqual(programs.status_sentences("We’re not looking for writers right now."),
+                         ["We’re not looking for writers right now."])
+        self.assertEqual(programs.status_sentences("We’re no longer accepting writers."),
+                         ["We’re no longer accepting writers."])
+        self.assertEqual(programs.status_sentences("We are looking for new writers."), [])
+
 
 class Classify(unittest.TestCase):
     def test_labels(self):
@@ -109,6 +120,50 @@ class Classify(unittest.TestCase):
                          ("ban", "assisted"))
         self.assertEqual(programs.classify([{"chars": 900}], ["AI-assisted drafts are welcome if you disclose them."]),
                          ("allow_or_conditional", None))
+
+    def test_curly_apostrophe(self):
+        # 0.1.1: 0.1.0 labelled this other_mention because "can’t" did not match the straight "can't".
+        self.assertEqual(programs.classify([{"chars": 900}], ["You can’t submit AI-generated articles."]),
+                         ("ban", "generated"))
+        self.assertEqual(programs.norm("won’t ‘x’"), "won't 'x'")
+
+
+class Detector(unittest.TestCase):
+    def test_detection_of_ai_writing_only(self):
+        self.assertIsNone(programs.DETECTOR_CUE.search("We use AI to detect fraud and keep your account safe."))
+        self.assertIsNotNone(programs.DETECTOR_CUE.search(
+            "Authors will be banned from the program if we detect AI drafts."))
+        self.assertIsNone(programs.DETECTOR_TOOL.search(
+            "Authors will be banned from the program if we detect AI drafts."))
+        self.assertIsNotNone(programs.DETECTOR_TOOL.search("Every draft is checked with Originality.ai."))
+        self.assertIsNotNone(programs.DETECTOR_TOOL.search("We run submissions through an AI detector."))
+
+
+class Redirect(unittest.TestCase):
+    def test_kinds(self):
+        self.assertEqual(programs.redirect_kind("https://a.example/write-for-us/", "https://www.a.example/"), "home")
+        self.assertEqual(programs.redirect_kind("https://a.example/join/", "https://a.example/about/"), "elsewhere")
+        self.assertEqual(programs.redirect_kind("http://a.example/w", "https://www.a.example/w/"), "")
+        self.assertEqual(programs.redirect_kind("https://a.example/w", None), "")
+        self.assertEqual(programs.redirect_kind("https://a.example/", "https://a.example"), "")
+
+    def test_census_records_home_redirect_and_caps_notice(self):
+        html = "<html><body><p>%s</p></body></html>" % CAPS_NOTICE
+
+        def fetch_home(url):
+            return page(html, url="https://www.delta.example/")
+
+        rows = [{"id": "P01", "name": "Delta", "url": "https://delta.example/write-for-us/", "section": "Active",
+                 "pay": "", "description": ""}]
+        results, texts = programs.census(rows, fetcher=fetch_home, pause=0)
+        r = results[0]
+        self.assertEqual(r["main_redirect"], "home")
+        self.assertEqual(len(r["pages"]), 1)
+        self.assertTrue(r["closed_cue"])
+        self.assertEqual([s["sentence"] for s in r["status_sentences"]], [CAPS_NOTICE])
+        self.assertEqual(r["auto_label"], "unreadable")
+        self.assertFalse(r["mentions_detector"])
+        self.assertFalse(r["names_detector_tool"])
 
 
 class FollowLinks(unittest.TestCase):
@@ -129,14 +184,17 @@ class Main(unittest.TestCase):
             self.assertEqual(rc, 0)
             with open(os.path.join(tmp, "census.json"), encoding="utf-8") as fh:
                 data = json.load(fh)
+            self.assertEqual(data["version"], "0.1.1")
             self.assertEqual(data["prereg"]["committed_at"], "2026-11-02T12:30:00Z")
             by_id = {r["id"]: r for r in data["programs"]}
             self.assertEqual(sorted(by_id), ["P01", "P02", "P03"])
             self.assertEqual((by_id["P01"]["auto_label"], by_id["P01"]["auto_scope"]), ("ban", "generated"))
             self.assertEqual(len(by_id["P01"]["pages"]), 2)
             self.assertTrue(by_id["P01"]["pages"][1]["followed"])
+            self.assertEqual(by_id["P01"]["main_redirect"], "")
             self.assertEqual(by_id["P02"]["auto_label"], "unreachable")
             self.assertEqual(by_id["P02"]["main_status"], 403)
+            self.assertEqual(by_id["P02"]["main_redirect"], "")
             self.assertTrue(by_id["P02"]["listing_mentions_ai"])
             self.assertEqual(by_id["P03"]["auto_label"], "silent")
             self.assertTrue(by_id["P03"]["closed_cue"])
@@ -147,7 +205,8 @@ class Main(unittest.TestCase):
             with open(os.path.join(tmp, "frame.csv"), newline="", encoding="utf-8") as fh:
                 self.assertEqual(len(list(csv.DictReader(fh))), 3)
             self.assertTrue(os.path.exists(os.path.join(tmp, "status.csv")))
-            self.assertTrue(os.path.exists(os.path.join(tmp, "CENSUS_AUTO.md")))
+            with open(os.path.join(tmp, "CENSUS_AUTO.md"), encoding="utf-8") as fh:
+                self.assertIn("Listed pages that redirect to a home page: 0; elsewhere: 0.", fh.read())
 
     def test_waits_then_stops_without_prereg(self):
         slept = []

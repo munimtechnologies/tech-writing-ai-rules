@@ -19,13 +19,14 @@ Compared with writing contests ([companion census](https://github.com/munimtechn
 
 ## Files
 
-- `programs.py`: the census tool (Python standard library only). It parses the pinned list, waits until the pre-registration is on `main`, then fetches each program's page and up to five same-site guideline, FAQ or policy pages. It writes `census.json`, `sentences.csv` (AI sentences), `status.csv` (status and pay sentences), `frame.csv` and `CENSUS_AUTO.md` (a deterministic first-pass label).
+- `programs.py`: the census tool (Python standard library only), now version 0.1.1. It parses the pinned list, waits until the pre-registration is on `main`, then fetches each program's page and up to five same-site guideline, FAQ or policy pages. It writes `census.json`, `sentences.csv` (AI sentences), `status.csv` (status and pay sentences), `frame.csv` and `CENSUS_AUTO.md` (a deterministic first-pass label, plus redirect, detector and closed-notice flags).
 - `test_programs.py`: offline tests (`python -m unittest -v test_programs`).
+- `CHANGELOG.md`: what changed in 0.1.1. The first pass now reads curly apostrophes, catches "not looking for new writers" notices, records redirects to a home page, and stops counting fraud detection as AI detection. The 2026-11 census was made with 0.1.0, and its files are unchanged.
 - `census/2026-11/PREREGISTRATION.md`: the frame, rubric and predictions, committed before any page was read.
 - `census/2026-11/RESULT.md`: the graded result, borderline readings and exploratory notes.
 - `census/2026-11/coding.csv`: one row per program, giving the code, flags, status and the sentence it rests on.
 - `census/2026-11/sentences.csv`: the AI sentences found, word for word (rows from personal author pages are left out; see RESULT.md).
-- `census/2026-11/frame.csv`, `census/2026-11/CENSUS_AUTO.md`: the tool's frame and first-pass output, unchanged.
+- `census/2026-11/frame.csv`, `census/2026-11/CENSUS_AUTO.md`: the 0.1.0 tool's frame and first-pass output, unchanged.
 
 Run it yourself: `python programs.py --out-dir out --no-prereg-check`
 
