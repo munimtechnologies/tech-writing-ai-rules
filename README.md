@@ -4,8 +4,8 @@ What do the people who pay for or accept technical writing say about AI?
 
 This repository holds two pre-registered studies. Each reads its sources' own pages, keeps every AI sentence word for word, and codes them against a rubric fixed in advance.
 
-1. **Paid technical-writing programs** (graded): many software companies and developer publications pay $100 to $900 per tutorial or how-to. Community lists give each program's pay and topics, but not its rule on AI-written or AI-assisted work.
-2. **Open-source AI contribution policies and documentation** (registered 2026-11-04, not yet run): do projects' AI rules say whether they cover docs, READMEs, tutorials and translations, or only code?
+1. **Paid technical-writing programs** (graded 2026-11-03): many software companies and developer publications pay $100 to $900 per tutorial or how-to. Community lists give each program's pay and topics, but not its rule on AI-written or AI-assisted work.
+2. **Open-source AI contribution policies and documentation** (graded 2026-11-05): do projects' AI rules say whether they cover docs, READMEs, tutorials and translations, or only code?
 
 ## Result 1: paid programs (census of 2026-11-02, graded 2026-11-03)
 
@@ -20,9 +20,15 @@ The frame is all 43 programs (39 listed Active, 4 Paused) in commit `0338535` of
 
 Compared with writing contests ([companion census](https://github.com/munimtechnologies/ai-writing-prize-rules)): 47% of contests ban AI, and three in four of those bans reach editing and grammar tools. Paid technical programs ban less often, and they guard only the finished text.
 
-## Study 2: do AI contribution policies cover documentation? (pre-registered 2026-11-04)
+## Result 2: do AI contribution policies cover documentation? (texts read 2026-11-04, graded 2026-11-05)
 
-The largest study of open-source AI policies so far ([arXiv 2609.07542](https://arxiv.org/abs/2609.07542), 281 policies) counts documentation together with code, and the open datasets record stance but not scope. This study reads the policies of the 101 projects in [awesome-ai-contribution-policies](https://github.com/ahmad-punch/awesome-ai-contribution-policies) (data CC BY 4.0, pinned commit `6cd258e`). For each one it codes whether the rules name documentation, treat it differently from code, speak of contributions in general, or are worded for code only. The rubric, five predictions and two gates are in [`census/2026-11-oss-docs/PREREGISTRATION.md`](census/2026-11-oss-docs/PREREGISTRATION.md), committed before any policy text was read.
+The largest study of open-source AI policies so far ([arXiv 2609.07542](https://arxiv.org/abs/2609.07542), 281 policies) counts documentation together with code, and the open datasets record stance but not scope. This study read the policies of the 101 projects in [awesome-ai-contribution-policies](https://github.com/ahmad-punch/awesome-ai-contribution-policies) (data CC BY 4.0, pinned commit `6cd258e`), 6 minutes after the [pre-registration](census/2026-11-oss-docs/PREREGISTRATION.md) was committed. Full write-up: [`census/2026-11-oss-docs/RESULT.md`](census/2026-11-oss-docs/RESULT.md).
+
+- 93 projects had readable own texts, and **56 of them set terms for AI-made contributions.**
+- **Only 14 of the 56 (25%) name documentation in their rules**: CPython, crewAI, Debian, Django, Fedora, Home Assistant, Instructor, Kubeflow, Kubernetes, LLVM, the two Model Context Protocol repos, OpenJDK and Rust. **Only Rust treats docs differently from code**: its agent rules forbid writing non-trivial user-facing documentation, while LLM-made code changes are allowed with a named reviewer and tests.
+- **32 (57%) speak of contributions or PRs in general** and never say whether a docs fix or a translation counts. 7 are worded for code only, and 3 cover only issues or PR text.
+- 5 of the 45 projects the dataset lists as having no policy do have AI rules in their own files (Formbricks, Hono, Inspect AI, Pydantic AI, tRPC).
+- Predictions: **P1, P3 and P4 held; P2 and P5 did not.** Code-only wording was rarer than predicted (12.5%, not at least 20%). The keyword first pass agreed with the hand coding for only 54%, mostly because documentation is named next to the AI sentence, not in it.
 
 ## Files
 
@@ -30,12 +36,8 @@ The largest study of open-source AI policies so far ([arXiv 2609.07542](https://
 - `test_programs.py`: offline tests (`python -m unittest -v test_programs`).
 - `docscope.py`: the documentation-scope tool, version 0.1.0 (standard library only). It reads each frame project's CONTRIBUTING, AI_POLICY, AGENTS.md and pull request template files, the dataset's source link and up to four AI-policy links. It writes `census.json`, `sentences.csv` (AI sentences with docs, code, generic and rule-word flags), `frame.csv` and `DOCSCOPE_AUTO.md`. Offline tests: `python -m unittest -v test_docscope`.
 - `CHANGELOG.md`: what changed in each version.
-- `census/2026-11/PREREGISTRATION.md`: the frame, rubric and predictions, committed before any page was read.
-- `census/2026-11/RESULT.md`: the graded result, borderline readings and exploratory notes.
-- `census/2026-11/coding.csv`: one row per program, giving the code, flags, status and the sentence it rests on.
-- `census/2026-11/sentences.csv`: the AI sentences found, word for word (rows from personal author pages are left out; see RESULT.md).
-- `census/2026-11/frame.csv`, `census/2026-11/CENSUS_AUTO.md`: the 0.1.0 tool's frame and first-pass output, unchanged.
-- `census/2026-11-oss-docs/PREREGISTRATION.md`: study 2's frame, rubric, predictions and gates.
+- `census/2026-11/`: study 1's pre-registration, result, coding, AI sentences (rows from personal author pages are left out), frame and first-pass output.
+- `census/2026-11-oss-docs/`: study 2's pre-registration, result, `coding.csv` (one row per project with its code and one short quote), frame and first-pass output. Page texts are not republished.
 
 Run them yourself: `python programs.py --out-dir out --no-prereg-check` or `python docscope.py --out-dir out --no-prereg-check`
 

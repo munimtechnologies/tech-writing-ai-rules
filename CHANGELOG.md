@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0 (2026-11-05): study 2 graded
+
+- **Result of study 2** in `census/2026-11-oss-docs/RESULT.md`, with `coding.csv` (one row per project: RULE, SCOPE, first-pass label and agreement, borderline flag, one quote of at most 300 characters and its source), plus the tool's unchanged `frame.csv` and `DOCSCOPE_AUTO.md`. Both gates passed (93 of 101 projects read; 56 with AI rules). P1, P3 and P4 held; P2 and P5 failed. Of the 56 projects with AI rules, 14 name documentation, and only Rust treats it differently from code.
+- **Known first-pass issues in `docscope.py` 0.1.0** (not fixed in this release; the primary coding was done by reading and did not rely on them): the docs flag only looks inside the AI sentence itself, so documentation named in a neighbouring sentence or list item is missed; the sentence splitter breaks at "e.g."; and the docs cues match "manual", "README.md" in other senses and site names such as "Source Docs". A later version should look at a window around each AI sentence.
+- No tool code changed. `programs.py` stays at 0.1.1 and `docscope.py` at 0.1.0.
+
 ## 0.2.0 (2026-11-04): docscope.py 0.1.0, a second study
 
 - **New tool, `docscope.py` 0.1.0**, with offline tests in `test_docscope.py`. It asks whether open-source projects' AI contribution policies say they cover documentation. The frame is the 101 projects of the open dataset awesome-ai-contribution-policies (data CC BY 4.0) at a pinned commit. For each project it reads the repo's standard policy files at the default branch, the dataset's own source link and up to four AI-policy links from those texts, then keeps every AI sentence word for word with first-pass flags (docs, code, generic, rule word). Raw Markdown and reST are read with hard-wrapped lines joined, so a sentence that spans lines stays whole. The text inside HTML comments is kept, because pull request templates put their instructions there. A rate-limited fetch (HTTP 429) is retried after 60, 120 and 240 seconds, and each page records whether it was retried.

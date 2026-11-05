@@ -1,0 +1,102 @@
+id,project,repo,stance,source_url,source_kind
+D001,Anthropic SDK (Python),anthropics/anthropic-sdk-python,no-policy,https://github.com/anthropics/anthropic-sdk-python,repo_home
+D002,Anthropic SDK (TypeScript),anthropics/anthropic-sdk-typescript,no-policy,https://github.com/anthropics/anthropic-sdk-typescript,repo_home
+D003,AnythingLLM,Mintplex-Labs/anything-llm,neutral,https://github.com/Mintplex-Labs/anything-llm,repo_home
+D004,Apache Airflow,apache/airflow,disclose-required,https://github.com/apache/airflow,repo_home
+D005,browser-use,browser-use/browser-use,no-policy,https://github.com/browser-use/browser-use,repo_home
+D006,cal.diy (Cal.com),calcom/cal.diy,neutral,https://github.com/calcom/cal.diy,repo_home
+D007,Claude Agent SDK (Python),anthropics/claude-agent-sdk-python,no-policy,https://github.com/anthropics/claude-agent-sdk-python,repo_home
+D008,Claude Agent SDK (TypeScript),anthropics/claude-agent-sdk-typescript,no-policy,https://github.com/anthropics/claude-agent-sdk-typescript,repo_home
+D009,Claude Code,anthropics/claude-code,no-policy,https://github.com/anthropics/claude-code,repo_home
+D010,Cloudflare Agents,cloudflare/agents,no-policy,https://github.com/cloudflare/agents,repo_home
+D011,Coder,coder/coder,disclose-required,https://coder.com/docs/about/contributing/AI_CONTRIBUTING,web
+D012,CPython,python/cpython,disclose-encouraged,https://devguide.python.org/getting-started/ai-tools/,web
+D013,Crawl4AI,unclecode/crawl4ai,no-policy,https://github.com/unclecode/crawl4ai,repo_home
+D014,crewAI,crewAIInc/crewAI,disclose-required,https://github.com/crewAIInc/crewAI,repo_home
+D015,curl,curl/curl,neutral,https://curl.se/docs/bugbounty.html,web
+D016,Debian,salsa.debian.org/debian,disclose-encouraged,https://www.debian.org/vote/2026/vote_002,web
+D017,DeepEval,confident-ai/deepeval,no-policy,https://github.com/confident-ai/deepeval,repo_home
+D018,Dify,langgenius/dify,neutral,https://github.com/langgenius/dify,repo_home
+D019,Django,django/django,disclose-required,https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/submitting-patches/,web
+D020,Documenso,documenso/documenso,neutral,https://github.com/documenso/documenso,repo_home
+D021,Drizzle ORM,drizzle-team/drizzle-orm,no-policy,https://github.com/drizzle-team/drizzle-orm,repo_home
+D022,E2B,e2b-dev/E2B,no-policy,https://github.com/e2b-dev/E2B,repo_home
+D023,FastAPI,fastapi/fastapi,no-policy,https://github.com/fastapi/fastapi,repo_home
+D024,FastMCP (TypeScript),punkpeye/fastmcp,no-policy,https://github.com/punkpeye/fastmcp,repo_home
+D025,Fedora,forge.fedoraproject.org/council/docs,disclose-encouraged,https://forge.fedoraproject.org/council/docs/commit/823e93b640dea2205d6df2bc51586552a52898d7,web
+D026,Firecrawl,firecrawl/firecrawl,no-policy,https://github.com/firecrawl/firecrawl,repo_home
+D027,Formbricks,formbricks/formbricks,no-policy,https://github.com/formbricks/formbricks,repo_home
+D028,GCC,gcc.gnu.org/git/gcc,ban,https://gcc.gnu.org/ai-policy.html,web
+D029,Gemara,ossf/gemara,encouraged,https://github.com/ossf/gemara,repo_home
+D030,Gentoo,gentoo/gentoo,ban,https://wiki.gentoo.org/wiki/Project:Council/AI_policy,web
+D031,Ghostty,ghostty-org/ghostty,disclose-required,https://raw.githubusercontent.com/ghostty-org/ghostty/main/AI_POLICY.md,repo_file
+D032,Gitea,go-gitea/gitea,encouraged,https://github.com/go-gitea/gitea,repo_home
+D033,Go,golang/go,no-policy,https://go.dev/doc/contribute,web
+D034,Godot Engine,godotengine/godot,ban,https://godotengine.org/article/contribution-policy-2026/,web
+D035,Haystack,deepset-ai/haystack,disclose-required,https://github.com/deepset-ai/haystack,repo_home
+D036,Home Assistant,home-assistant/core,restricted,https://developers.home-assistant.io/blog/2026/07/20/ai-policy/,web
+D037,Hono,honojs/hono,no-policy,https://github.com/honojs/hono/commit/d4542eeb11efb9f1d1450bfb4ba54eb8b0e8e19f,github_page
+D038,Hugging Face Transformers,huggingface/transformers,disclose-required,https://github.com/huggingface/transformers,repo_home
+D039,Infisical,Infisical/infisical,no-policy,https://github.com/Infisical/infisical,repo_home
+D040,Inngest JS SDK,inngest/inngest-js,no-policy,https://github.com/inngest/inngest-js,repo_home
+D041,Inspect AI,UKGovernmentBEIS/inspect_ai,no-policy,https://github.com/UKGovernmentBEIS/inspect_ai,repo_home
+D042,Instructor,567-labs/instructor,encouraged,https://github.com/567-labs/instructor,repo_home
+D043,Kubeflow,kubeflow,disclose-required,https://www.kubeflow.org/docs/about/ai_policy/,web
+D044,Kubernetes,kubernetes/kubernetes,disclose-required,https://www.kubernetes.dev/docs/guide/pull-requests/#ai-guidance,web
+D045,LangChain,langchain-ai/langchain,neutral,https://docs.langchain.com/oss/python/contributing/overview,web
+D046,LangChain.js,langchain-ai/langchainjs,no-policy,https://github.com/langchain-ai/langchainjs,repo_home
+D047,Langfuse,langfuse/langfuse,no-policy,https://github.com/langfuse/langfuse,repo_home
+D048,LangGraph,langchain-ai/langgraph,neutral,https://docs.langchain.com/oss/python/contributing/overview,web
+D049,Linux Foundation,linuxfoundation,neutral,https://www.linuxfoundation.org/legal/generative-ai,web
+D050,Linux kernel,torvalds/linux,disclose-required,https://docs.kernel.org/process/coding-assistants.html,web
+D051,LiteLLM,BerriAI/litellm,neutral,https://github.com/BerriAI/litellm,repo_home
+D052,LlamaIndex,run-llama/llama_index,neutral,https://github.com/run-llama/llama_index,repo_home
+D053,LLVM,llvm/llvm-project,disclose-required,https://llvm.org/docs/AIToolPolicy.html,web
+D054,Mastra,mastra-ai/mastra,no-policy,https://github.com/mastra-ai/mastra,repo_home
+D055,MCP Inspector,modelcontextprotocol/inspector,no-policy,https://github.com/modelcontextprotocol/inspector,repo_home
+D056,MCP Python SDK,modelcontextprotocol/python-sdk,disclose-required,https://github.com/modelcontextprotocol/python-sdk,repo_home
+D057,MCP servers,modelcontextprotocol/servers,no-policy,https://github.com/modelcontextprotocol/servers/blob/main/CONTRIBUTING.md,repo_file
+D058,MCP TypeScript SDK,modelcontextprotocol/typescript-sdk,neutral,https://github.com/modelcontextprotocol/typescript-sdk,repo_home
+D059,MCP-Nest,rekog-labs/MCP-Nest,no-policy,https://github.com/rekog-labs/MCP-Nest,repo_home
+D060,Mesa,gitlab.freedesktop.org/mesa/mesa,disclose-required,https://docs.mesa3d.org/submittingpatches.html,web
+D061,MLflow,mlflow/mlflow,no-policy,https://github.com/mlflow/mlflow,repo_home
+D062,Model Context Protocol (spec),modelcontextprotocol/modelcontextprotocol,disclose-required,https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/main/AI_POLICY.md,repo_file
+D063,Mozilla Firefox,mozilla-firefox/firefox,neutral,https://firefox-source-docs.mozilla.org/contributing/ai-coding.html,web
+D064,NestJS,nestjs/nest,no-policy,https://github.com/nestjs/nest,repo_home
+D065,NestJS GraphQL,nestjs/graphql,no-policy,https://github.com/nestjs/graphql,repo_home
+D066,NestJS Swagger,nestjs/swagger,no-policy,https://github.com/nestjs/swagger,repo_home
+D067,NetBSD,NetBSD/src,ban,https://netbsd.org/developers/commit-guidelines.html,web
+D068,Next.js,vercel/next.js,neutral,https://raw.githubusercontent.com/vercel/next.js/canary/contributing.md,repo_file
+D069,Node.js,nodejs/node,disclose-required,https://hackmd.io/@openjs-nodejs/r1K17WfjZg,web
+D070,Novu,novuhq/novu,no-policy,https://github.com/novuhq/novu,repo_home
+D071,Ollama,ollama/ollama,no-policy,https://github.com/ollama/ollama,repo_home
+D072,Open WebUI,open-webui/open-webui,neutral,https://github.com/open-webui/open-webui,repo_home
+D073,OpenAI Agents SDK (JS),openai/openai-agents-js,no-policy,https://github.com/openai/openai-agents-js,repo_home
+D074,OpenHands,OpenHands/OpenHands,neutral,https://github.com/OpenHands/OpenHands,repo_home
+D075,OpenJDK,openjdk/jdk,ban,https://www.theregister.com/a/5281851,press
+D076,PostHog,PostHog/posthog,disclose-required,https://raw.githubusercontent.com/PostHog/posthog/master/AI_POLICY.md,repo_file
+D077,posthog-js,PostHog/posthog-js,disclose-required,https://github.com/PostHog/posthog-js/blob/main/AI_POLICY.md,repo_file
+D078,promptfoo,promptfoo/promptfoo,neutral,https://github.com/promptfoo/promptfoo,repo_home
+D079,Pydantic,pydantic/pydantic,neutral,https://github.com/pydantic/pydantic,repo_home
+D080,Pydantic AI,pydantic/pydantic-ai,no-policy,https://github.com/pydantic/pydantic-ai,repo_home
+D081,pytest,pytest-dev/pytest,disclose-required,https://github.com/pytest-dev/pytest,repo_home
+D082,QEMU,gitlab.com/qemu-project/qemu,ban,https://www.qemu.org/docs/master/devel/code-provenance.html,web
+D083,Ragas,vibrantlabsai/ragas,encouraged,https://github.com/vibrantlabsai/ragas,repo_home
+D084,RAGFlow,infiniflow/ragflow,no-policy,https://github.com/infiniflow/ragflow,repo_home
+D085,React Email,resend/react-email,no-policy,https://github.com/resend/react-email,repo_home
+D086,Ruby,ruby/ruby,no-policy,https://github.com/ruby/ruby,repo_home
+D087,Rust,rust-lang/rust,restricted,https://blog.rust-lang.org/inside-rust/2026/08/05/rust-langrust-is-adopting-an-llm-policy/,web
+D088,SDL,libsdl-org/SDL,ban,https://discourse.libsdl.org/t/sdl-policy-added-to-the-pr-template-and-an-agents-md-refusing-ai-contributions/67256,web
+D089,Shaka Player,shaka-project/shaka-player,encouraged,https://github.com/shaka-project/shaka-player,repo_home
+D090,SQLite,sqlite.org/src,ban,https://sqlite.org/src/doc/trunk/AGENTS.md,web
+D091,Stagehand,browserbase/stagehand,no-policy,https://github.com/browserbase/stagehand,repo_home
+D092,Storybook,storybookjs/storybook,disclose-required,https://storybook.js.org/docs/10.4/contribute.md,web
+D093,Supabase,supabase/supabase,no-policy,https://github.com/supabase/supabase,repo_home
+D094,Supabase Edge Runtime,supabase/edge-runtime,no-policy,https://github.com/supabase/edge-runtime,repo_home
+D095,supabase-js,supabase/supabase-js,no-policy,https://github.com/supabase/supabase-js,repo_home
+D096,Trigger.dev,triggerdotdev/trigger.dev,no-policy,https://github.com/triggerdotdev/trigger.dev/blob/main/CONTRIBUTING.md,repo_file
+D097,tRPC,trpc/trpc,no-policy,https://github.com/trpc/trpc,repo_home
+D098,Twenty,twentyhq/twenty,no-policy,https://github.com/twentyhq/twenty,repo_home
+D099,Vercel AI SDK,vercel/ai,no-policy,https://github.com/vercel/ai/blob/main/CONTRIBUTING.md,repo_file
+D100,vLLM,vllm-project/vllm,disclose-required,https://github.com/vllm-project/vllm,repo_home
+D101,Zig,codeberg.org/ziglang/zig,ban,https://www.infoq.com/news/2026/09/andrew-kelley-zig-no-ai/,press
