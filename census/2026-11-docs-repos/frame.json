@@ -1,0 +1,16 @@
+[
+ {"project": "AnythingLLM docs", "repo": "Mintplex-Labs/anythingllm-docs", "stance": "neutral; main rule GENERIC", "source_url": ""},
+ {"project": "Dify docs", "repo": "langgenius/dify-docs", "stance": "neutral; main rule GENERIC", "source_url": ""},
+ {"project": "Ghostty website and docs", "repo": "ghostty-org/website", "stance": "disclose-required; main rule GENERIC", "source_url": ""},
+ {"project": "Godot docs", "repo": "godotengine/godot-docs", "stance": "ban; main rule GENERIC", "source_url": "https://docs.godotengine.org/en/latest/contributing/documentation/contributing_to_the_documentation.html"},
+ {"project": "Home Assistant user docs", "repo": "home-assistant/home-assistant.io", "stance": "restricted; main rule DOCS_NAMED", "source_url": "https://developers.home-assistant.io/docs/documenting/"},
+ {"project": "Hono website and docs", "repo": "honojs/website", "stance": "no-policy in dataset; main rule GENERIC", "source_url": ""},
+ {"project": "Kubeflow website and docs", "repo": "kubeflow/website", "stance": "disclose-required; main rule DOCS_NAMED", "source_url": ""},
+ {"project": "Kubernetes website and docs", "repo": "kubernetes/website", "stance": "disclose-required; main rule DOCS_NAMED", "source_url": "https://kubernetes.io/docs/contribute/"},
+ {"project": "LangChain and LangGraph docs", "repo": "langchain-ai/docs", "stance": "neutral; main rule GENERIC", "source_url": ""},
+ {"project": "OpenHands docs", "repo": "OpenHands/docs", "stance": "neutral; main rule OTHER_ONLY", "source_url": ""},
+ {"project": "Open WebUI docs", "repo": "open-webui/docs", "stance": "neutral; main rule CODE_ONLY", "source_url": ""},
+ {"project": "PostHog website, docs and handbook", "repo": "PostHog/posthog.com", "stance": "disclose-required; main rule GENERIC", "source_url": ""},
+ {"project": "The Rust Programming Language (book)", "repo": "rust-lang/book", "stance": "restricted; main rule DOCS_DISTINCT", "source_url": ""},
+ {"project": "SDL wiki", "repo": "libsdl-org/sdlwiki", "stance": "ban; main rule GENERIC", "source_url": ""}
+]
