@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0 (2026-11-07): study 4 graded
+
+- **Result of study 4** in `census/2026-11-style-guides/RESULT.md`. Of 19 public documentation style guides, 14 could be read. Only 3 say anything about writing with AI: GitLab and Intuit allow it with a check, Microsoft's word list recommends learning to prompt, and none bans it. 4 give advice on writing for AI (LLMs, AI search, AI crawlers, chatbots), and 7 have a rule on writing AI terms. All five predictions held, and the gate passed (N = 14). The release adds `coding.csv` (BY, FOR and ABOUT per guide, first-pass agreement, borderline flags, verbatim quotes of at most 300 characters with URLs) and the tool's unchanged `frame.csv`, `pages.csv` and `GUIDESCAN_AUTO.md`.
+- The tool's `sentences.csv` is not republished, because some rows come from event-programme pages that name individual speakers. `guidescan.py` reproduces it.
+- **Known first-pass limits in `guidescan.py` 0.1.0** (not fixed here; the primary coding was done by reading). Site menus and footers count as AI sentences, which gave three false `ai_text` labels (Draft.dev, Princeton, DigitalOcean). A page that is only a table of contents passes the 1,000-character check (Apple). The breadth-first crawl can spend its page cap on a word list before it reaches topic sections (Microsoft). A later version should drop repeated navigation text and visit section index pages before word-list entries.
+- No tool code changed. `programs.py` stays at 0.1.1, and `docscope.py` and `guidescan.py` at 0.1.0.
+
 ## 0.4.0 (2026-11-07): study 3 graded, study 4 pre-registered
 
 - **Result of study 3** in `census/2026-11-docs-repos/RESULT.md`. It covers 14 separate documentation repos of projects whose main repos have AI contribution rules. Only 3 state an AI rule in their own contributor files, and none has a link that points to an AI policy. Four main rules name documentation, and only Home Assistant's appears in its docs repo. P1, P2 and P3 held; P4 failed on one borderline code (PostHog's website repo drops the disclosure its main policy requires). The release adds `coding.csv` (REACH, TERMS, first-pass agreement, borderline flag, one quote of at most 300 characters and its source per repo) and the tool's unchanged `frame.csv`, `sentences.csv` and `DOCSCOPE_AUTO.md`.
