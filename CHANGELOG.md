@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0 (2026-11-07): study 3 graded, study 4 pre-registered
+
+- **Result of study 3** in `census/2026-11-docs-repos/RESULT.md`. It covers 14 separate documentation repos of projects whose main repos have AI contribution rules. Only 3 state an AI rule in their own contributor files, and none has a link that points to an AI policy. Four main rules name documentation, and only Home Assistant's appears in its docs repo. P1, P2 and P3 held; P4 failed on one borderline code (PostHog's website repo drops the disclosure its main policy requires). The release adds `coding.csv` (REACH, TERMS, first-pass agreement, borderline flag, one quote of at most 300 characters and its source per repo) and the tool's unchanged `frame.csv`, `sentences.csv` and `DOCSCOPE_AUTO.md`.
+- **A known first-pass gap in `docscope.py` 0.1.0** (not fixed here; the primary coding was done by reading): its AI cues do not match "agent" on its own, so a rule addressed to "you, an agent" in an AGENTS.md file is missed. This happened in PostHog's website repo.
+- **Study 4 is pre-registered** in `census/2026-11-style-guides/`, with `guidescan.py` 0.1.0 and its offline tests (committed 2026-11-06). It has not been graded yet.
+- No tool code changed in this release. `programs.py` stays at 0.1.1 and `docscope.py` at 0.1.0.
+
 ## 0.3.0 (2026-11-05): study 2 graded
 
 - **Result of study 2** in `census/2026-11-oss-docs/RESULT.md`, with `coding.csv` (one row per project: RULE, SCOPE, first-pass label and agreement, borderline flag, one quote of at most 300 characters and its source), plus the tool's unchanged `frame.csv` and `DOCSCOPE_AUTO.md`. Both gates passed (93 of 101 projects read; 56 with AI rules). P1, P3 and P4 held; P2 and P5 failed. Of the 56 projects with AI rules, 14 name documentation, and only Rust treats it differently from code.

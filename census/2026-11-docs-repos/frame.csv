@@ -1,0 +1,15 @@
+id,project,repo,stance,source_url,source_kind
+D001,AnythingLLM docs,Mintplex-Labs/anythingllm-docs,neutral; main rule GENERIC,,none
+D002,Dify docs,langgenius/dify-docs,neutral; main rule GENERIC,,none
+D003,Ghostty website and docs,ghostty-org/website,disclose-required; main rule GENERIC,,none
+D004,Godot docs,godotengine/godot-docs,ban; main rule GENERIC,https://docs.godotengine.org/en/latest/contributing/documentation/contributing_to_the_documentation.html,web
+D005,Home Assistant user docs,home-assistant/home-assistant.io,restricted; main rule DOCS_NAMED,https://developers.home-assistant.io/docs/documenting/,web
+D006,Hono website and docs,honojs/website,no-policy in dataset; main rule GENERIC,,none
+D007,Kubeflow website and docs,kubeflow/website,disclose-required; main rule DOCS_NAMED,,none
+D008,Kubernetes website and docs,kubernetes/website,disclose-required; main rule DOCS_NAMED,https://kubernetes.io/docs/contribute/,web
+D009,LangChain and LangGraph docs,langchain-ai/docs,neutral; main rule GENERIC,,none
+D010,OpenHands docs,OpenHands/docs,neutral; main rule OTHER_ONLY,,none
+D011,Open WebUI docs,open-webui/docs,neutral; main rule CODE_ONLY,,none
+D012,"PostHog website, docs and handbook",PostHog/posthog.com,disclose-required; main rule GENERIC,,none
+D013,The Rust Programming Language (book),rust-lang/book,restricted; main rule DOCS_DISTINCT,,none
+D014,SDL wiki,libsdl-org/sdlwiki,ban; main rule GENERIC,,none
