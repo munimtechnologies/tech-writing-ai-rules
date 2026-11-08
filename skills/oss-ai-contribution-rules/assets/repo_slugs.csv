@@ -1,0 +1,102 @@
+id,project,repos
+D001,Anthropic SDK (Python),anthropics/anthropic-sdk-python
+D002,Anthropic SDK (TypeScript),anthropics/anthropic-sdk-typescript
+D003,AnythingLLM,Mintplex-Labs/anything-llm
+D004,Apache Airflow,apache/airflow
+D005,browser-use,browser-use/browser-use
+D006,cal.diy (Cal.com),calcom/cal.diy
+D007,Claude Agent SDK (Python),anthropics/claude-agent-sdk-python
+D008,Claude Agent SDK (TypeScript),anthropics/claude-agent-sdk-typescript
+D009,Claude Code,anthropics/claude-code
+D010,Cloudflare Agents,cloudflare/agents
+D011,Coder,coder/coder
+D012,CPython,python/cpython;python/devguide
+D013,Crawl4AI,unclecode/crawl4ai
+D014,crewAI,crewAIInc/crewAI
+D015,curl,curl/curl
+D016,Debian,
+D017,DeepEval,confident-ai/deepeval
+D018,Dify,langgenius/dify
+D019,Django,django/django
+D020,Documenso,documenso/documenso
+D021,Drizzle ORM,drizzle-team/drizzle-orm
+D022,E2B,e2b-dev/E2B
+D023,FastAPI,fastapi/fastapi
+D024,FastMCP (TypeScript),punkpeye/fastmcp
+D025,Fedora,
+D026,Firecrawl,firecrawl/firecrawl
+D027,Formbricks,formbricks/formbricks
+D028,GCC,gcc-mirror/gcc
+D029,Gemara,ossf/gemara
+D030,Gentoo,gentoo/gentoo
+D031,Ghostty,ghostty-org/ghostty
+D032,Gitea,go-gitea/gitea
+D033,Go,golang/go
+D034,Godot Engine,godotengine/godot
+D035,Haystack,deepset-ai/haystack
+D036,Home Assistant,home-assistant/core
+D037,Hono,honojs/hono
+D038,Hugging Face Transformers,huggingface/transformers
+D039,Infisical,Infisical/infisical
+D040,Inngest JS SDK,inngest/inngest-js
+D041,Inspect AI,UKGovernmentBEIS/inspect_ai
+D042,Instructor,567-labs/instructor
+D043,Kubeflow,
+D044,Kubernetes,kubernetes/kubernetes
+D045,LangChain,langchain-ai/langchain
+D046,LangChain.js,langchain-ai/langchainjs
+D047,Langfuse,langfuse/langfuse
+D048,LangGraph,langchain-ai/langgraph
+D049,Linux Foundation,
+D050,Linux kernel,torvalds/linux
+D051,LiteLLM,BerriAI/litellm
+D052,LlamaIndex,run-llama/llama_index
+D053,LLVM,llvm/llvm-project
+D054,Mastra,mastra-ai/mastra
+D055,MCP Inspector,modelcontextprotocol/inspector
+D056,MCP Python SDK,modelcontextprotocol/python-sdk
+D057,MCP servers,modelcontextprotocol/servers
+D058,MCP TypeScript SDK,modelcontextprotocol/typescript-sdk
+D059,MCP-Nest,rekog-labs/MCP-Nest
+D060,Mesa,
+D061,MLflow,mlflow/mlflow
+D062,Model Context Protocol (spec),modelcontextprotocol/modelcontextprotocol
+D063,Mozilla Firefox,
+D064,NestJS,nestjs/nest
+D065,NestJS GraphQL,nestjs/graphql
+D066,NestJS Swagger,nestjs/swagger
+D067,NetBSD,NetBSD/src
+D068,Next.js,vercel/next.js
+D069,Node.js,nodejs/node
+D070,Novu,novuhq/novu
+D071,Ollama,ollama/ollama
+D072,Open WebUI,open-webui/open-webui
+D073,OpenAI Agents SDK (JS),openai/openai-agents-js
+D074,OpenHands,OpenHands/OpenHands
+D075,OpenJDK,openjdk/jdk
+D076,PostHog,PostHog/posthog
+D077,posthog-js,PostHog/posthog-js
+D078,promptfoo,promptfoo/promptfoo
+D079,Pydantic,pydantic/pydantic
+D080,Pydantic AI,pydantic/pydantic-ai
+D081,pytest,pytest-dev/pytest
+D082,QEMU,qemu/qemu
+D083,Ragas,explodinggradients/ragas
+D084,RAGFlow,infiniflow/ragflow
+D085,React Email,resend/react-email
+D086,Ruby,ruby/ruby
+D087,Rust,rust-lang/rust
+D088,SDL,libsdl-org/SDL
+D089,Shaka Player,shaka-project/shaka-player
+D090,SQLite,sqlite/sqlite
+D091,Stagehand,browserbase/stagehand
+D092,Storybook,storybookjs/storybook
+D093,Supabase,supabase/supabase
+D094,Supabase Edge Runtime,supabase/edge-runtime
+D095,supabase-js,supabase/supabase-js
+D096,Trigger.dev,triggerdotdev/trigger.dev
+D097,tRPC,trpc/trpc
+D098,Twenty,twentyhq/twenty
+D099,Vercel AI SDK,vercel/ai
+D100,vLLM,vllm-project/vllm
+D101,Zig,ziglang/zig

@@ -2,13 +2,27 @@
 
 What do the people who pay for or accept technical writing say about AI?
 
-This repository holds five pre-registered studies. Each reads its sources' own pages, keeps every AI sentence or answer as found, and codes them against a rubric fixed in advance.
+This repository holds five pre-registered studies. Each reads its sources' own pages, keeps every AI sentence or answer as found, and codes them against a rubric fixed in advance. It also ships an [agent skill](#agent-skill-check-a-projects-ai-rule-before-contributing) built on studies 2 and 3.
 
 1. **Paid technical-writing programs** (graded 2026-11-03): many software companies and developer publications pay $100 to $900 per tutorial or how-to. Community lists give each program's pay and topics, but not its rule on AI-written or AI-assisted work.
 2. **Open-source AI contribution policies and documentation** (graded 2026-11-05): do projects' AI rules say whether they cover docs, READMEs, tutorials and translations, or only code?
 3. **Separate documentation repos** (graded 2026-11-07): when a project keeps its docs in a repo of their own, do that repo's contributor files show the project's AI rule?
 4. **Documentation style guides** (graded 2026-11-07): what do 19 public style guides say about writing with AI, writing for AI, and writing about AI?
 5. **Docs for AI readers** (pre-registered 2026-11-08, not graded yet): do the 56 projects with AI contribution rules serve llms.txt files, Markdown copies or robots.txt blocks to AI readers of their docs, and does that differ between projects that ban AI-made contributions and projects that allow them? See [`census/2026-11-llms-txt/PREREGISTRATION.md`](census/2026-11-llms-txt/PREREGISTRATION.md).
+
+## Agent skill: check a project's AI rule before contributing
+
+[`skills/oss-ai-contribution-rules/`](skills/oss-ai-contribution-rules/SKILL.md) is an agent skill (Agent Skills `SKILL.md` format) for coding agents such as Claude Code, Codex and Cursor. Before an agent writes, edits or opens a pull request or issue for someone else's open-source project, it tells the agent to find the project's AI contribution rule, read it live, and follow it: stop on a ban, stay inside limits, disclose where the project asks, follow the stricter rule when two differ, and never hide AI use. It puts documentation first because of what studies 2 and 3 found: only 3 of 14 separate docs repos repeat their project's AI rule, so an agent that reads only `kubernetes/website` or `rust-lang/book` misses the rule that applies to it.
+
+Its lookup script works offline (Python standard library only) on unchanged copies of study 2's and study 3's coding:
+
+```
+python skills/oss-ai-contribution-rules/scripts/ai_rules_lookup.py rust-lang/book
+python skills/oss-ai-contribution-rules/scripts/ai_rules_lookup.py https://github.com/kubernetes/website --json
+python skills/oss-ai-contribution-rules/scripts/ai_rules_lookup.py --summary
+```
+
+Install it with the open skills CLI: `npx skills add munimtechnologies/tech-writing-ai-rules --skill oss-ai-contribution-rules`. The table is a snapshot (texts read 2026-11-04 and 2026-11-07), and the skill says so: the live files always win. Tests: `python -m unittest -v test_ai_rules_skill`.
 
 ## Result 1: paid programs (census of 2026-11-02, graded 2026-11-03)
 
@@ -63,6 +77,7 @@ The frame is study 2's 56 projects with AI rules, grouped by the dataset's stanc
 - `docscope.py`: the documentation-scope tool, version 0.1.0 (standard library only), used by studies 2 and 3. It reads each frame project's CONTRIBUTING, AI_POLICY, AGENTS.md and pull request template files, the frame's source link and up to four AI-policy links. It writes `census.json`, `sentences.csv` (AI sentences with docs, code, generic and rule-word flags), `frame.csv` and `DOCSCOPE_AUTO.md`. Offline tests: `python -m unittest -v test_docscope`.
 - `guidescan.py`: the style-guide tool for study 4, version 0.1.0 (standard library only), with offline tests in `test_guidescan.py`. It reads each guide's in-scope HTML pages breadth first up to a cap, honouring robots.txt, and writes `census.json`, `sentences.csv` (AI sentences with BY, FOR, rule and term-page flags), `pages.csv`, `frame.csv` and `GUIDESCAN_AUTO.md`.
 - `llmsprobe.py`: the docs-for-AI-readers tool for study 5, version 0.1.0 (standard library only), with offline tests in `test_llmsprobe.py`. For each docs base it labels every llms.txt and llms-full.txt answer, checks Markdown on request, and matches robots.txt for 20 named AI crawlers (RFC 9309, longest match). It honours robots.txt for its own fetches and writes `census.json`, `frame.csv`, `bases.csv`, `probes.csv`, `projects.csv` and `LLMSPROBE_AUTO.md`.
+- `skills/oss-ai-contribution-rules/`: the agent skill, version 0.1.0: `SKILL.md`, `scripts/ai_rules_lookup.py` and `assets/` (unchanged copies of study 2's and study 3's `coding.csv`, plus `repo_slugs.csv`, a lookup map from each study 2 row to GitHub slugs that is not part of the studies' coding). Offline tests: `test_ai_rules_skill.py`.
 - `CHANGELOG.md`: what changed in each version.
 - `census/2026-11/`: study 1's pre-registration, result, coding, AI sentences (rows from personal author pages are left out), frame and first-pass output.
 - `census/2026-11-oss-docs/`: study 2's pre-registration, result, `coding.csv` (one row per project with its code and one short quote), frame and first-pass output. Page texts are not republished.
@@ -74,6 +89,6 @@ Run them yourself: `python programs.py --out-dir out --no-prereg-check`, `python
 
 ## Licence and disclosure
 
-Code: Apache-2.0 (see `LICENSE`). Text and data: CC BY 4.0. The program list `programs.py` reads is malgamves/CommunityWriterPrograms (MIT); only names, links and pay text are parsed from it. The project list `docscope.py` reads in study 2, and the stance labels study 5 groups by, come from awesome-ai-contribution-policies (data CC BY 4.0), used with attribution. Quoted policy and style-guide text belongs to each project or publisher.
+Code: Apache-2.0 (see `LICENSE`). Text and data: CC BY 4.0. The program list `programs.py` reads is malgamves/CommunityWriterPrograms (MIT); only names, links and pay text are parsed from it. The project list `docscope.py` reads in study 2, and the stance labels study 5 groups by and the skill reports, come from awesome-ai-contribution-policies (data CC BY 4.0), used with attribution. Quoted policy and style-guide text belongs to each project or publisher.
 
-Made by MV2 of Munim, Inc. (mv2@munimtech.com), with AI agents working in his name: the tools, the coding and this text were made with AI. Nothing here is legal advice or advice about any program, project or guide. Read the program's, project's or guide's own page before pitching or contributing.
+Made by MV2 of Munim, Inc. (mv2@munimtech.com), with AI agents working in his name: the tools, the coding, the skill and this text were made with AI. Nothing here is legal advice or advice about any program, project or guide. Read the program's, project's or guide's own page before pitching or contributing.
