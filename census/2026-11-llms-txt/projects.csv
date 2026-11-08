@@ -1,0 +1,57 @@
+id,project,group,stance,reached,serves_any,serves_llms,serves_full,spec_h1,md_negotiated,ai_block,challenge,refuses_ai_readers,ai_blocked_agents,content_signal,valid_urls,policy_url,policy_status,policy_mentions_llms
+D003,AnythingLLM,OPEN,neutral,yes,no,no,no,no,no,no,no,no,,,,https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/HEAD/CONTRIBUTING.md,200,0
+D004,Apache Airflow,OPEN,disclose-required,yes,no,no,no,no,no,no,no,no,,,,https://raw.githubusercontent.com/apache/airflow/HEAD/.github/PULL_REQUEST_TEMPLATE.md,200,0
+D006,cal.diy (Cal.com),OPEN,neutral,yes,yes,yes,yes,yes,yes,no,no,no,,"ai-train=no, search=yes, ai-input=yes",https://cal.com/docs/llms.txt https://cal.com/llms.txt https://cal.com/docs/llms-full.txt,https://raw.githubusercontent.com/calcom/cal.diy/HEAD/CONTRIBUTING.md,200,0
+D011,Coder,OPEN,disclose-required,yes,yes,yes,yes,yes,no,no,no,no,,,https://coder.com/docs/llms.txt https://coder.com/llms.txt https://coder.com/docs/llms-full.txt https://coder.com/llms-full.txt,https://raw.githubusercontent.com/coder/coder/HEAD/CONTRIBUTING.md,200,0
+D012,CPython,OPEN,disclose-encouraged,yes,no,no,no,no,no,no,no,no,,,,https://raw.githubusercontent.com/python/devguide/main/getting-started/ai-tools.rst,200,0
+D014,crewAI,OPEN,disclose-required,yes,yes,yes,yes,yes,yes,no,no,no,,"ai-train=yes, search=yes, ai-input=yes",https://docs.crewai.com/llms.txt https://docs.crewai.com/llms-full.txt,https://raw.githubusercontent.com/crewAIInc/crewAI/HEAD/.github/CONTRIBUTING.md,200,0
+D015,curl,OPEN,neutral,yes,no,no,no,no,no,no,no,no,,,,https://raw.githubusercontent.com/curl/curl/HEAD/.github/pull_request_template.md,200,0
+D016,Debian,OPEN,disclose-encouraged,yes,no,no,no,no,no,no,no,no,,,,https://www.debian.org/vote/2026/vote_002,200,0
+D018,Dify,OPEN,neutral,yes,yes,yes,yes,yes,yes,no,no,no,,"ai-train=yes, search=yes, ai-input=yes",https://docs.dify.ai/llms.txt https://docs.dify.ai/llms-full.txt,https://raw.githubusercontent.com/langgenius/dify/HEAD/CONTRIBUTING.md,200,0
+D019,Django,OPEN,disclose-required,yes,no,no,no,no,no,no,no,no,,,,https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/submitting-patches/,200,0
+D020,Documenso,OPEN,neutral,yes,yes,yes,yes,yes,no,no,no,no,,,https://docs.documenso.com/llms.txt https://docs.documenso.com/llms-full.txt,https://raw.githubusercontent.com/documenso/documenso/HEAD/CONTRIBUTING.md,200,0
+D025,Fedora,OPEN,disclose-encouraged,yes,no,no,no,no,no,no,no,no,,,,https://forge.fedoraproject.org/council/docs/src/commit/823e93b640dea2205d6df2bc51586552a52898d7/council/modules/ROOT/pages/policy/ai-contribution-policy.adoc,200,0
+D027,Formbricks,OPEN,no-policy,yes,yes,yes,yes,yes,yes,no,no,no,,,https://formbricks.com/docs/llms.txt https://formbricks.com/llms.txt https://formbricks.com/docs/llms-full.txt,https://raw.githubusercontent.com/formbricks/formbricks/HEAD/.github/pull_request_template.md,200,0
+D028,GCC,BAN,ban,yes,no,no,no,no,no,no,no,no,,,,https://gcc.gnu.org/ai-policy.html,200,0
+D029,Gemara,OPEN,encouraged,yes,no,no,no,no,no,no,no,no,,,,https://raw.githubusercontent.com/ossf/gemara/HEAD/.github/pull_request_template.md,200,0
+D030,Gentoo,BAN,ban,yes,no,no,no,no,no,yes,no,yes,Amazonbot Applebot-Extended Bytespider CCBot ChatGPT-User Claude-SearchBot Claude-User ClaudeBot Diffbot GPTBot Google-Extended OAI-SearchBot Omgilibot Perplexity-User PerplexityBot Timpibot YouBot anthropic-ai cohere-ai meta-externalagent,,,https://wiki.gentoo.org/wiki/Project:Council/AI_policy,200,0
+D031,Ghostty,OPEN,disclose-required,yes,no,no,no,no,no,no,no,no,,,,https://raw.githubusercontent.com/ghostty-org/ghostty/HEAD/AI_POLICY.md,200,0
+D032,Gitea,OPEN,encouraged,yes,no,no,no,no,no,yes,no,yes,Amazonbot Applebot-Extended Bytespider CCBot ClaudeBot Diffbot GPTBot Google-Extended anthropic-ai cohere-ai meta-externalagent,"search=yes,ai-train=no,use=reference",,https://raw.githubusercontent.com/go-gitea/gitea/HEAD/CONTRIBUTING.md,200,0
+D034,Godot Engine,BAN,ban,yes,no,no,no,no,yes,no,no,no,,,,https://raw.githubusercontent.com/godotengine/godot/HEAD/.github/PULL_REQUEST_TEMPLATE.md,200,0
+D035,Haystack,OPEN,disclose-required,yes,yes,yes,no,no,no,no,no,no,,,https://docs.haystack.deepset.ai/llms.txt,https://raw.githubusercontent.com/deepset-ai/haystack/HEAD/CONTRIBUTING.md,200,0
+D036,Home Assistant,RESTRICTED,restricted,yes,no,no,no,no,yes,no,yes,yes,,,,https://contributors.home-assistant.io/start/ai-policy/,200,0
+D037,Hono,OPEN,no-policy,yes,yes,yes,no,yes,yes,no,no,no,,,https://hono.dev/llms.txt,https://raw.githubusercontent.com/honojs/hono/HEAD/docs/CONTRIBUTING.md,200,0
+D038,Hugging Face Transformers,OPEN,disclose-required,yes,yes,yes,yes,yes,yes,no,no,no,,,https://huggingface.co/docs/transformers/llms.txt https://huggingface.co/docs/transformers/llms-full.txt,https://raw.githubusercontent.com/huggingface/transformers/HEAD/CONTRIBUTING.md,200,0
+D041,Inspect AI,OPEN,no-policy,yes,yes,yes,yes,yes,no,no,no,no,,,https://inspect.aisi.org.uk/llms.txt https://inspect.aisi.org.uk/llms-full.txt,https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_ai/HEAD/CONTRIBUTING.md,200,0
+D042,Instructor,OPEN,encouraged,yes,yes,yes,no,yes,no,no,no,no,,,https://python.useinstructor.com/llms.txt,https://raw.githubusercontent.com/567-labs/instructor/HEAD/CONTRIBUTING.md,200,0
+D043,Kubeflow,OPEN,disclose-required,yes,no,no,no,no,no,no,no,no,,,,https://www.kubeflow.org/docs/about/ai_policy/,200,0
+D044,Kubernetes,OPEN,disclose-required,yes,no,no,no,no,no,no,no,no,,,,https://www.kubernetes.dev/docs/guide/pull-requests/,200,0
+D045,LangChain,OPEN,neutral,yes,yes,yes,yes,yes,yes,no,no,no,,"ai-train=yes, search=yes, ai-input=yes",https://docs.langchain.com/llms.txt https://docs.langchain.com/llms-full.txt,https://docs.langchain.com/oss/python/contributing/overview,200,1
+D048,LangGraph,OPEN,neutral,yes,yes,yes,yes,yes,yes,no,no,no,,"ai-train=yes, search=yes, ai-input=yes",https://docs.langchain.com/llms.txt https://docs.langchain.com/llms-full.txt,https://docs.langchain.com/oss/python/contributing/overview,200,1
+D049,Linux Foundation,OPEN,neutral,yes,yes,yes,yes,yes,yes,no,no,no,,"ai-train=yes, search=yes, ai-input=yes",https://docs.linuxfoundation.org/llms.txt https://docs.linuxfoundation.org/llms-full.txt,https://www.linuxfoundation.org/legal/generative-ai,200,0
+D050,Linux kernel,OPEN,disclose-required,yes,no,no,no,no,no,no,no,no,,,,https://docs.kernel.org/process/coding-assistants.html,200,0
+D052,LlamaIndex,OPEN,neutral,yes,yes,yes,no,yes,no,no,no,no,,,https://developers.llamaindex.ai/llms.txt,https://raw.githubusercontent.com/run-llama/llama_index/HEAD/CONTRIBUTING.md,200,0
+D053,LLVM,OPEN,disclose-required,yes,no,no,no,no,no,no,no,no,,,,https://llvm.org/docs/AIToolPolicy.html,200,0
+D056,MCP Python SDK,OPEN,disclose-required,yes,yes,yes,yes,yes,no,no,no,no,,,https://py.sdk.modelcontextprotocol.io/llms.txt https://py.sdk.modelcontextprotocol.io/llms-full.txt,https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/main/AI_POLICY.md,200,0
+D058,MCP TypeScript SDK,OPEN,neutral,yes,yes,yes,yes,yes,no,no,no,no,,,https://ts.sdk.modelcontextprotocol.io/v2/llms.txt https://ts.sdk.modelcontextprotocol.io/v2/llms-full.txt,https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/HEAD/CONTRIBUTING.md,200,1
+D060,Mesa,OPEN,disclose-required,yes,no,no,no,no,no,no,no,no,,,,https://docs.mesa3d.org/submittingpatches.html,200,0
+D062,Model Context Protocol (spec),OPEN,disclose-required,yes,yes,yes,yes,yes,yes,no,no,no,,"ai-train=yes, search=yes, ai-input=yes",https://modelcontextprotocol.io/llms.txt https://modelcontextprotocol.io/llms-full.txt,https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/HEAD/AI_POLICY.md,200,0
+D063,Mozilla Firefox,OPEN,neutral,yes,no,no,no,no,no,no,no,no,,,,https://firefox-source-docs.mozilla.org/contributing/ai-coding.html,200,0
+D067,NetBSD,BAN,ban,yes,no,no,no,no,no,no,no,no,,,,https://netbsd.org/developers/commit-guidelines.html,200,0
+D068,Next.js,OPEN,neutral,yes,yes,yes,yes,yes,yes,no,no,no,,,https://nextjs.org/docs/llms.txt https://nextjs.org/llms.txt https://nextjs.org/docs/llms-full.txt,https://raw.githubusercontent.com/vercel/next.js/HEAD/.github/pull_request_template.md,200,0
+D069,Node.js,OPEN,disclose-required,yes,yes,yes,no,yes,no,no,no,no,Amazonbot Applebot-Extended Bytespider CCBot ChatGPT-User Claude-SearchBot Claude-User ClaudeBot Diffbot GPTBot Google-Extended OAI-SearchBot Omgilibot Perplexity-User PerplexityBot Timpibot YouBot anthropic-ai cohere-ai meta-externalagent,,https://nodejs.org/llms.txt,https://raw.githubusercontent.com/nodejs/node/HEAD/doc/contributing/ai-guidelines.md,200,0
+D072,Open WebUI,OPEN,neutral,yes,yes,yes,yes,yes,no,no,no,no,,,https://docs.openwebui.com/llms.txt https://docs.openwebui.com/llms-full.txt,https://raw.githubusercontent.com/open-webui/open-webui/HEAD/.github/pull_request_template.md,200,0
+D074,OpenHands,OPEN,neutral,yes,yes,yes,yes,yes,yes,no,no,no,,"ai-train=yes, search=yes, ai-input=yes",https://docs.openhands.dev/llms.txt https://docs.openhands.dev/llms-full.txt,https://raw.githubusercontent.com/OpenHands/OpenHands/HEAD/AGENTS.md,200,0
+D075,OpenJDK,BAN,ban,yes,no,no,no,no,no,no,no,no,,,,https://openjdk.org/legal/ai,200,0
+D076,PostHog,OPEN,disclose-required,yes,yes,yes,no,yes,no,no,no,no,,,https://posthog.com/llms.txt,https://raw.githubusercontent.com/PostHog/posthog/HEAD/AI_POLICY.md,200,0
+D077,posthog-js,OPEN,disclose-required,yes,yes,yes,no,yes,yes,no,no,no,,,https://posthog.com/llms.txt,https://raw.githubusercontent.com/PostHog/posthog-js/HEAD/AI_POLICY.md,200,0
+D080,Pydantic AI,OPEN,no-policy,yes,yes,yes,yes,no,yes,no,no,no,,"search=yes, ai-input=yes search=yes, ai-input=yes, ai-train=yes",https://ai.pydantic.dev/llms.txt https://ai.pydantic.dev/llms-full.txt,https://raw.githubusercontent.com/pydantic/pydantic-ai/HEAD/AGENTS.md,200,0
+D081,pytest,OPEN,disclose-required,yes,no,no,no,no,yes,no,no,no,,,,https://raw.githubusercontent.com/pytest-dev/pytest/HEAD/CONTRIBUTING.rst,200,0
+D082,QEMU,BAN,ban,yes,no,no,no,no,no,no,no,no,,,,https://www.qemu.org/docs/master/devel/code-provenance.html,200,0
+D087,Rust,RESTRICTED,restricted,yes,no,no,no,no,no,no,no,no,,,,https://raw.githubusercontent.com/rust-lang/rust/HEAD/AGENTS.md,200,0
+D088,SDL,BAN,ban,yes,no,no,no,no,no,no,no,no,,,,https://raw.githubusercontent.com/libsdl-org/SDL/HEAD/AGENTS.md,200,0
+D089,Shaka Player,OPEN,encouraged,yes,no,no,no,no,no,no,no,no,,,,https://raw.githubusercontent.com/shaka-project/shaka-player/HEAD/CONTRIBUTING.md,200,0
+D090,SQLite,BAN,ban,yes,no,no,no,no,no,no,no,no,,,,https://sqlite.org/src/doc/trunk/AGENTS.md,robots,?
+D092,Storybook,OPEN,disclose-required,yes,yes,yes,yes,yes,yes,no,no,no,,,https://storybook.js.org/llms.txt https://storybook.js.org/llms-full.txt,https://raw.githubusercontent.com/storybookjs/storybook/HEAD/CONTRIBUTING.md,200,0
+D097,tRPC,OPEN,no-policy,yes,yes,yes,yes,yes,yes,no,no,no,,,https://trpc.io/llms.txt https://trpc.io/llms-full.txt,https://raw.githubusercontent.com/trpc/trpc/HEAD/.github/PULL_REQUEST_TEMPLATE.md,200,0
+D100,vLLM,OPEN,disclose-required,yes,no,no,no,no,yes,no,no,no,,,,https://raw.githubusercontent.com/vllm-project/vllm/HEAD/AGENTS.md,200,0

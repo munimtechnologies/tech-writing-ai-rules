@@ -1,0 +1,57 @@
+id,project,group,stance,reached,serves,serves_full,spec_h1,markdown,ai_block,challenge,refuses_ai_readers,changed_from_auto,agent_instructions_in_head,content_signal_ai_train,valid_files,note
+D003,AnythingLLM,OPEN,neutral,yes,no,no,,no,no,no,no,,,,,
+D004,Apache Airflow,OPEN,disclose-required,yes,no,no,,no,no,no,no,,,,,
+D006,cal.diy (Cal.com),OPEN,neutral,yes,yes,yes,yes,yes,no,no,no,,yes,no,https://cal.com/docs/llms.txt https://cal.com/llms.txt https://cal.com/docs/llms-full.txt,"Root llms.txt redirects to the docs-folder file; root llms-full.txt is the HTML app shell (not valid). llms-full.txt opens with an agent quickstart and ""Instructions for the agent""."
+D011,Coder,OPEN,disclose-required,yes,yes,yes,yes,no,no,no,no,,,,https://coder.com/docs/llms.txt https://coder.com/llms.txt https://coder.com/docs/llms-full.txt https://coder.com/llms-full.txt,
+D012,CPython,OPEN,disclose-encouraged,yes,no,no,,no,no,no,no,,,,,
+D014,crewAI,OPEN,disclose-required,yes,yes,yes,yes,yes,no,no,no,,,yes,https://docs.crewai.com/llms.txt https://docs.crewai.com/llms-full.txt,
+D015,curl,OPEN,neutral,yes,no,no,,no,no,no,no,,,,,Two bases (curl.se/docs and everything.curl.dev); neither serves one.
+D016,Debian,OPEN,disclose-encouraged,yes,no,no,,no,no,no,no,,,,,
+D018,Dify,OPEN,neutral,yes,yes,yes,yes,yes,no,no,no,,,yes,https://docs.dify.ai/llms.txt https://docs.dify.ai/llms-full.txt,
+D019,Django,OPEN,disclose-required,yes,no,no,,no,no,no,no,,,,,Root llms.txt and llms-full.txt redirect to the HTML docs home page (not valid).
+D020,Documenso,OPEN,neutral,yes,yes,yes,yes,no,no,no,no,,,,https://docs.documenso.com/llms.txt https://docs.documenso.com/llms-full.txt,
+D025,Fedora,OPEN,disclose-encouraged,yes,no,no,,no,no,no,no,,,,,
+D027,Formbricks,OPEN,no-policy,yes,yes,yes,yes,yes,no,no,no,,,,https://formbricks.com/docs/llms.txt https://formbricks.com/llms.txt https://formbricks.com/docs/llms-full.txt,
+D028,GCC,BAN,ban,yes,no,no,,no,no,no,no,,,,,
+D029,Gemara,OPEN,encouraged,yes,no,no,,no,no,no,no,,,,,
+D030,Gentoo,BAN,ban,yes,no,no,,no,yes,no,yes,,,,,"wiki.gentoo.org robots.txt: one group of 93 named crawlers (all 20 checked) with Disallow: /; the * group excludes only search and API paths. Root llms requests redirect to the wiki Main Page (HTML). devmanual.gentoo.org has no robots.txt."
+D031,Ghostty,OPEN,disclose-required,yes,no,no,,no,no,no,no,,,,,
+D032,Gitea,OPEN,encouraged,yes,no,no,,no,yes,no,yes,,,no,,"docs.gitea.com robots.txt blocks 11 of the 20 checked agents inside a ""Cloudflare Managed content"" block; Content-Signal search=yes,ai-train=no,use=reference. Fetch-on-request agents (ChatGPT-User, Claude-User) are not blocked."
+D034,Godot Engine,BAN,ban,yes,no,no,,yes,no,no,no,,,,,Docs page answers Accept: text/markdown with Markdown.
+D035,Haystack,OPEN,disclose-required,yes,yes,no,no,no,no,no,no,,yes,,https://docs.haystack.deepset.ai/llms.txt,"llms.txt is 2.85 MB of concatenated docs source files (not an index); its first file is the docs folder's AGENTS.md, the rules for AI agents that edit the docs."
+D036,Home Assistant,RESTRICTED,restricted,yes,no,no,,yes,no,yes,yes,,,,,"challenge UNCONFIRMED: the tool matched its bot-check pattern on the HTML of www.home-assistant.io/docs/ (status 200; page text not kept), but the same URL served text/markdown on request and a later fetch got normal docs. Follow-up job llmsprobe-hacheck-v1 records the matched words. P5 holds either way. developers.home-assistant.io llms requests redirect to the contributors site's Markdown home page (not valid)."
+D037,Hono,OPEN,no-policy,yes,yes,yes,yes,yes,no,no,no,serves_full: no -> yes,,,https://hono.dev/llms.txt https://hono.dev/llms-full.txt,"llms-full.txt (text/plain, 396 links) is Hono's full docs; the tool called it html because it opens with <SYSTEM>...</SYSTEM>."
+D038,Hugging Face Transformers,OPEN,disclose-required,yes,yes,yes,yes,yes,no,no,no,,,,https://huggingface.co/docs/transformers/llms.txt https://huggingface.co/docs/transformers/llms-full.txt,
+D041,Inspect AI,OPEN,no-policy,yes,yes,yes,yes,no,no,no,no,,,,https://inspect.aisi.org.uk/llms.txt https://inspect.aisi.org.uk/llms-full.txt,
+D042,Instructor,OPEN,encouraged,yes,yes,no,yes,no,no,no,no,,,,https://python.useinstructor.com/llms.txt,
+D043,Kubeflow,OPEN,disclose-required,yes,no,no,,no,no,no,no,,,,,
+D044,Kubernetes,OPEN,disclose-required,yes,no,no,,no,no,no,no,,,,,
+D045,LangChain,OPEN,neutral,yes,yes,yes,yes,yes,no,no,no,,,yes,https://docs.langchain.com/llms.txt https://docs.langchain.com/llms-full.txt,Shares docs.langchain.com with LangGraph. Its contributing page mentions llms.txt once.
+D048,LangGraph,OPEN,neutral,yes,yes,yes,yes,yes,no,no,no,,,yes,https://docs.langchain.com/llms.txt https://docs.langchain.com/llms-full.txt,Shares docs.langchain.com with LangChain.
+D049,Linux Foundation,OPEN,neutral,yes,yes,yes,yes,yes,no,no,no,,yes,yes,https://docs.linuxfoundation.org/llms.txt https://docs.linuxfoundation.org/llms-full.txt,"LFX docs (GitBook); llms-full.txt is paginated in 5 parts and opens with ""Agent Instructions"". www.linuxfoundation.org serves none."
+D050,Linux kernel,OPEN,disclose-required,yes,no,no,,no,no,no,no,,,,,
+D052,LlamaIndex,OPEN,neutral,yes,yes,no,yes,no,no,no,no,,yes,,https://developers.llamaindex.ai/llms.txt,"Has a section ""Instructions for AI agents"". Seen in passing before the pre-registration (disclosed there)."
+D053,LLVM,OPEN,disclose-required,yes,no,no,,no,no,no,no,,,,,
+D056,MCP Python SDK,OPEN,disclose-required,yes,yes,yes,yes,no,no,no,no,,,,https://py.sdk.modelcontextprotocol.io/llms.txt https://py.sdk.modelcontextprotocol.io/llms-full.txt,
+D058,MCP TypeScript SDK,OPEN,neutral,yes,yes,yes,yes,no,no,no,no,,,,https://ts.sdk.modelcontextprotocol.io/v2/llms.txt https://ts.sdk.modelcontextprotocol.io/v2/llms-full.txt,Its CONTRIBUTING mentions llms.txt once.
+D060,Mesa,OPEN,disclose-required,yes,no,no,,no,no,no,no,,,,,
+D062,Model Context Protocol (spec),OPEN,disclose-required,yes,yes,yes,yes,yes,no,no,no,,,yes,https://modelcontextprotocol.io/llms.txt https://modelcontextprotocol.io/llms-full.txt,
+D063,Mozilla Firefox,OPEN,neutral,yes,no,no,,no,no,no,no,,,,,
+D067,NetBSD,BAN,ban,yes,no,no,,no,no,no,no,,,,,
+D068,Next.js,OPEN,neutral,yes,yes,yes,yes,yes,no,no,no,,yes,,https://nextjs.org/docs/llms.txt https://nextjs.org/llms.txt https://nextjs.org/docs/llms-full.txt,"Root llms.txt tells agents to use the site as the source of truth and to cite canonical URLs."
+D069,Node.js,OPEN,disclose-required,yes,yes,no,yes,,no,no,no,,,,https://nodejs.org/llms.txt,"robots.txt has only User-Agent: * with Disallow: /docs/, so every agent is kept out of the docs (not an AI block by the pre-registered definition) and the docs page and docs-folder files were not requested. The root llms.txt lists API pages under /docs/latest/api/, a path its robots.txt disallows for all crawlers."
+D072,Open WebUI,OPEN,neutral,yes,yes,yes,yes,no,no,no,no,,yes,,https://docs.openwebui.com/llms.txt https://docs.openwebui.com/llms-full.txt,Asks agents to cite canonical HTML URLs.
+D074,OpenHands,OPEN,neutral,yes,yes,yes,yes,yes,no,no,no,,,yes,https://docs.openhands.dev/llms.txt https://docs.openhands.dev/llms-full.txt,
+D075,OpenJDK,BAN,ban,yes,no,no,,no,no,no,no,,,,,
+D076,PostHog,OPEN,disclose-required,yes,yes,no,yes,no,no,no,no,,yes,,https://posthog.com/llms.txt,"Shares posthog.com with posthog-js. Has ""Instructions for AI Coding Assistants""."
+D077,posthog-js,OPEN,disclose-required,yes,yes,no,yes,yes,no,no,no,,yes,,https://posthog.com/llms.txt,Shares posthog.com with PostHog.
+D080,Pydantic AI,OPEN,no-policy,yes,yes,yes,no,yes,no,no,no,,yes,yes,https://ai.pydantic.dev/llms.txt https://ai.pydantic.dev/llms-full.txt,"Both files open with ""## Querying This Documentation"", which asks agents to add intent, stack and harness query parameters to every request (and never personal or confidential information)."
+D081,pytest,OPEN,disclose-required,yes,no,no,,yes,no,no,no,,,,,
+D082,QEMU,BAN,ban,yes,no,no,,no,no,no,no,,,,,
+D087,Rust,RESTRICTED,restricted,yes,no,no,,no,no,no,no,,,,,
+D088,SDL,BAN,ban,yes,no,no,,no,no,no,no,,,,,
+D089,Shaka Player,OPEN,encouraged,yes,no,no,,no,no,no,no,,,,,
+D090,SQLite,BAN,ban,yes,no,no,,no,no,no,no,,,,,Policy page not read (robots.txt).
+D092,Storybook,OPEN,disclose-required,yes,yes,yes,yes,yes,no,no,no,,,,https://storybook.js.org/llms.txt https://storybook.js.org/llms-full.txt,
+D097,tRPC,OPEN,no-policy,yes,yes,yes,yes,yes,no,no,no,,,,https://trpc.io/llms.txt https://trpc.io/llms-full.txt,
+D100,vLLM,OPEN,disclose-required,yes,no,no,,yes,no,no,no,,,,,

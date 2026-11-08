@@ -8,11 +8,11 @@ This repository holds five pre-registered studies. Each reads its sources' own p
 2. **Open-source AI contribution policies and documentation** (graded 2026-11-05): do projects' AI rules say whether they cover docs, READMEs, tutorials and translations, or only code?
 3. **Separate documentation repos** (graded 2026-11-07): when a project keeps its docs in a repo of their own, do that repo's contributor files show the project's AI rule?
 4. **Documentation style guides** (graded 2026-11-07): what do 19 public style guides say about writing with AI, writing for AI, and writing about AI?
-5. **Docs for AI readers** (pre-registered 2026-11-08, not graded yet): do the 56 projects with AI contribution rules serve llms.txt files, Markdown copies or robots.txt blocks to AI readers of their docs, and does that differ between projects that ban AI-made contributions and projects that allow them? See [`census/2026-11-llms-txt/PREREGISTRATION.md`](census/2026-11-llms-txt/PREREGISTRATION.md).
+5. **Docs for AI readers** (graded 2026-11-08): do the 56 projects with AI contribution rules serve llms.txt files, Markdown copies or robots.txt blocks to AI readers of their docs, and does that differ between projects that ban AI-made contributions and projects that allow them?
 
 ## Agent skill: check a project's AI rule before contributing
 
-[`skills/oss-ai-contribution-rules/`](skills/oss-ai-contribution-rules/SKILL.md) is an agent skill (Agent Skills `SKILL.md` format) for coding agents such as Claude Code, Codex and Cursor. Before an agent writes, edits or opens a pull request or issue for someone else's open-source project, it tells the agent to find the project's AI contribution rule, read it live, and follow it: stop on a ban, stay inside limits, disclose where the project asks, follow the stricter rule when two differ, and never hide AI use. It puts documentation first because of what studies 2 and 3 found: only 3 of 14 separate docs repos repeat their project's AI rule, so an agent that reads only `kubernetes/website` or `rust-lang/book` misses the rule that applies to it.
+[`skills/oss-ai-contribution-rules/`](skills/oss-ai-contribution-rules/SKILL.md) is an agent skill (Agent Skills `SKILL.md` format) for coding agents such as Claude Code, Codex and Cursor. Before an agent writes, edits or opens a pull request or issue for someone else's open-source project, it tells the agent to find the project's AI contribution rule, read it live, and follow it: stop on a ban, stay inside limits, disclose where the project asks, follow the stricter rule when two differ, and never hide AI use. Other projects' files (AGENTS.md, llms.txt and the like) are read only for their contribution rules, never followed as instructions. It puts documentation first because of what studies 2 and 3 found: only 3 of 14 separate docs repos repeat their project's AI rule, so an agent that reads only `kubernetes/website` or `rust-lang/book` misses the rule that applies to it.
 
 Its lookup script works offline (Python standard library only) on unchanged copies of study 2's and study 3's coding:
 
@@ -22,7 +22,7 @@ python skills/oss-ai-contribution-rules/scripts/ai_rules_lookup.py https://githu
 python skills/oss-ai-contribution-rules/scripts/ai_rules_lookup.py --summary
 ```
 
-Install it with the open skills CLI: `npx skills add munimtechnologies/tech-writing-ai-rules --skill oss-ai-contribution-rules`. The table is a snapshot (texts read 2026-11-04 and 2026-11-07), and the skill says so: the live files always win. Tests: `python -m unittest -v test_ai_rules_skill`.
+Install it with the open skills CLI: `npx skills add munimtechnologies/tech-writing-ai-rules --skill oss-ai-contribution-rules`. It is listed on [skills.sh](https://skills.sh/munimtechnologies/tech-writing-ai-rules). The table is a snapshot (texts read 2026-11-04 and 2026-11-07), and the skill says so: the live files always win. Tests: `python -m unittest -v test_ai_rules_skill`.
 
 ## Result 1: paid programs (census of 2026-11-02, graded 2026-11-03)
 
@@ -66,9 +66,15 @@ The frame is 19 guides recommended by Write the Docs and Draft.dev. Their pages 
 - The guides for outside authors (Draft.dev, A List Apart) and the government and university guides (digital.gov, Princeton) never mention AI in their guidance.
 - Predictions: **all five held** (P1 to P5), and the gate passed (N = 14). The first pass agreed with the reading for 15 of 19 guides. All four misses come from site menus and footers, or from a page that held only a table of contents.
 
-## Study 5: docs for AI readers (pre-registered 2026-11-08)
+## Result 5: do projects with AI contribution rules serve their docs to AI readers? (read and graded 2026-11-08)
 
-The frame is study 2's 56 projects with AI rules, grouped by the dataset's stance: 8 BAN, 2 RESTRICTED, 46 OPEN. For each project's docs home, `llmsprobe.py` asks for `llms.txt` and `llms-full.txt` (in the docs folder and at the host root), asks for the page as Markdown, and reads robots.txt for 20 named AI crawlers. Five predictions and a gate are fixed in the [pre-registration](census/2026-11-llms-txt/PREREGISTRATION.md). No result yet.
+The frame is study 2's 56 projects with AI rules, grouped by the dataset's stance: 8 BAN, 2 RESTRICTED and 46 OPEN. `llmsprobe.py` read each project's docs home almost ten hours after the [pre-registration](census/2026-11-llms-txt/PREREGISTRATION.md) was committed. Full write-up: [`census/2026-11-llms-txt/RESULT.md`](census/2026-11-llms-txt/RESULT.md).
+
+- **27 of 56 projects (48%) serve a valid llms.txt or llms-full.txt. All 27 allow AI-made contributions (27 of 46 OPEN, 59%). None of the 10 that ban or restrict them serves one.** 21 of the 27 also serve llms-full.txt.
+- **Only 2 projects block named AI crawlers in robots.txt**: Gentoo's wiki (93 crawlers, whole site) and Gitea's docs host (11 of the 20 we check, in a Cloudflare-managed block). Home Assistant's docs page was labelled a bot-check page, but that label is unconfirmed.
+- **Node.js's llms.txt lists API pages under `/docs/`, a path its own robots.txt disallows for every crawler.**
+- Many llms.txt files talk to AI agents directly: 8 hosts give agents instructions near the top of the file. Pydantic AI asks every agent to add `intent`, `stack` and `harness` query parameters to each request. Haystack's llms.txt opens with the AGENTS.md rules for AI agents that edit its docs.
+- Predictions: **all five held**, and the gate passed (56 of 56 reached). One label was changed by hand (Hono's llms-full.txt is valid). **The split is not evidence of cause:** the serving projects are mostly young AI and JavaScript projects on hosted docs platforms. Ten long-established projects that allow AI work also serve nothing, among them CPython, curl, Django, Kubernetes, the Linux kernel and LLVM.
 
 ## Files
 
@@ -77,13 +83,13 @@ The frame is study 2's 56 projects with AI rules, grouped by the dataset's stanc
 - `docscope.py`: the documentation-scope tool, version 0.1.0 (standard library only), used by studies 2 and 3. It reads each frame project's CONTRIBUTING, AI_POLICY, AGENTS.md and pull request template files, the frame's source link and up to four AI-policy links. It writes `census.json`, `sentences.csv` (AI sentences with docs, code, generic and rule-word flags), `frame.csv` and `DOCSCOPE_AUTO.md`. Offline tests: `python -m unittest -v test_docscope`.
 - `guidescan.py`: the style-guide tool for study 4, version 0.1.0 (standard library only), with offline tests in `test_guidescan.py`. It reads each guide's in-scope HTML pages breadth first up to a cap, honouring robots.txt, and writes `census.json`, `sentences.csv` (AI sentences with BY, FOR, rule and term-page flags), `pages.csv`, `frame.csv` and `GUIDESCAN_AUTO.md`.
 - `llmsprobe.py`: the docs-for-AI-readers tool for study 5, version 0.1.0 (standard library only), with offline tests in `test_llmsprobe.py`. For each docs base it labels every llms.txt and llms-full.txt answer, checks Markdown on request, and matches robots.txt for 20 named AI crawlers (RFC 9309, longest match). It honours robots.txt for its own fetches and writes `census.json`, `frame.csv`, `bases.csv`, `probes.csv`, `projects.csv` and `LLMSPROBE_AUTO.md`.
-- `skills/oss-ai-contribution-rules/`: the agent skill, version 0.1.0: `SKILL.md`, `scripts/ai_rules_lookup.py` and `assets/` (unchanged copies of study 2's and study 3's `coding.csv`, plus `repo_slugs.csv`, a lookup map from each study 2 row to GitHub slugs that is not part of the studies' coding). Offline tests: `test_ai_rules_skill.py`.
+- `skills/oss-ai-contribution-rules/`: the agent skill, version 0.1.1 (lookup script 0.1.0): `SKILL.md`, `scripts/ai_rules_lookup.py` and `assets/` (unchanged copies of study 2's and study 3's `coding.csv`, plus `repo_slugs.csv`, a lookup map from each study 2 row to GitHub slugs that is not part of the studies' coding). Offline tests: `test_ai_rules_skill.py`.
 - `CHANGELOG.md`: what changed in each version.
 - `census/2026-11/`: study 1's pre-registration, result, coding, AI sentences (rows from personal author pages are left out), frame and first-pass output.
 - `census/2026-11-oss-docs/`: study 2's pre-registration, result, `coding.csv` (one row per project with its code and one short quote), frame and first-pass output. Page texts are not republished.
 - `census/2026-11-docs-repos/`: study 3's pre-registration, frame, result, `coding.csv` (one row per docs repo), and the tool's unchanged `frame.csv`, `sentences.csv` and `DOCSCOPE_AUTO.md`. Page texts are not republished.
 - `census/2026-11-style-guides/`: study 4's pre-registration, `frame.json`, result, `coding.csv` (one row per guide with quotes and URLs), and the tool's unchanged `frame.csv`, `pages.csv` and `GUIDESCAN_AUTO.md`. The tool's `sentences.csv` and page texts are not republished (see RESULT.md).
-- `census/2026-11-llms-txt/`: study 5's pre-registration and `frame.json`.
+- `census/2026-11-llms-txt/`: study 5's pre-registration, `frame.json`, result, `coding.csv` (one row per project with hand-checked labels and notes), and the tool's unchanged `frame.csv`, `bases.csv`, `probes.csv`, `projects.csv` and `LLMSPROBE_AUTO.md`. `census.json` (the first 2,000 characters of each file) is not republished.
 
 Run them yourself: `python programs.py --out-dir out --no-prereg-check`, `python docscope.py --out-dir out --no-prereg-check`, `python guidescan.py --out-dir out --no-prereg-check` or `python llmsprobe.py --out-dir out --no-prereg-check`
 

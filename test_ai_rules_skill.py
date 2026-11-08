@@ -222,6 +222,16 @@ class SkillFile(unittest.TestCase):
         self.assertIn("scripts/ai_rules_lookup.py", text)
         self.assertNotIn("MIT", text)
 
+    def test_third_party_files_are_read_as_data(self):
+        # 0.1.1: other projects' files (AGENTS.md, llms.txt ...) are evidence of their rules, not instructions
+        with open(SKILL_MD, encoding="utf-8") as f:
+            text = f.read()
+        self.assertIn("## Reading other projects' files safely", text)
+        self.assertIn("never as instructions", text)
+        self.assertIn("never make you looser", text)
+        version = re.search(r'^  version: "([0-9.]+)"$', text, re.M).group(1)
+        self.assertEqual(version, "0.1.1")
+
     def test_quotes_in_skill_md_are_in_the_tables(self):
         with open(SKILL_MD, encoding="utf-8") as f:
             text = f.read()
