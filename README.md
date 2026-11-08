@@ -2,12 +2,13 @@
 
 What do the people who pay for or accept technical writing say about AI?
 
-This repository holds four pre-registered studies. Each reads its sources' own pages, keeps every AI sentence word for word, and codes them against a rubric fixed in advance.
+This repository holds five pre-registered studies. Each reads its sources' own pages, keeps every AI sentence or answer as found, and codes them against a rubric fixed in advance.
 
 1. **Paid technical-writing programs** (graded 2026-11-03): many software companies and developer publications pay $100 to $900 per tutorial or how-to. Community lists give each program's pay and topics, but not its rule on AI-written or AI-assisted work.
 2. **Open-source AI contribution policies and documentation** (graded 2026-11-05): do projects' AI rules say whether they cover docs, READMEs, tutorials and translations, or only code?
 3. **Separate documentation repos** (graded 2026-11-07): when a project keeps its docs in a repo of their own, do that repo's contributor files show the project's AI rule?
 4. **Documentation style guides** (graded 2026-11-07): what do 19 public style guides say about writing with AI, writing for AI, and writing about AI?
+5. **Docs for AI readers** (pre-registered 2026-11-08, not graded yet): do the 56 projects with AI contribution rules serve llms.txt files, Markdown copies or robots.txt blocks to AI readers of their docs, and does that differ between projects that ban AI-made contributions and projects that allow them? See [`census/2026-11-llms-txt/PREREGISTRATION.md`](census/2026-11-llms-txt/PREREGISTRATION.md).
 
 ## Result 1: paid programs (census of 2026-11-02, graded 2026-11-03)
 
@@ -51,22 +52,28 @@ The frame is 19 guides recommended by Write the Docs and Draft.dev. Their pages 
 - The guides for outside authors (Draft.dev, A List Apart) and the government and university guides (digital.gov, Princeton) never mention AI in their guidance.
 - Predictions: **all five held** (P1 to P5), and the gate passed (N = 14). The first pass agreed with the reading for 15 of 19 guides. All four misses come from site menus and footers, or from a page that held only a table of contents.
 
+## Study 5: docs for AI readers (pre-registered 2026-11-08)
+
+The frame is study 2's 56 projects with AI rules, grouped by the dataset's stance: 8 BAN, 2 RESTRICTED, 46 OPEN. For each project's docs home, `llmsprobe.py` asks for `llms.txt` and `llms-full.txt` (in the docs folder and at the host root), asks for the page as Markdown, and reads robots.txt for 20 named AI crawlers. Five predictions and a gate are fixed in the [pre-registration](census/2026-11-llms-txt/PREREGISTRATION.md). No result yet.
+
 ## Files
 
 - `programs.py`: the paid-programs census tool (Python standard library only), version 0.1.1. It parses the pinned list, waits until the pre-registration is on `main`, then fetches each program's page and up to five same-site guideline, FAQ or policy pages. It writes `census.json`, `sentences.csv` (AI sentences), `status.csv` (status and pay sentences), `frame.csv` and `CENSUS_AUTO.md` (a deterministic first-pass label, plus redirect, detector and closed-notice flags).
 - `test_programs.py`: offline tests (`python -m unittest -v test_programs`).
 - `docscope.py`: the documentation-scope tool, version 0.1.0 (standard library only), used by studies 2 and 3. It reads each frame project's CONTRIBUTING, AI_POLICY, AGENTS.md and pull request template files, the frame's source link and up to four AI-policy links. It writes `census.json`, `sentences.csv` (AI sentences with docs, code, generic and rule-word flags), `frame.csv` and `DOCSCOPE_AUTO.md`. Offline tests: `python -m unittest -v test_docscope`.
 - `guidescan.py`: the style-guide tool for study 4, version 0.1.0 (standard library only), with offline tests in `test_guidescan.py`. It reads each guide's in-scope HTML pages breadth first up to a cap, honouring robots.txt, and writes `census.json`, `sentences.csv` (AI sentences with BY, FOR, rule and term-page flags), `pages.csv`, `frame.csv` and `GUIDESCAN_AUTO.md`.
+- `llmsprobe.py`: the docs-for-AI-readers tool for study 5, version 0.1.0 (standard library only), with offline tests in `test_llmsprobe.py`. For each docs base it labels every llms.txt and llms-full.txt answer, checks Markdown on request, and matches robots.txt for 20 named AI crawlers (RFC 9309, longest match). It honours robots.txt for its own fetches and writes `census.json`, `frame.csv`, `bases.csv`, `probes.csv`, `projects.csv` and `LLMSPROBE_AUTO.md`.
 - `CHANGELOG.md`: what changed in each version.
 - `census/2026-11/`: study 1's pre-registration, result, coding, AI sentences (rows from personal author pages are left out), frame and first-pass output.
 - `census/2026-11-oss-docs/`: study 2's pre-registration, result, `coding.csv` (one row per project with its code and one short quote), frame and first-pass output. Page texts are not republished.
 - `census/2026-11-docs-repos/`: study 3's pre-registration, frame, result, `coding.csv` (one row per docs repo), and the tool's unchanged `frame.csv`, `sentences.csv` and `DOCSCOPE_AUTO.md`. Page texts are not republished.
 - `census/2026-11-style-guides/`: study 4's pre-registration, `frame.json`, result, `coding.csv` (one row per guide with quotes and URLs), and the tool's unchanged `frame.csv`, `pages.csv` and `GUIDESCAN_AUTO.md`. The tool's `sentences.csv` and page texts are not republished (see RESULT.md).
+- `census/2026-11-llms-txt/`: study 5's pre-registration and `frame.json`.
 
-Run them yourself: `python programs.py --out-dir out --no-prereg-check`, `python docscope.py --out-dir out --no-prereg-check` or `python guidescan.py --out-dir out --no-prereg-check`
+Run them yourself: `python programs.py --out-dir out --no-prereg-check`, `python docscope.py --out-dir out --no-prereg-check`, `python guidescan.py --out-dir out --no-prereg-check` or `python llmsprobe.py --out-dir out --no-prereg-check`
 
 ## Licence and disclosure
 
-Code: Apache-2.0 (see `LICENSE`). Text and data: CC BY 4.0. The program list `programs.py` reads is malgamves/CommunityWriterPrograms (MIT); only names, links and pay text are parsed from it. The project list `docscope.py` reads in study 2 is awesome-ai-contribution-policies (data CC BY 4.0), used with attribution. Quoted policy and style-guide text belongs to each project or publisher.
+Code: Apache-2.0 (see `LICENSE`). Text and data: CC BY 4.0. The program list `programs.py` reads is malgamves/CommunityWriterPrograms (MIT); only names, links and pay text are parsed from it. The project list `docscope.py` reads in study 2, and the stance labels study 5 groups by, come from awesome-ai-contribution-policies (data CC BY 4.0), used with attribution. Quoted policy and style-guide text belongs to each project or publisher.
 
 Made by MV2 of Munim, Inc. (mv2@munimtech.com), with AI agents working in his name: the tools, the coding and this text were made with AI. Nothing here is legal advice or advice about any program, project or guide. Read the program's, project's or guide's own page before pitching or contributing.

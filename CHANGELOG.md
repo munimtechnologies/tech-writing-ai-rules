@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased (2026-11-08): study 5 pre-registered
+
+- **New tool, `llmsprobe.py` 0.1.0**, with offline tests in `test_llmsprobe.py` (standard library only). For each documentation base in a frame it reads the base page (noting bot-check pages), asks for it again as Markdown, asks for `llms.txt` and `llms-full.txt` in the base's folder and at the host root, and labels each answer (valid, html, challenge, redirected, missing, short, unstructured, error, robots). It reads robots.txt of the host the docs land on and records which of 20 named AI crawlers may not fetch the docs page while an agent without a group of its own may, using RFC 9309 / Google-style matching (own group else `*`, longest rule, Allow wins a tie), plus any Content-Signal lines. It honours robots.txt for its own fetches and computes the pre-registered gate and predictions from its labels.
+- **Study 5 is pre-registered** in `census/2026-11-llms-txt/` (frame of 56 projects from study 2, grouped BAN / RESTRICTED / OPEN by the dataset's stance; five predictions and a gate). The tool waits until the pre-registration is on `main`. Not graded yet.
+- No other tool changed: `programs.py` stays at 0.1.1, and `docscope.py` and `guidescan.py` at 0.1.0.
+
 ## 0.5.0 (2026-11-07): study 4 graded
 
 - **Result of study 4** in `census/2026-11-style-guides/RESULT.md`. Of 19 public documentation style guides, 14 could be read. Only 3 say anything about writing with AI: GitLab and Intuit allow it with a check, Microsoft's word list recommends learning to prompt, and none bans it. 4 give advice on writing for AI (LLMs, AI search, AI crawlers, chatbots), and 7 have a rule on writing AI terms. All five predictions held, and the gate passed (N = 14). The release adds `coding.csv` (BY, FOR and ABOUT per guide, first-pass agreement, borderline flags, verbatim quotes of at most 300 characters with URLs) and the tool's unchanged `frame.csv`, `pages.csv` and `GUIDESCAN_AUTO.md`.
