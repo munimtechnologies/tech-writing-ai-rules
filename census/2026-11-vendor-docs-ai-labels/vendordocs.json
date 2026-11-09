@@ -1,0 +1,1280 @@
+{
+ "meta": {
+  "version": "0.1.0",
+  "started": "2026-11-09T15:34:39Z",
+  "settings": {
+   "per_site": 30,
+   "want_urls": 2000,
+   "max_sitemaps": 25
+  },
+  "prereg": {
+   "committed_at": "2026-11-09T09:43:25Z",
+   "sha": "97e5ca8a03eb29a52a045d9c621f43e5ee8656f8",
+   "error": null,
+   "waited_seconds": 0
+  },
+  "finished": "2026-11-09T16:23:39Z"
+ },
+ "summary": {
+  "sites": 20,
+  "readable_sites": 18,
+  "pages_sampled": 571,
+  "pages_readable": 537,
+  "pages_counted": 536,
+  "gates": {
+   "G1": {
+    "readable_sites": 18,
+    "passed": true
+   },
+   "G2": {
+    "passed": true
+   },
+   "G3": {
+    "passed": true
+   }
+  },
+  "predictions": {
+   "P1": {
+    "k": 0,
+    "n": 18,
+    "value_pct": 0.0,
+    "held": true
+   },
+   "P2": {
+    "k": 0,
+    "n": 18,
+    "value_pct": 0.0,
+    "held": true
+   },
+   "P3": {
+    "k": 0,
+    "n": 536,
+    "value_pct": 0.0,
+    "held": true
+   },
+   "P4": {
+    "k": 14,
+    "n": 20,
+    "value_pct": 70.0,
+    "held": true
+   },
+   "P5": {
+    "k": 13,
+    "n": 18,
+    "value_pct": 72.22,
+    "held": true
+   },
+   "P6": {
+    "k": null,
+    "n": 20,
+    "value_pct": null,
+    "held": null,
+    "note": "graded by hand"
+   }
+  },
+  "md_header_keys_by_sites": {
+   "title": 7,
+   "description": 5,
+   "url": 2,
+   "last_updated": 2,
+   "product": 2,
+   "image": 1,
+   "breadcrumbs": 1,
+   "source": 1,
+   "related": 1,
+   "prerequisites": 1,
+   "type": 1,
+   "install_vercel_plugin": 1,
+   "summary": 1,
+   "canonical_url": 1
+  },
+  "labels": {},
+  "note_texts": {},
+  "controls": [
+   {
+    "site": "control-md",
+    "url": "https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app",
+    "final_url": "https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app",
+    "html_status": 200,
+    "html_ctype": "text/html",
+    "readable": true,
+    "blocked": false,
+    "html_ai_key": "ai-usage",
+    "html_ai_value": "ai-assisted",
+    "note_html": false,
+    "note_html_text": "",
+    "note_raw_html": false,
+    "raw_label": false,
+    "md_accept_status": 200,
+    "md_accept": true,
+    "md_suffix_status": 404,
+    "md_suffix": false,
+    "md_ai_key": "ai-usage",
+    "md_ai_value": "ai-assisted",
+    "md_keys": "layout title canonicalUrl uhfHeaderId breadcrumb_path feedback_system feedback_product_url author ms.author ms.service description manager ms.custom ms.date ms.topic ai-usage locale document_id document_version_independent_id updated_at original_content_git_url gitcommit git_commit_id site_name depot_name page_type toc_rel feedback_help_link_type feedback_help_link_url word_count",
+    "note_md": false,
+    "note_md_text": "",
+    "control": "control-md"
+   },
+   {
+    "site": "control-note",
+    "url": "https://devblogs.microsoft.com/performance-diagnostics/introducing-windbg-mcp-debug-with-natural-language-grounded-in-evidence/",
+    "final_url": "https://devblogs.microsoft.com/performance-diagnostics/introducing-windbg-mcp-debug-with-natural-language-grounded-in-evidence/",
+    "html_status": 200,
+    "html_ctype": "text/html; charset=UTF-8",
+    "readable": true,
+    "blocked": false,
+    "html_ai_key": "",
+    "html_ai_value": "",
+    "note_html": true,
+    "note_html_text": "AI-assisted content.",
+    "note_raw_html": true,
+    "raw_label": false,
+    "md_accept_status": 200,
+    "md_accept": false,
+    "md_suffix_status": 404,
+    "md_suffix": false,
+    "md_ai_key": "",
+    "md_ai_value": "",
+    "md_keys": "",
+    "note_md": false,
+    "note_md_text": "",
+    "control": "control-note"
+   }
+  ]
+ },
+ "sites": [
+  {
+   "id": "docker",
+   "name": "Docker",
+   "so": "Docker",
+   "root": "https://docs.docker.com/",
+   "robots_status": 200,
+   "content_signal": "ai-train=yes, search=yes, ai-input=yes",
+   "method": "sitemap",
+   "sitemaps_read": 1,
+   "pool": 2176,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://docs.docker.com/llms.txt",
+   "llms_full": true,
+   "md_pages": 30,
+   "md_accept_pages": 30,
+   "md_suffix_pages": 30,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "npm",
+   "name": "npm",
+   "so": "npm",
+   "root": "https://docs.npmjs.com/",
+   "robots_status": 404,
+   "content_signal": "",
+   "method": "crawl",
+   "sitemaps_read": 2,
+   "pool": 216,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": false,
+   "llms_url": "",
+   "llms_full": false,
+   "md_pages": 0,
+   "md_accept_pages": 0,
+   "md_suffix_pages": 0,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "aws",
+   "name": "Amazon Web Services",
+   "so": "Amazon Web Services (AWS)",
+   "root": "https://docs.aws.amazon.com/",
+   "robots_status": 200,
+   "content_signal": "",
+   "method": "sitemap",
+   "sitemaps_read": 25,
+   "pool": 678,
+   "sampled": 30,
+   "readable": 28,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://docs.aws.amazon.com/llms.txt",
+   "llms_full": true,
+   "md_pages": 28,
+   "md_accept_pages": 28,
+   "md_suffix_pages": 28,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "gcloud",
+   "name": "Google Cloud",
+   "so": "Google Cloud",
+   "root": "https://cloud.google.com/docs",
+   "robots_status": 200,
+   "content_signal": "",
+   "method": "crawl",
+   "sitemaps_read": 25,
+   "pool": 1103,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": false,
+   "llms_url": "",
+   "llms_full": false,
+   "md_pages": 30,
+   "md_accept_pages": 30,
+   "md_suffix_pages": 30,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "cloudflare",
+   "name": "Cloudflare",
+   "so": "Cloudflare",
+   "root": "https://developers.cloudflare.com/",
+   "robots_status": 200,
+   "content_signal": "ai-train=yes, search=yes, ai-input=yes",
+   "method": "sitemap",
+   "sitemaps_read": 4,
+   "pool": 9044,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://developers.cloudflare.com/llms.txt",
+   "llms_full": false,
+   "md_pages": 30,
+   "md_accept_pages": 30,
+   "md_suffix_pages": 0,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "terraform",
+   "name": "Terraform (HashiCorp)",
+   "so": "Terraform",
+   "root": "https://developer.hashicorp.com/terraform",
+   "robots_status": 200,
+   "content_signal": "",
+   "method": "sitemap",
+   "sitemaps_read": 5,
+   "pool": 1864,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": false,
+   "llms_url": "",
+   "llms_full": false,
+   "md_pages": 0,
+   "md_accept_pages": 0,
+   "md_suffix_pages": 0,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "firebase",
+   "name": "Firebase",
+   "so": "Firebase",
+   "root": "https://firebase.google.com/docs",
+   "robots_status": 200,
+   "content_signal": "",
+   "method": "crawl",
+   "sitemaps_read": 5,
+   "pool": 6361,
+   "sampled": 30,
+   "readable": 28,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://firebase.google.com/docs/llms.txt",
+   "llms_full": false,
+   "md_pages": 28,
+   "md_accept_pages": 28,
+   "md_suffix_pages": 28,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "ansible",
+   "name": "Ansible",
+   "so": "Ansible",
+   "root": "https://docs.ansible.com/",
+   "robots_status": 200,
+   "content_signal": "",
+   "method": "sitemap",
+   "sitemaps_read": 3,
+   "pool": 11545,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": false,
+   "llms_url": "",
+   "llms_full": false,
+   "md_pages": 30,
+   "md_accept_pages": 30,
+   "md_suffix_pages": 0,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "chocolatey",
+   "name": "Chocolatey",
+   "so": "Chocolatey",
+   "root": "https://docs.chocolatey.org/",
+   "robots_status": 200,
+   "content_signal": "search=yes,ai-train=no,use=reference",
+   "method": "crawl",
+   "sitemaps_read": 2,
+   "pool": 456,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": false,
+   "llms_url": "",
+   "llms_full": false,
+   "md_pages": 0,
+   "md_accept_pages": 0,
+   "md_suffix_pages": 0,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "digitalocean",
+   "name": "DigitalOcean",
+   "so": "Digital Ocean",
+   "root": "https://docs.digitalocean.com/",
+   "robots_status": 200,
+   "content_signal": "ai-train=yes, search=yes, ai-input=yes",
+   "method": "sitemap",
+   "sitemaps_read": 2,
+   "pool": 7186,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://docs.digitalocean.com/llms.txt",
+   "llms_full": true,
+   "md_pages": 29,
+   "md_accept_pages": 0,
+   "md_suffix_pages": 29,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "vercel",
+   "name": "Vercel",
+   "so": "Vercel",
+   "root": "https://vercel.com/docs",
+   "robots_status": 200,
+   "content_signal": "",
+   "method": "sitemap",
+   "sitemaps_read": 2,
+   "pool": 2505,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://vercel.com/llms.txt",
+   "llms_full": true,
+   "md_pages": 30,
+   "md_accept_pages": 30,
+   "md_suffix_pages": 30,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "datadog",
+   "name": "Datadog",
+   "so": "Datadog",
+   "root": "https://docs.datadoghq.com/",
+   "robots_status": 200,
+   "content_signal": "",
+   "method": "sitemap",
+   "sitemaps_read": 6,
+   "pool": 16281,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://docs.datadoghq.com/llms.txt",
+   "llms_full": false,
+   "md_pages": 30,
+   "md_accept_pages": 30,
+   "md_suffix_pages": 30,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "netlify",
+   "name": "Netlify",
+   "so": "Netlify",
+   "root": "https://docs.netlify.com/",
+   "robots_status": 200,
+   "content_signal": "search=yes, ai-input=yes, ai-train=yes",
+   "method": "sitemap",
+   "sitemaps_read": 2,
+   "pool": 424,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://docs.netlify.com/llms.txt",
+   "llms_full": false,
+   "md_pages": 30,
+   "md_accept_pages": 30,
+   "md_suffix_pages": 30,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "supabase",
+   "name": "Supabase",
+   "so": "Supabase",
+   "root": "https://supabase.com/docs",
+   "robots_status": 200,
+   "content_signal": "ai-train=yes, search=yes, ai-input=yes",
+   "method": "sitemap",
+   "sitemaps_read": 1,
+   "pool": 2548,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://supabase.com/llms.txt",
+   "llms_full": true,
+   "md_pages": 11,
+   "md_accept_pages": 11,
+   "md_suffix_pages": 11,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "heroku",
+   "name": "Heroku",
+   "so": "Heroku",
+   "root": "https://devcenter.heroku.com/",
+   "robots_status": 200,
+   "content_signal": "",
+   "method": "sitemap",
+   "sitemaps_read": 2,
+   "pool": 821,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://devcenter.heroku.com/llms.txt",
+   "llms_full": false,
+   "md_pages": 30,
+   "md_accept_pages": 0,
+   "md_suffix_pages": 30,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "splunk",
+   "name": "Splunk",
+   "so": "Splunk",
+   "root": "https://help.splunk.com/",
+   "robots_status": 302,
+   "content_signal": "",
+   "method": "sitemap",
+   "sitemaps_read": 3,
+   "pool": 7005,
+   "sampled": 30,
+   "readable": 0,
+   "blocked": 30,
+   "llms_txt": false,
+   "llms_url": "",
+   "llms_full": false,
+   "md_pages": 0,
+   "md_accept_pages": 0,
+   "md_suffix_pages": 0,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "newrelic",
+   "name": "New Relic",
+   "so": "New Relic",
+   "root": "https://docs.newrelic.com/",
+   "robots_status": 200,
+   "content_signal": "",
+   "method": "sitemap",
+   "sitemaps_read": 5,
+   "pool": 7778,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://docs.newrelic.com/llms.txt",
+   "llms_full": false,
+   "md_pages": 29,
+   "md_accept_pages": 0,
+   "md_suffix_pages": 29,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "railway",
+   "name": "Railway",
+   "so": "Railway",
+   "root": "https://docs.railway.com/",
+   "robots_status": 200,
+   "content_signal": "search=yes, ai-input=yes, ai-train=yes",
+   "method": "sitemap",
+   "sitemaps_read": 3,
+   "pool": 288,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://docs.railway.com/llms.txt",
+   "llms_full": true,
+   "md_pages": 30,
+   "md_accept_pages": 30,
+   "md_suffix_pages": 30,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "ibmcloud",
+   "name": "IBM Cloud",
+   "so": "IBM Cloud",
+   "root": "https://cloud.ibm.com/docs",
+   "robots_status": 200,
+   "content_signal": "ai-train=yes, search=yes, ai-input=yes",
+   "method": "crawl",
+   "sitemaps_read": 25,
+   "pool": 1,
+   "sampled": 1,
+   "readable": 1,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://cloud.ibm.com/docs/llms.txt",
+   "llms_full": false,
+   "md_pages": 0,
+   "md_accept_pages": 0,
+   "md_suffix_pages": 0,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  },
+  {
+   "id": "yandex",
+   "name": "Yandex Cloud",
+   "so": "Yandex Cloud",
+   "root": "https://yandex.cloud/en/docs",
+   "robots_status": 200,
+   "content_signal": "",
+   "method": "sitemap",
+   "sitemaps_read": 4,
+   "pool": 13945,
+   "sampled": 30,
+   "readable": 30,
+   "blocked": 0,
+   "llms_txt": true,
+   "llms_url": "https://yandex.cloud/llms.txt",
+   "llms_full": false,
+   "md_pages": 0,
+   "md_accept_pages": 0,
+   "md_suffix_pages": 0,
+   "label_pages": 0,
+   "note_pages": 0,
+   "raw_note_pages": 0
+  }
+ ],
+ "sitemap_logs": {
+  "docker": [
+   [
+    "https://docs.docker.com/sitemap.xml",
+    "urlset",
+    2176
+   ]
+  ],
+  "npm": [
+   [
+    "https://docs.npmjs.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://docs.npmjs.com/sitemap.xml",
+    404
+   ],
+   [
+    "crawl",
+    216
+   ]
+  ],
+  "aws": [
+   [
+    "https://docs.aws.amazon.com/sitemap_index.xml",
+    "index",
+    13780
+   ],
+   [
+    "https://docs.aws.amazon.com/sitemap.xml",
+    404
+   ],
+   [
+    "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/sitemap.xml",
+    "urlset",
+    92
+   ],
+   [
+    "https://docs.aws.amazon.com/id_id/speke/latest/documentation/sitemap.xml",
+    "urlset",
+    34
+   ],
+   [
+    "https://docs.aws.amazon.com/ko_kr/reference-architecture-diagrams/latest/migration-mongodb-documentdb/sitemap.xml",
+    "urlset",
+    3
+   ],
+   [
+    "https://docs.aws.amazon.com/zh_cn/workdocs/latest/userguide/sitemap.xml",
+    "urlset",
+    108
+   ],
+   [
+    "https://docs.aws.amazon.com/zh_cn/documentdb/latest/devguide/sitemap.xml",
+    "urlset",
+    526
+   ],
+   [
+    "https://docs.aws.amazon.com/zh_cn/reference-architecture-diagrams/latest/migration-mongodb-documentdb/sitemap.xml",
+    "urlset",
+    3
+   ],
+   [
+    "https://docs.aws.amazon.com/documentation/latest/databases-on-aws-how-to-choose/sitemap.xml",
+    "not a sitemap",
+    0
+   ],
+   [
+    "https://docs.aws.amazon.com/it_it/speke/latest/documentation/sitemap.xml",
+    "urlset",
+    34
+   ],
+   [
+    "https://docs.aws.amazon.com/pt_br/workdocs/latest/adminguide/sitemap.xml",
+    "urlset",
+    55
+   ],
+   [
+    "https://docs.aws.amazon.com/id_id/documentdb/latest/developerguide/sitemap.xml",
+    "urlset",
+    526
+   ],
+   [
+    "https://docs.aws.amazon.com/zh_cn/workdocs/latest/developerguide/sitemap.xml",
+    "urlset",
+    19
+   ],
+   [
+    "https://docs.aws.amazon.com/zh_tw/reference-architecture-diagrams/latest/migration-mongodb-documentdb/sitemap.xml",
+    "urlset",
+    3
+   ],
+   [
+    "https://docs.aws.amazon.com/ko_kr/workdocs/latest/userguide/sitemap.xml",
+    "urlset",
+    108
+   ],
+   [
+    "https://docs.aws.amazon.com/solutions/querying-sustainability-documents-using-generative-ai-for-esg-reporting-on-aws/site_map/sitemap.xml",
+    "urlset",
+    1
+   ],
+   [
+    "https://docs.aws.amazon.com/zh_tw/workdocs/latest/userguide/sitemap.xml",
+    "urlset",
+    108
+   ],
+   [
+    "https://docs.aws.amazon.com/ko_kr/documentdb/latest/developerguide/sitemap.xml",
+    "urlset",
+    526
+   ],
+   [
+    "https://docs.aws.amazon.com/pt_br/workdocs/latest/userguide/sitemap.xml",
+    "urlset",
+    108
+   ],
+   [
+    "https://docs.aws.amazon.com/sdk-for-ruby/aws-record/api/doc/sitemap.xml",
+    "urlset",
+    59
+   ],
+   [
+    "https://docs.aws.amazon.com/fr_fr/workdocs/latest/developerguide/sitemap.xml",
+    "urlset",
+    19
+   ],
+   [
+    "https://docs.aws.amazon.com/fr_fr/documentdb/latest/devguide/sitemap.xml",
+    "urlset",
+    526
+   ],
+   [
+    "https://docs.aws.amazon.com/de_de/reference-architecture-diagrams/latest/migration-mongodb-documentdb/sitemap.xml",
+    "urlset",
+    3
+   ],
+   [
+    "https://docs.aws.amazon.com/documentdb/latest/devguide/sitemap.xml",
+    "urlset",
+    526
+   ],
+   [
+    "https://docs.aws.amazon.com/pt_br/awsconsolehelpdocs/latest/gsg/sitemap.xml",
+    "urlset",
+    92
+   ]
+  ],
+  "gcloud": [
+   [
+    "https://cloud.google.com/docs/sitemap.xml",
+    404
+   ],
+   [
+    "https://cloud.google.com/sitemap_index.xml",
+    "not a sitemap",
+    0
+   ],
+   [
+    "https://cloud.google.com/sitemapindex.xml",
+    "index",
+    4
+   ],
+   [
+    "https://cloud.google.com/transform/sitemapsummary/transform",
+    "index",
+    112
+   ],
+   [
+    "https://cloud.google.com/transform/sitemapsummary/cloudblog",
+    "index",
+    1078
+   ],
+   [
+    "https://cloud.google.com/transform/sitemapsummarylanding/cloudblog",
+    "index",
+    5
+   ],
+   [
+    "https://cloud.google.com/cgc/sitemapindex.xml",
+    "index",
+    33
+   ],
+   [
+    "https://cloud.google.com/sitemap.xml",
+    "index",
+    180
+   ],
+   [
+    "https://cloud.google.com/sitemapentries/solutions",
+    "urlset",
+    9
+   ],
+   [
+    "https://cloud.google.com/sitemapentries/consulting",
+    "urlset",
+    1
+   ],
+   [
+    "https://cloud.google.com/sitemapentries/contact/quote",
+    "not a sitemap",
+    0
+   ],
+   [
+    "https://cloud.google.com/sitemapentries/gcp",
+    "urlset",
+    11
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2022-06-16/2022-06-30",
+    "urlset",
+    15
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2024-09-16/2024-09-30",
+    "urlset",
+    9
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2025-03-01/2025-03-15",
+    "urlset",
+    6
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2025-06-16/2025-06-30",
+    "urlset",
+    5
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2025-02-16/2025-02-28",
+    "urlset",
+    10
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2024-10-01/2024-10-15",
+    "urlset",
+    2
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2023-08-16/2023-08-31",
+    "urlset",
+    4
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2026-07-01/2026-07-15",
+    "urlset",
+    3
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2025-08-16/2025-08-31",
+    "urlset",
+    5
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2025-04-16/2025-04-30",
+    "urlset",
+    9
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2022-11-16/2022-11-30",
+    "urlset",
+    3
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2023-07-01/2023-07-15",
+    "urlset",
+    1
+   ],
+   [
+    "https://cloud.google.com/transform/sitemap/transform/en/2024-12-16/2024-12-31",
+    "urlset",
+    4
+   ],
+   [
+    "crawl",
+    1103
+   ]
+  ],
+  "cloudflare": [
+   [
+    "https://developers.cloudflare.com/sitemap-index.xml",
+    "index",
+    1
+   ],
+   [
+    "https://developers.cloudflare.com/sitemap.xml",
+    "index",
+    1
+   ],
+   [
+    "https://developers.cloudflare.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://developers.cloudflare.com/sitemap-0.xml",
+    "urlset",
+    9044
+   ]
+  ],
+  "terraform": [
+   [
+    "https://developer.hashicorp.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://developer.hashicorp.com/sitemap.xml",
+    "index",
+    2
+   ],
+   [
+    "https://developer.hashicorp.com/server-sitemap.xml",
+    "urlset",
+    7079
+   ],
+   [
+    "https://developer.hashicorp.com/terraform/sitemap.xml",
+    404
+   ],
+   [
+    "https://developer.hashicorp.com/sitemap-0.xml",
+    "urlset",
+    821
+   ]
+  ],
+  "firebase": [
+   [
+    "https://firebase.google.com/docs/sitemap.xml",
+    404
+   ],
+   [
+    "https://firebase.google.com/sitemap.xml",
+    "index",
+    2
+   ],
+   [
+    "https://firebase.google.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://firebase.google.com/sitemap_0_of_2.xml",
+    500
+   ],
+   [
+    "https://firebase.google.com/sitemap_1_of_2.xml",
+    500
+   ],
+   [
+    "crawl",
+    6361
+   ]
+  ],
+  "ansible": [
+   [
+    "https://docs.ansible.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://docs.ansible.com/sitemap.xml",
+    "urlset",
+    1
+   ],
+   [
+    "https://docs.ansible.com/ansible-sitemap.xml",
+    "urlset",
+    11547
+   ]
+  ],
+  "chocolatey": [
+   [
+    "https://docs.chocolatey.org/sitemap.xml",
+    404
+   ],
+   [
+    "https://docs.chocolatey.org/sitemap_index.xml",
+    404
+   ],
+   [
+    "crawl",
+    456
+   ]
+  ],
+  "digitalocean": [
+   [
+    "https://docs.digitalocean.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://docs.digitalocean.com/sitemap.xml",
+    "urlset",
+    7186
+   ]
+  ],
+  "vercel": [
+   [
+    "https://vercel.com/docs/sitemap.xml",
+    404
+   ],
+   [
+    "https://vercel.com/sitemap.xml",
+    "urlset",
+    9392
+   ]
+  ],
+  "datadog": [
+   [
+    "https://docs.datadoghq.com/ja/sitemap.xml",
+    "urlset",
+    4094
+   ],
+   [
+    "https://docs.datadoghq.com/ko/sitemap.xml",
+    "urlset",
+    3505
+   ],
+   [
+    "https://docs.datadoghq.com/sitemap.xml",
+    "index",
+    5
+   ],
+   [
+    "https://docs.datadoghq.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://docs.datadoghq.com/fr/sitemap.xml",
+    "urlset",
+    3207
+   ],
+   [
+    "https://docs.datadoghq.com/en/sitemap.xml",
+    "urlset",
+    16282
+   ]
+  ],
+  "netlify": [
+   [
+    "https://docs.netlify.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://docs.netlify.com/sitemap.xml",
+    "urlset",
+    424
+   ]
+  ],
+  "supabase": [
+   [
+    "https://supabase.com/docs/sitemap.xml",
+    "urlset",
+    2548
+   ]
+  ],
+  "heroku": [
+   [
+    "https://devcenter.heroku.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://devcenter.heroku.com/sitemap.xml",
+    "urlset",
+    3781
+   ]
+  ],
+  "splunk": [
+   [
+    "https://help.splunk.com/sitemap.xml",
+    "index",
+    17
+   ],
+   [
+    "https://help.splunk.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://help.splunk.com/en/splunk-enterprise-security-8/sitemap.xml",
+    "urlset",
+    7086
+   ]
+  ],
+  "newrelic": [
+   [
+    "https://docs.newrelic.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://docs.newrelic.com/sitemap-index.xml",
+    "index",
+    2
+   ],
+   [
+    "https://docs.newrelic.com/sitemap.xml",
+    404
+   ],
+   [
+    "https://docs.newrelic.com/sitemap-1.xml",
+    "urlset",
+    4860
+   ],
+   [
+    "https://docs.newrelic.com/sitemap-0.xml",
+    "urlset",
+    45000
+   ]
+  ],
+  "railway": [
+   [
+    "https://docs.railway.com/sitemap.xml",
+    "index",
+    1
+   ],
+   [
+    "https://docs.railway.com/sitemap_index.xml",
+    404
+   ],
+   [
+    "https://docs.railway.com/sitemap-0.xml",
+    "urlset",
+    291
+   ]
+  ],
+  "ibmcloud": [
+   [
+    "https://cloud.ibm.com/docs/sitemap.xml",
+    "index",
+    210
+   ],
+   [
+    "https://cloud.ibm.com/sitemap_index.xml",
+    "not a sitemap",
+    0
+   ],
+   [
+    "https://cloud.ibm.com/sitemap.xml",
+    "urlset",
+    4
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_cloud-databases.xml.gz",
+    "urlset",
+    480
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_pattern-pvs-ibmi-resiliency.xml.gz",
+    "urlset",
+    16
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_pattern-maximo-on-satellite.xml.gz",
+    "urlset",
+    18
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_account.xml.gz",
+    "urlset",
+    1730
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_sdk-handbook.xml.gz",
+    "urlset",
+    18
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_powervs-migration.xml.gz",
+    "urlset",
+    1
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_mqcloud.xml.gz",
+    "urlset",
+    30
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_hpc-ibm-spectrumlsf.xml.gz",
+    "urlset",
+    54
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_sandbox.xml.gz",
+    "urlset",
+    18
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_hs-crypto.xml.gz",
+    "urlset",
+    1473
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_hpc-spectrum-symphony.xml.gz",
+    "urlset",
+    361
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_pvs-baas-with-compass.xml.gz",
+    "urlset",
+    1
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_pattern-pvs-aix-resiliency.xml.gz",
+    "urlset",
+    16
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_monitoring.xml.gz",
+    "urlset",
+    1180
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_terraform-on-ibm-cloud.xml.gz",
+    "urlset",
+    1
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_dns-svcs.xml.gz",
+    "urlset",
+    731
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_database-tools.xml.gz",
+    "urlset",
+    170
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_confidential-computing.xml.gz",
+    "urlset",
+    16
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_observability-hub.xml.gz",
+    "urlset",
+    4
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_openpages.xml.gz",
+    "urlset",
+    400
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_hybrid-workloads.xml.gz",
+    "urlset",
+    19
+   ],
+   [
+    "https://cloud.ibm.com/docs/sitemap_databases-for-mysql-gen2.xml.gz",
+    "urlset",
+    253
+   ],
+   [
+    "crawl",
+    1
+   ]
+  ],
+  "yandex": [
+   [
+    "https://yandex.cloud/en/docs/sitemap.xml",
+    404
+   ],
+   [
+    "https://yandex.cloud/sitemap.xml",
+    404
+   ],
+   [
+    "https://yandex.cloud/sitemap_index.xml",
+    "index",
+    4
+   ],
+   [
+    "https://yandex.cloud/sitemap_docs_1.xml",
+    "urlset",
+    42061
+   ]
+  ]
+ }
+}

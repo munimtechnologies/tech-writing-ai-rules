@@ -1,0 +1,21 @@
+id,name,so,root,robots_status,content_signal,method,sitemaps_read,pool,sampled,readable,blocked,llms_txt,llms_url,llms_full,md_pages,md_accept_pages,md_suffix_pages,label_pages,note_pages,raw_note_pages
+docker,Docker,Docker,https://docs.docker.com/,200,"ai-train=yes, search=yes, ai-input=yes",sitemap,1,2176,30,30,0,True,https://docs.docker.com/llms.txt,True,30,30,30,0,0,0
+npm,npm,npm,https://docs.npmjs.com/,404,,crawl,2,216,30,30,0,False,,False,0,0,0,0,0,0
+aws,Amazon Web Services,Amazon Web Services (AWS),https://docs.aws.amazon.com/,200,,sitemap,25,678,30,28,0,True,https://docs.aws.amazon.com/llms.txt,True,28,28,28,0,0,0
+gcloud,Google Cloud,Google Cloud,https://cloud.google.com/docs,200,,crawl,25,1103,30,30,0,False,,False,30,30,30,0,0,0
+cloudflare,Cloudflare,Cloudflare,https://developers.cloudflare.com/,200,"ai-train=yes, search=yes, ai-input=yes",sitemap,4,9044,30,30,0,True,https://developers.cloudflare.com/llms.txt,False,30,30,0,0,0,0
+terraform,Terraform (HashiCorp),Terraform,https://developer.hashicorp.com/terraform,200,,sitemap,5,1864,30,30,0,False,,False,0,0,0,0,0,0
+firebase,Firebase,Firebase,https://firebase.google.com/docs,200,,crawl,5,6361,30,28,0,True,https://firebase.google.com/docs/llms.txt,False,28,28,28,0,0,0
+ansible,Ansible,Ansible,https://docs.ansible.com/,200,,sitemap,3,11545,30,30,0,False,,False,30,30,0,0,0,0
+chocolatey,Chocolatey,Chocolatey,https://docs.chocolatey.org/,200,"search=yes,ai-train=no,use=reference",crawl,2,456,30,30,0,False,,False,0,0,0,0,0,0
+digitalocean,DigitalOcean,Digital Ocean,https://docs.digitalocean.com/,200,"ai-train=yes, search=yes, ai-input=yes",sitemap,2,7186,30,30,0,True,https://docs.digitalocean.com/llms.txt,True,29,0,29,0,0,0
+vercel,Vercel,Vercel,https://vercel.com/docs,200,,sitemap,2,2505,30,30,0,True,https://vercel.com/llms.txt,True,30,30,30,0,0,0
+datadog,Datadog,Datadog,https://docs.datadoghq.com/,200,,sitemap,6,16281,30,30,0,True,https://docs.datadoghq.com/llms.txt,False,30,30,30,0,0,0
+netlify,Netlify,Netlify,https://docs.netlify.com/,200,"search=yes, ai-input=yes, ai-train=yes",sitemap,2,424,30,30,0,True,https://docs.netlify.com/llms.txt,False,30,30,30,0,0,0
+supabase,Supabase,Supabase,https://supabase.com/docs,200,"ai-train=yes, search=yes, ai-input=yes",sitemap,1,2548,30,30,0,True,https://supabase.com/llms.txt,True,11,11,11,0,0,0
+heroku,Heroku,Heroku,https://devcenter.heroku.com/,200,,sitemap,2,821,30,30,0,True,https://devcenter.heroku.com/llms.txt,False,30,0,30,0,0,0
+splunk,Splunk,Splunk,https://help.splunk.com/,302,,sitemap,3,7005,30,0,30,False,,False,0,0,0,0,0,0
+newrelic,New Relic,New Relic,https://docs.newrelic.com/,200,,sitemap,5,7778,30,30,0,True,https://docs.newrelic.com/llms.txt,False,29,0,29,0,0,0
+railway,Railway,Railway,https://docs.railway.com/,200,"search=yes, ai-input=yes, ai-train=yes",sitemap,3,288,30,30,0,True,https://docs.railway.com/llms.txt,True,30,30,30,0,0,0
+ibmcloud,IBM Cloud,IBM Cloud,https://cloud.ibm.com/docs,200,"ai-train=yes, search=yes, ai-input=yes",crawl,25,1,1,1,0,True,https://cloud.ibm.com/docs/llms.txt,False,0,0,0,0,0,0
+yandex,Yandex Cloud,Yandex Cloud,https://yandex.cloud/en/docs,200,,sitemap,4,13945,30,30,0,True,https://yandex.cloud/llms.txt,False,0,0,0,0,0,0
