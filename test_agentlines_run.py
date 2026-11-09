@@ -1,10 +1,12 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2026 Munim, Inc.
 """Offline tests for agentlines_run.py (no network). Made by MV2 of Munim, Inc., with AI agents. Apache-2.0."""
+import itertools
 import json
 import os
 import tempfile
 import threading
+import time
 import unittest
 
 import agentlines as al
@@ -129,6 +131,35 @@ class ReadCappedTests(unittest.TestCase):
         self.assertEqual(run.read_capped(Plain(), 10, 0.0, 60, lambda: 0.0), b"abc")
 
 
+class WildcardTests(unittest.TestCase):
+    def test_same_answer_as_agentlines_for_every_short_pattern_and_path(self):
+        patterns = ["".join(p) for n in range(6) for p in itertools.product("a.*$", repeat=n)]
+        paths = ["".join(p) for n in range(5) for p in itertools.product("a.$", repeat=n)]
+        self.assertEqual((len(patterns), len(paths)), (1365, 121))
+        differ = [(p, s) for p in patterns for s in paths if run.wildcard_match(p, s) != al.pattern_match(p, s)]
+        self.assertEqual(differ, [])
+
+    def test_real_robots_rules(self):
+        cases = [("/", "/llms.txt", True), ("/llms.txt", "/llms.txt", True), ("/llms.txt$", "/llms.txt", True),
+                 ("/llms", "/llms.txt", True), ("/*.txt$", "/docs/llms.txt", True), ("/*.txt$", "/a.txt?x=1", False),
+                 ("/*?", "/llms.txt", False), ("/docs/", "/llms.txt", False), ("*llms*", "/llms.txt", True),
+                 ("/*/llms.txt", "/llms.txt", False), ("/*/llms.txt", "/en/llms.txt", True), ("/$", "/", True),
+                 ("/$", "/llms.txt", False), ("/a$b", "/a$b", True), ("/a$b", "/a", False)]
+        for pattern, path, want in cases:
+            self.assertEqual(run.wildcard_match(pattern, path), want, (pattern, path))
+            self.assertEqual(al.pattern_match(pattern, path), want, (pattern, path))
+
+    def test_pathological_rule_is_fast(self):
+        # agentlines.pattern_match backtracks on this for a very long time (the regex engine holds the GIL)
+        pattern = "/" + "*a" * 40 + "*b"
+        path = "/" + "a" * 60
+        t0 = time.monotonic()
+        self.assertFalse(run.wildcard_match(pattern, path))
+        self.assertTrue(run.wildcard_match(pattern, path + "b"))
+        self.assertTrue(run.wildcard_match("/" + "*" * 5000 + "x$", "/" + "y" * 5000 + "x"))
+        self.assertLess(time.monotonic() - t0, 1.0)
+
+
 class CensusTests(unittest.TestCase):
     def test_parallel_matches_one_by_one(self):
         rows = al.parse_frame(FRAME)
@@ -202,29 +233,109 @@ class CensusTests(unittest.TestCase):
         self.assertTrue(all(l.startswith("progress: ") for l in lines))
 
 
+class GiveUpTests(unittest.TestCase):
+    """A host that never finishes is given up; the other hosts and the frame order are unaffected."""
+
+    def test_stuck_hosts_are_given_up_and_the_run_goes_on(self):
+        frame = [{"name": "Good", "llmsTxtUrl": "https://good.example/llms.txt"},
+                 {"name": "Slow file", "llmsTxtUrl": "https://slowfile.example/llms.txt"},
+                 {"name": "Slow robots", "llmsTxtUrl": "https://slowrobots.example/llms.txt"},
+                 {"name": "Good 2", "llmsTxtUrl": "https://good2.example/llms.txt"}]
+        rows = al.parse_frame(frame)
+        release = threading.Event()
+        stuck = {"https://slowfile.example/llms.txt", "https://slowrobots.example/robots.txt"}
+
+        def fetcher(url, accept=al.ACCEPT_TEXT):
+            if url in stuck:
+                release.wait(10)
+                return ok("late", url, status=404)
+            if url.endswith("/robots.txt"):
+                return ok("", url, status=404)
+            return ok(FILE_B, url)
+
+        beats, lines = [], []
+        try:
+            t0 = time.monotonic()
+            results, n = run.census(rows, fetcher, pause=0, sleep=noop, workers=2, log=lines.append,
+                                    url_limit=0.3, poll=0.02, beat=lambda: beats.append(1))
+            took = time.monotonic() - t0
+        finally:
+            release.set()
+        self.assertLess(took, 5.0)
+        self.assertEqual([r["id"] for r in results], ["W0001", "W0002", "W0003", "W0004"])
+        by_id = {r["id"]: r for r in results}
+        self.assertEqual(by_id["W0001"]["kind"], "valid")
+        self.assertEqual(by_id["W0004"]["kind"], "valid")
+        slow_file, slow_robots = by_id["W0002"], by_id["W0003"]
+        self.assertEqual((slow_file["kind"], slow_file["reached"], slow_file["status"]), ("error", True, None))
+        self.assertTrue(slow_file["error"].startswith("no complete answer within 0 s; given up"))
+        self.assertEqual((slow_robots["kind"], slow_robots["reached"]), ("error", False))
+        self.assertTrue(slow_robots["error"].startswith("host not reached (no complete answer"))
+        self.assertIn(len(beats), (3, 4))  # two hosts given up in the same pass give one beat
+        self.assertEqual(sorted(l.split(" after ")[0] for l in lines if l.startswith("given up")),
+                         ["given up: https://slowfile.example", "given up: https://slowrobots.example"])
+
+    def test_given_up_host_keeps_its_finished_urls(self):
+        frame = [{"name": "A", "llmsTxtUrl": "https://two.example/llms.txt"},
+                 {"name": "B", "llmsTxtUrl": "https://two.example/docs/llms.txt"}]
+        rows = al.parse_frame(frame)
+        release = threading.Event()
+
+        def fetcher(url, accept=al.ACCEPT_TEXT):
+            if url == "https://two.example/docs/llms.txt":
+                release.wait(10)
+            if url.endswith("/robots.txt"):
+                return ok("", url, status=404)
+            return ok(FILE_B, url)
+
+        try:
+            results, _ = run.census(rows, fetcher, pause=0, sleep=noop, workers=1, log=None, url_limit=0.2,
+                                    poll=0.02)
+        finally:
+            release.set()
+        self.assertEqual([r["kind"] for r in results], ["valid", "error"])
+        self.assertTrue(results[1]["reached"])
+        self.assertIn("within 0 s", results[1]["error"])
+
+
 class MainTests(unittest.TestCase):
     def test_runs_agentlines_main_and_restores_it(self):
         fetcher, _ = make_web()
-        original = (al.census, al.fetch, al.VERSION)
+        original = (al.census, al.fetch, al.VERSION, al.pattern_match)
         with tempfile.TemporaryDirectory() as tmp:
             code = run.main(["--out-dir", tmp, "--no-prereg-check", "--pause", "0", "--workers", "3"],
                             fetcher=fetcher, sleep=noop)
             self.assertEqual(code, 0)
             with open(os.path.join(tmp, "AGENTLINES_AUTO.md"), encoding="utf-8") as fh:
                 text = fh.read()
-            self.assertIn("agentlines.py 0.1.0, run by agentlines_run.py %s (3 workers, 60 s per request)"
-                          % run.RUNNER_VERSION, text)
+            self.assertIn("agentlines.py 0.1.0, run by agentlines_run.py %s (3 workers, 60 s per request, "
+                          "600 s per URL)" % run.RUNNER_VERSION, text)
             self.assertIn("| ALL | 6 | 5 | 3 | 1 | 1 | 0 |", text)
             with open(os.path.join(tmp, "census.json"), encoding="utf-8") as fh:
                 meta = json.load(fh)
             self.assertEqual([r["id"] for r in meta["results"]], ["W0001", "W0002", "W0003", "W0005", "W0006",
                                                                    "W0007"])
-        self.assertEqual((al.census, al.fetch, al.VERSION), original)
+        self.assertEqual((al.census, al.fetch, al.VERSION, al.pattern_match), original)
+
+    def test_robots_rules_use_the_linear_matcher_during_a_run(self):
+        seen = []
+
+        def spy_fetcher(url, accept=al.ACCEPT_TEXT):
+            seen.append(al.pattern_match is run.wildcard_match)
+            return fetcher(url, accept)
+
+        fetcher, _ = make_web()
+        with tempfile.TemporaryDirectory() as tmp:
+            self.assertEqual(run.main(["--out-dir", tmp, "--no-prereg-check", "--pause", "0"],
+                                      fetcher=spy_fetcher, sleep=noop), 0)
+        self.assertTrue(seen and all(seen))
+        self.assertIsNot(al.pattern_match, run.wildcard_match)
 
     def test_bad_options(self):
         with tempfile.TemporaryDirectory() as tmp:
-            self.assertEqual(run.main(["--out-dir", tmp, "--no-prereg-check", "--workers", "0"],
-                                      fetcher=lambda u, a=None: None, sleep=noop), 2)
+            for bad in (["--workers", "0"], ["--url-limit", "0"], ["--stall-dump", "-1"]):
+                self.assertEqual(run.main(["--out-dir", tmp, "--no-prereg-check"] + bad,
+                                          fetcher=lambda u, a=None: None, sleep=noop), 2)
         self.assertEqual(al.VERSION, "0.1.0")
 
     def test_bound_fetch_keeps_agentlines_signature(self):
