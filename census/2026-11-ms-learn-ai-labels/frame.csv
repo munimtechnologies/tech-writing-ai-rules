@@ -1,0 +1,130 @@
+rank,repo,size_kb,default_branch,pushed_at,status,commit,md,articles,ai_labelled,ai_assisted,ai_generated,other_ai,non_ai_label,include_ai_labelled
+1,MicrosoftDocs/azure-docs,27209684,main,2026-11-09T07:10:09Z,read,121e31ad51402bbcc82f923c0951ac55cef58de2,16839,13715,852,832,20,0,0,13
+2,MicrosoftDocs/learn,11689522,main,2026-11-07T08:17:59Z,too few articles,cc1c54baa188e56e8b3a703944ad8c5cb457d534,14650,0,0,0,0,0,0,0
+3,MicrosoftDocs/fabric-docs,3830336,main,2026-11-09T06:11:04Z,read,e17d291adf5649cb08722c374c0e93e289c3a6fb,3254,2822,1015,976,39,0,0,213
+4,MicrosoftDocs/azure-docs-sdk-java,3657658,main,2026-11-09T11:07:23Z,read,d376423c17a3fda4b9c1277fd8bb2932ca3e79bb,2362,1426,0,0,0,0,0,0
+5,MicrosoftDocs/microsoftgraph-docs-powershell,3613066,main,2026-11-06T05:00:43Z,read,ee4ec05b3c952d0f7081a985f402e707325c329d,27432,27344,0,0,0,0,0,0
+6,MicrosoftDocs/azure-docs-sdk-dotnet,3329868,main,2026-11-09T11:04:13Z,read,9500c2fad4740e2af8f3e5d313be41d109030aae,3123,1872,0,0,0,0,0,0
+7,MicrosoftDocs/entra-docs,3258214,main,2026-11-08T08:39:29Z,read,59b123da699e70670d284da5ee179ba5684b32aa,5027,4428,646,624,22,0,1,14
+8,MicrosoftDocs/microsoft-365-docs,2859383,public,2026-11-04T18:01:52Z,read,ee0f8f75d0045cc6397fe0a9c2c84d2aba1e01d6,1311,1246,56,55,1,0,3,0
+9,MicrosoftDocs/dynamics-365-customer-engagement,2227669,main,2026-11-07T07:06:50Z,read,96c1d681eba46e99954e6c73f9a034b8f06c845a,6899,4893,234,233,1,0,0,0
+10,MicrosoftDocs/msteams-docs,2149738,main,2026-11-09T09:50:19Z,read,b186b6ef467cdf8ba5351cc20f0995565be8cb78,387,330,0,0,0,0,0,0
+11,MicrosoftDocs/powerapps-docs,1943902,main,2026-11-07T07:07:14Z,read,9c11f4ada5ab056b6e884b8a43744f707952b005,4310,2881,103,97,6,0,0,0
+12,MicrosoftDocs/dynamics-365-unified-operations-public,1721564,main,2026-11-05T19:06:57Z,read,a1439b25a99370ba6be4edd986a6b48c6d63e9bc,6455,6351,154,154,0,0,0,0
+13,MicrosoftDocs/dynamics-365-mixed-reality,1680387,main,2026-10-29T19:05:22Z,read,bec0a3a1ca3ba2d0bf7733ecbeaa3bb06b84a095,332,248,0,0,0,0,0,0
+14,MicrosoftDocs/architecture-center,1675349,main,2026-11-07T06:03:17Z,read,629acf25fc1ab4096cfa102367a569867899b79e,523,313,105,104,1,0,0,0
+15,MicrosoftDocs/windows-dev-docs,1601072,docs,2026-11-07T00:23:29Z,read,a3812316d9d6678be4e526ffb4b1c4f3958d956d,2180,2160,1,1,0,0,0,0
+16,MicrosoftDocs/visualstudio-docs,1533703,main,2026-11-06T22:09:06Z,read,86a011a67de155a553fc9cd4fcb2312c1ac10e6e,5685,5440,43,43,0,0,0,0
+17,MicrosoftDocs/azure-docs-sdk-python,1405859,main,2026-11-09T11:13:41Z,read,cb5098127f56115ace6f4cde00e147b903b530db,2854,1718,0,0,0,0,0,0
+18,MicrosoftDocs/sql-docs,1367518,live,2026-11-06T23:37:12Z,read,038e8f383a91460dd9ead9815191b13f3cdb2da6,14482,13624,459,456,3,0,0,11
+19,MicrosoftDocs/azure-monitor-docs,1337820,main,2026-11-08T13:06:09Z,read,3f41128808147dc148a84b3ad75b5918cd259721,3051,2735,286,286,0,0,0,7
+20,MicrosoftDocs/azure-stack-docs,1309719,main,2026-11-09T10:40:12Z,read,c2817658499f29438d1d7bc8906e8223f53ffce5,1377,1217,40,40,0,0,0,0
+21,MicrosoftDocs/edge-developer,1242620,main,2026-11-06T16:36:57Z,read,6c8de50670f8a9b71428f21e74cf59897cc3222b,718,709,0,0,0,0,0,0
+22,MicrosoftDocs/minecraft-creator,1239276,main,2026-11-06T21:16:09Z,read,457cdeaa5aa428429884b092895f3979b1f69ad3,4254,4251,1542,1542,0,0,0,0
+23,MicrosoftDocs/SupportArticles-docs,1197246,main,2026-11-07T02:05:01Z,read,5fb2d0c31e705f39cf1f3df2d957ec7170c4e76c,7934,7823,519,513,6,0,0,0
+24,MicrosoftDocs/sdk-api,1184970,docs,2026-10-27T17:58:28Z,read,656e9656bfaef34dd29cd7ee9e1146aec17e924c,65915,65890,0,0,0,0,0,0
+25,MicrosoftDocs/cloud-adoption-framework,1048505,main,2026-11-07T01:02:44Z,read,79580679eaa7a8a966e395a586b92a4fd08bbc8f,230,215,26,26,0,0,0,0
+26,MicrosoftDocs/windowsserverdocs,1034217,main,2026-11-06T21:51:39Z,read,2205ce8e55001a9b5e8e0de43981baa8ad782562,2604,2568,118,110,8,0,0,0
+27,MicrosoftDocs/power-platform,990317,main,2026-11-07T07:05:25Z,read,71a5423a1cffff45739b8801fc08770dc9ca5a27,2611,1317,60,60,0,0,0,2
+28,MicrosoftDocs/azure-compute-docs,830919,main,2026-11-08T14:33:06Z,read,b5c887330bc0d3335fcae5696a9251fabd90ccee,1857,1407,117,116,1,0,0,4
+29,MicrosoftDocs/azure-docs-sdk-node,748184,main,2026-11-09T11:12:33Z,read,63104e8e9f0e11ae3cc3d1981692ceba4bfceca3,2751,1659,0,0,0,0,0,0
+30,MicrosoftDocs/power-automate-docs,746170,main,2026-11-04T07:04:05Z,read,e7a4c26faaa37ea3432ea7011957f3e72af745c1,791,728,1,1,0,0,0,0
+31,MicrosoftDocs/azure-dev-docs,681289,main,2026-11-06T18:03:53Z,read,b7d90883990e687ca388ea3abd40ad13e350b7e4,1331,803,241,93,148,0,0,6
+32,MicrosoftDocs/dataexplorer-docs,454476,main,2026-10-31T05:03:15Z,not reached,,,,,,,,,
+33,MicrosoftDocs/windows-driver-docs,429799,staging,2026-11-05T19:05:43Z,not reached,,,,,,,,,
+34,MicrosoftDocs/win32,426380,docs,2026-11-06T18:05:34Z,not reached,,,,,,,,,
+35,MicrosoftDocs/cpp-docs,418154,main,2026-10-16T17:35:58Z,not reached,,,,,,,,,
+36,MicrosoftDocs/community-content,394573,main,2026-06-18T19:00:18Z,not reached,,,,,,,,,
+37,MicrosoftDocs/azure-management-docs,378838,main,2026-11-08T12:03:24Z,not reached,,,,,,,,,
+38,MicrosoftDocs/customer-insights,365836,main,2026-11-05T19:03:26Z,not reached,,,,,,,,,
+39,MicrosoftDocs/dynamics365-guidance,328299,main,2026-10-28T19:08:52Z,not reached,,,,,,,,,
+40,MicrosoftDocs/VBA-Docs,327646,main,2026-11-05T00:39:13Z,not reached,,,,,,,,,
+41,MicrosoftDocs/azure-aks-docs,317349,main,2026-11-09T07:03:27Z,not reached,,,,,,,,,
+42,MicrosoftDocs/windows-driver-docs-ddi,306295,staging,2026-07-25T00:03:17Z,not reached,,,,,,,,,
+43,MicrosoftDocs/common-data-model-and-service,271806,main,2026-08-11T01:08:25Z,not reached,,,,,,,,,
+44,MicrosoftDocs/power-pages-docs,225983,main,2026-11-07T07:03:15Z,not reached,,,,,,,,,
+45,MicrosoftDocs/dynamics365smb-docs,212534,main,2026-11-06T19:04:32Z,not reached,,,,,,,,,
+46,MicrosoftDocs/playfab-docs,212382,docs,2026-11-03T21:33:10Z,not reached,,,,,,,,,
+47,MicrosoftDocs/ai-builder,212292,main,2026-10-29T19:02:38Z,not reached,,,,,,,,,
+48,MicrosoftDocs/dynamics365smb-devitpro-pb,196255,main,2026-11-06T15:45:22Z,not reached,,,,,,,,,
+49,MicrosoftDocs/altspace-vr,175553,main,2026-08-07T23:24:32Z,not reached,,,,,,,,,
+50,MicrosoftDocs/mip-sdk-docs,163962,main,2026-09-03T21:40:41Z,not reached,,,,,,,,,
+51,MicrosoftDocs/cloud-developer-advocates,157169,main,2026-10-20T16:32:03Z,not reached,,,,,,,,,
+52,MicrosoftDocs/m365copilot-docs,150265,main,2026-11-06T21:51:08Z,not reached,,,,,,,,,
+53,MicrosoftDocs/azure-docs-cli,143700,main,2026-11-09T05:07:25Z,not reached,,,,,,,,,
+54,MicrosoftDocs/winrt-api,138782,docs,2026-11-06T02:50:35Z,not reached,,,,,,,,,
+55,MicrosoftDocs/azure-docs-powershell,137151,main,2026-11-06T21:57:30Z,not reached,,,,,,,,,
+56,MicrosoftDocs/Contribute,133423,main,2026-10-28T19:54:42Z,not reached,,,,,,,,,
+57,MicrosoftDocs/Xandr-docs,133305,main,2026-11-05T20:58:08Z,not reached,,,,,,,,,
+58,MicrosoftDocs/office-docs-powershell,125315,main,2026-11-04T05:32:05Z,not reached,,,,,,,,,
+59,MicrosoftDocs/bingmaps-docs,122856,main,2026-06-03T17:10:59Z,not reached,,,,,,,,,
+60,MicrosoftDocs/quantum-docs,117007,main,2026-11-06T01:03:14Z,not reached,,,,,,,,,
+61,MicrosoftDocs/msftdynamicsgpdocs,107773,main,2026-11-06T19:02:33Z,not reached,,,,,,,,,
+62,MicrosoftDocs/PowerShell-Docs,106795,main,2026-11-02T22:06:01Z,not reached,,,,,,,,,
+63,MicrosoftDocs/terminal,102606,main,2026-08-02T07:40:24Z,not reached,,,,,,,,,
+64,MicrosoftDocs/Advertising,102517,main,2026-11-06T20:35:14Z,not reached,,,,,,,,,
+65,MicrosoftDocs/Virtualization-Documentation,100976,main,2026-10-20T23:02:46Z,not reached,,,,,,,,,
+66,MicrosoftDocs/dynamics-365-project-operations,92155,main,2026-11-03T19:03:17Z,not reached,,,,,,,,,
+67,MicrosoftDocs/copilot-connectors,90418,public,2026-11-06T21:50:50Z,not reached,,,,,,,,,
+68,MicrosoftDocs/windows-ai-docs,87873,docs,2026-11-07T00:37:50Z,not reached,,,,,,,,,
+69,MicrosoftDocs/windows-powershell-docs,87125,main,2026-11-05T03:15:22Z,not reached,,,,,,,,,
+70,MicrosoftDocs/microsoft-salescopilot-docs,81994,main,2026-11-02T07:03:19Z,not reached,,,,,,,,,
+71,MicrosoftDocs/Agent-Skills,75407,main,2026-11-09T00:06:19Z,not reached,,,,,,,,,
+72,MicrosoftDocs/semantic-kernel-docs,73411,main,2026-11-04T02:44:58Z,not reached,,,,,,,,,
+73,MicrosoftDocs/data-tools,60559,main,2026-11-02T19:08:00Z,not reached,,,,,,,,,
+74,MicrosoftDocs/CommunityToolkit,60367,main,2026-10-26T20:08:52Z,not reached,,,,,,,,,
+75,MicrosoftDocs/supply-chain-center,59054,main,2026-08-10T21:03:26Z,not reached,,,,,,,,,
+76,MicrosoftDocs/WSL,53724,main,2026-11-06T17:09:39Z,not reached,,,,,,,,,
+77,MicrosoftDocs/winrt-related,48259,docs,2026-11-03T16:40:53Z,not reached,,,,,,,,,
+78,MicrosoftDocs/winapps-winrt-api,40972,docs,2026-11-04T19:51:59Z,not reached,,,,,,,,,
+79,MicrosoftDocs/PowerShell-Docs-Modules,39598,main,2026-10-28T22:06:15Z,not reached,,,,,,,,,
+80,MicrosoftDocs/teams-ai-library,35413,main,2026-10-28T21:19:52Z,not reached,,,,,,,,,
+81,MicrosoftDocs/customer-voice,34537,main,2026-11-04T13:02:42Z,not reached,,,,,,,,,
+82,MicrosoftDocs/office-developer-client-docs,34158,main,2026-07-01T21:32:08Z,not reached,,,,,,,,,
+83,MicrosoftDocs/dynamics-365-contact-center,27802,main,2026-11-07T07:02:46Z,not reached,,,,,,,,,
+84,MicrosoftDocs/executable-docs,24155,main,2026-11-06T03:02:29Z,not reached,,,,,,,,,
+85,MicrosoftDocs/dynamics-365-fraud-protection,23634,main,2026-08-11T01:01:36Z,not reached,,,,,,,,,
+86,MicrosoftDocs/msix-docs,23317,main,2026-11-09T05:01:57Z,not reached,,,,,,,,,
+87,MicrosoftDocs/dynamics-365-intelligent-order-management,22480,main,2026-08-11T01:05:45Z,not reached,,,,,,,,,
+88,MicrosoftDocs/windows-iot-public,17879,main,2026-10-15T22:05:59Z,not reached,,,,,,,,,
+89,MicrosoftDocs/globalization,17798,main,2026-10-21T13:46:41Z,not reached,,,,,,,,,
+90,MicrosoftDocs/PlayReady,16946,main,2026-11-03T17:28:07Z,not reached,,,,,,,,,
+91,MicrosoftDocs/teams-sdk-typescript,16627,main,2026-11-06T23:38:15Z,not reached,,,,,,,,,
+92,MicrosoftDocs/quantum-api,15628,main,2026-06-04T21:01:58Z,not reached,,,,,,,,,
+93,MicrosoftDocs/WDAC-Toolkit,14914,main,2026-10-20T20:30:42Z,not reached,,,,,,,,,
+94,MicrosoftDocs/AdaptiveCards,14061,main,2026-10-28T11:00:12Z,not reached,,,,,,,,,
+95,MicrosoftDocs/OfficeDocs-SharePoint-PowerShell,13685,main,2026-11-05T19:45:14Z,not reached,,,,,,,,,
+96,MicrosoftDocs/office-developer-exchange-docs,11940,main,2026-10-07T21:31:42Z,not reached,,,,,,,,,
+97,MicrosoftDocs/powerbi-docs-powershell,11131,main,2026-10-13T06:53:09Z,not reached,,,,,,,,,
+98,MicrosoftDocs/azure-cloud-services-files,9943,master,2026-10-16T11:22:27Z,not reached,,,,,,,,,
+99,MicrosoftDocs/nav-content,8722,main,2026-09-14T11:20:29Z,not reached,,,,,,,,,
+100,MicrosoftDocs/webview2-win32-reference,8545,main,2026-11-06T08:45:47Z,not reached,,,,,,,,,
+101,MicrosoftDocs/data-api-builder-docs,8416,main,2026-09-02T17:03:40Z,not reached,,,,,,,,,
+102,MicrosoftDocs/anyscale-on-azure-docs,7873,main,2026-11-06T12:32:09Z,not reached,,,,,,,,,
+103,MicrosoftDocs/OData-docs,6677,main,2026-05-18T18:04:08Z,not reached,,,,,,,,,
+104,MicrosoftDocs/sysinternals,6624,main,2026-11-05T20:57:04Z,not reached,,,,,,,,,
+105,MicrosoftDocs/azure-docs-sdk-python-archive,6106,main,2026-10-29T17:40:20Z,not reached,,,,,,,,,
+106,MicrosoftDocs/office-365-management-api,6097,main,2026-10-07T23:31:08Z,not reached,,,,,,,,,
+107,MicrosoftDocs/linux,5385,main,2026-07-29T00:19:52Z,not reached,,,,,,,,,
+108,MicrosoftDocs/azure-docs-sdk-cpp,4748,main,2026-11-06T23:28:33Z,not reached,,,,,,,,,
+109,MicrosoftDocs/PowerShell-Docs-DSC,3928,main,2026-11-04T23:02:17Z,not reached,,,,,,,,,
+110,MicrosoftDocs/azure-docs-sdk-node-archive,3515,main,2026-10-29T17:42:27Z,not reached,,,,,,,,,
+111,MicrosoftDocs/vcpkg-docs,3270,main,2026-10-22T20:40:55Z,not reached,,,,,,,,,
+112,MicrosoftDocs/FastTrackBlogRepo,3044,main,2026-09-10T16:19:30Z,not reached,,,,,,,,,
+113,MicrosoftDocs/webview2-winrt-reference,2190,main,2026-11-06T08:45:49Z,not reached,,,,,,,,,
+114,MicrosoftDocs/MicrosoftCollaboratePortal,2118,main,2026-08-20T04:55:55Z,not reached,,,,,,,,,
+115,MicrosoftDocs/PowerShell-Docs-PSGet,1702,main,2026-10-28T22:06:31Z,not reached,,,,,,,,,
+116,MicrosoftDocs/openapi-docs,1615,main,2026-11-05T19:03:12Z,not reached,,,,,,,,,
+117,MicrosoftDocs/ef-core-for-beginners,1549,main,2026-09-30T07:25:03Z,not reached,,,,,,,,,
+118,MicrosoftDocs/node-essentials,1325,main,2026-11-04T12:53:31Z,not reached,,,,,,,,,
+119,MicrosoftDocs/Console-Docs,1243,main,2026-10-19T13:49:02Z,not reached,,,,,,,,,
+120,MicrosoftDocs/teams-sdk-python,1030,main,2026-11-06T23:23:29Z,not reached,,,,,,,,,
+121,MicrosoftDocs/trace-processor-reference-docs,456,main,2026-07-28T17:27:48Z,not reached,,,,,,,,,
+122,MicrosoftDocs/windows-topic-specific-samples,451,main,2026-09-24T21:49:01Z,not reached,,,,,,,,,
+123,MicrosoftDocs/mcp,427,main,2026-10-30T04:04:15Z,not reached,,,,,,,,,
+124,MicrosoftDocs/CSIDev-Public,299,main,2026-11-03T05:51:55Z,not reached,,,,,,,,,
+125,MicrosoftDocs/tcp-workflows,246,main,2026-09-11T16:36:19Z,not reached,,,,,,,,,
+126,MicrosoftDocs/.github,45,main,2026-10-29T19:57:49Z,not reached,,,,,,,,,
+127,MicrosoftDocs/aspire-docs-samples,37,main,2026-08-14T12:31:07Z,not reached,,,,,,,,,
+128,MicrosoftDocs/MS-AppControl-AppManifests,20,main,2026-08-06T18:30:00Z,not reached,,,,,,,,,
+129,MicrosoftDocs/tcp-workflows-public,9,main,2026-08-13T17:43:51Z,not reached,,,,,,,,,

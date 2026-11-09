@@ -1,0 +1,331 @@
+{
+ "meta": {
+  "version": "0.1.0",
+  "started": "2026-11-09T11:18:36Z",
+  "settings": {
+   "org": "MicrosoftDocs",
+   "since": "2026-05-01",
+   "target": 30,
+   "max_clones": 50,
+   "min_articles": 200
+  },
+  "prereg": {
+   "committed_at": "2026-11-09T01:24:41Z",
+   "sha": "33c984e7d65a44f8e724c90303529b7f65164476",
+   "error": null,
+   "waited_seconds": 0
+  },
+  "listed": 711,
+  "eligible": 129,
+  "excluded": {
+   "archived": 399,
+   "not pushed since 2026-05-01": 144,
+   "fork": 10,
+   "localized copy": 29
+  },
+  "finished": "2026-11-09T11:23:50Z",
+  "clones": 31
+ },
+ "summary": {
+  "repos_read": 30,
+  "articles": 182133,
+  "md_files": 198879,
+  "ai_labelled": 6618,
+  "ai_labelled_pct": 3.63,
+  "categories": {
+   "": 175511,
+   "ai-assisted": 6362,
+   "ai-generated": 256,
+   "non-ai": 4
+  },
+  "include_ai_labelled": 270,
+  "ai_keys": {
+   "ai-usage": 6450,
+   "ms.ai-usage": 122,
+   "ai.usage": 47,
+   "AI_Usage": 3
+  },
+  "ai_values": {
+   "ai-assisted": 6362,
+   "ai-generated": 256,
+   "": 3,
+   "human-only": 1
+  },
+  "other_tokens": {
+   "ai-gen-docs-bap": 457,
+   "ai-gen-description": 220,
+   "ai-gen-desc": 183,
+   "ai-gen-title": 102,
+   "ai-assisted": 27,
+   "ai-gen-diyeditor": 6,
+   "ai-generated": 2
+  },
+  "by_year": {
+   "2007": {
+    "articles": 1,
+    "ai_labelled": 0,
+    "pct": 0.0
+   },
+   "2008": {
+    "articles": 1,
+    "ai_labelled": 0,
+    "pct": 0.0
+   },
+   "2011": {
+    "articles": 12,
+    "ai_labelled": 0,
+    "pct": 0.0
+   },
+   "2012": {
+    "articles": 21,
+    "ai_labelled": 0,
+    "pct": 0.0
+   },
+   "2013": {
+    "articles": 8,
+    "ai_labelled": 0,
+    "pct": 0.0
+   },
+   "2015": {
+    "articles": 3,
+    "ai_labelled": 0,
+    "pct": 0.0
+   },
+   "2016": {
+    "articles": 3029,
+    "ai_labelled": 0,
+    "pct": 0.0
+   },
+   "2017": {
+    "articles": 6824,
+    "ai_labelled": 2,
+    "pct": 0.03
+   },
+   "2018": {
+    "articles": 53446,
+    "ai_labelled": 2,
+    "pct": 0.0
+   },
+   "2019": {
+    "articles": 3156,
+    "ai_labelled": 0,
+    "pct": 0.0
+   },
+   "2020": {
+    "articles": 2182,
+    "ai_labelled": 1,
+    "pct": 0.05
+   },
+   "2021": {
+    "articles": 2615,
+    "ai_labelled": 2,
+    "pct": 0.08
+   },
+   "2022": {
+    "articles": 7060,
+    "ai_labelled": 4,
+    "pct": 0.06
+   },
+   "2023": {
+    "articles": 7720,
+    "ai_labelled": 16,
+    "pct": 0.21
+   },
+   "2024": {
+    "articles": 9931,
+    "ai_labelled": 39,
+    "pct": 0.39
+   },
+   "2025": {
+    "articles": 21443,
+    "ai_labelled": 1911,
+    "pct": 8.91
+   },
+   "2026": {
+    "articles": 60046,
+    "ai_labelled": 4641,
+    "pct": 7.73
+   },
+   "none": {
+    "articles": 4635,
+    "ai_labelled": 0,
+    "pct": 0.0
+   }
+  },
+  "by_topic": [
+   {
+    "ms_topic": "(none)",
+    "articles": 98699,
+    "ai_labelled": 1699,
+    "pct": 1.72
+   },
+   {
+    "ms_topic": "how-to",
+    "articles": 25163,
+    "ai_labelled": 2014,
+    "pct": 8.0
+   },
+   {
+    "ms_topic": "reference",
+    "articles": 20935,
+    "ai_labelled": 260,
+    "pct": 1.24
+   },
+   {
+    "ms_topic": "concept-article",
+    "articles": 10014,
+    "ai_labelled": 1059,
+    "pct": 10.58
+   },
+   {
+    "ms_topic": "troubleshooting",
+    "articles": 5349,
+    "ai_labelled": 379,
+    "pct": 7.09
+   },
+   {
+    "ms_topic": "article",
+    "articles": 4764,
+    "ai_labelled": 112,
+    "pct": 2.35
+   },
+   {
+    "ms_topic": "generated-reference",
+    "articles": 4245,
+    "ai_labelled": 1,
+    "pct": 0.02
+   },
+   {
+    "ms_topic": "overview",
+    "articles": 3925,
+    "ai_labelled": 366,
+    "pct": 9.32
+   },
+   {
+    "ms_topic": "tutorial",
+    "articles": 2048,
+    "ai_labelled": 221,
+    "pct": 10.79
+   },
+   {
+    "ms_topic": "quickstart",
+    "articles": 1334,
+    "ai_labelled": 152,
+    "pct": 11.39
+   },
+   {
+    "ms_topic": "error-reference",
+    "articles": 942,
+    "ai_labelled": 2,
+    "pct": 0.21
+   },
+   {
+    "ms_topic": "sample",
+    "articles": 650,
+    "ai_labelled": 56,
+    "pct": 8.62
+   },
+   {
+    "ms_topic": "best-practice",
+    "articles": 460,
+    "ai_labelled": 73,
+    "pct": 15.87
+   },
+   {
+    "ms_topic": "install-set-up-deploy",
+    "articles": 434,
+    "ai_labelled": 18,
+    "pct": 4.15
+   },
+   {
+    "ms_topic": "whats-new",
+    "articles": 420,
+    "ai_labelled": 12,
+    "pct": 2.86
+   },
+   {
+    "ms_topic": "faq",
+    "articles": 343,
+    "ai_labelled": 23,
+    "pct": 6.71
+   },
+   {
+    "ms_topic": "troubleshooting-general",
+    "articles": 323,
+    "ai_labelled": 25,
+    "pct": 7.74
+   },
+   {
+    "ms_topic": "upgrade-and-migration-article",
+    "articles": 299,
+    "ai_labelled": 10,
+    "pct": 3.34
+   },
+   {
+    "ms_topic": "language-reference",
+    "articles": 295,
+    "ai_labelled": 0,
+    "pct": 0.0
+   },
+   {
+    "ms_topic": "ui-reference",
+    "articles": 276,
+    "ai_labelled": 4,
+    "pct": 1.45
+   },
+   {
+    "ms_topic": "get-started",
+    "articles": 260,
+    "ai_labelled": 24,
+    "pct": 9.23
+   },
+   {
+    "ms_topic": "release-notes",
+    "articles": 217,
+    "ai_labelled": 5,
+    "pct": 2.3
+   }
+  ],
+  "gate": {
+   "repos_read": 30,
+   "articles": 182133,
+   "passed": true
+  },
+  "predictions": {
+   "P1": {
+    "value_pct": 3.63,
+    "held": false
+   },
+   "P2": {
+    "ai_assisted": 6362,
+    "ai_generated": 256,
+    "ratio": 24.85,
+    "held": true
+   },
+   "P3": {
+    "value_pct": 99.0,
+    "known_year": 6618,
+    "held": true
+   },
+   "P4": {
+    "share_2026_pct": 7.73,
+    "n_2026": 60046,
+    "share_le2024_pct": 0.07,
+    "n_le2024": 96009,
+    "ratio": 112.43,
+    "held": true
+   },
+   "P5": {
+    "repos_with_label": 21,
+    "repos_read": 30,
+    "value_pct": 70.0,
+    "held": false
+   },
+   "P6": {
+    "noncanonical": 169,
+    "value_pct": 2.55,
+    "held": true
+   }
+  }
+ }
+}
