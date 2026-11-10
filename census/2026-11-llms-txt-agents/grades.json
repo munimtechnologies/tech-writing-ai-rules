@@ -1,0 +1,75 @@
+{
+ "version": "0.1.0",
+ "gate": {
+  "unique_urls": 1512,
+  "reached": 1416,
+  "reached_share": 0.9365,
+  "valid": 1233,
+  "held": true
+ },
+ "code_files": 200,
+ "counts": {
+  "directive": 30,
+  "cite": 8,
+  "promote": 6,
+  "source": 4,
+  "usage": 17,
+  "action": 10,
+  "limit": 10,
+  "override": 0,
+  "other": 7
+ },
+ "by_year": {
+  "2025": {
+   "files": 79,
+   "directive": 4,
+   "share": 0.0506
+  },
+  "2026": {
+   "files": 121,
+   "directive": 26,
+   "share": 0.2149
+  }
+ },
+ "template_directive_files": 3,
+ "recall": {
+  "files": 20,
+  "directive": 3,
+  "lower_bound": true
+ },
+ "predictions": {
+  "P1": {
+   "text": "10% to 40% of CODE files have DIRECTIVE",
+   "value": 0.15,
+   "count": "30 of 200",
+   "verdict": "held"
+  },
+  "P2": {
+   "text": "PROMOTE in at least 25% of directive files",
+   "value": 0.2,
+   "count": "6 of 30",
+   "verdict": "failed"
+  },
+  "P3": {
+   "text": "ACTION in at least 20% of directive files",
+   "value": 0.3333,
+   "count": "10 of 30",
+   "verdict": "held"
+  },
+  "P4": {
+   "text": "OVERRIDE in at most 2% of CODE files",
+   "value": 0.0,
+   "count": "0 of 200",
+   "verdict": "held"
+  },
+  "P5": {
+   "text": "DIRECTIVE share higher among files listed in 2026 than in 2025",
+   "value": [
+    0.2149,
+    0.0506
+   ],
+   "count": "2026: 26 of 121; 2025: 4 of 79",
+   "verdict": "held"
+  }
+ }
+}
