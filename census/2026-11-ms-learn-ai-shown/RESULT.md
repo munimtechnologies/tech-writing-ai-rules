@@ -1,6 +1,6 @@
 # Study 8 result: does Microsoft Learn tell its readers, people and agents, that an article was made with AI?
 
-Read 2026-11-10 13:46 to 14:36 UTC by `learnshown.py` 0.2.0 with `--render`, 22 minutes after [amendment 1](AMENDMENT-1.md) was committed (2026-11-10 13:24 UTC, commit `edd768a`). The [pre-registration](PREREGISTRATION.md) was committed on 2026-11-09. Graded 2026-11-10. The tool computed the gates and the six predictions as pre-registered; the hand check changed one automatic match (in stratum U) and no verdict.
+Read 2026-11-10 13:46 to 14:36 UTC by `learnshown.py` 0.2.0 with `--render`, 22 minutes after [amendment 1](AMENDMENT-1.md) was committed (2026-11-10 13:24 UTC, commit `edd768a`). The [pre-registration](PREREGISTRATION.md) was committed on 2026-11-09. Graded 2026-11-10. The tool computed the gates and the six predictions as pre-registered; the hand check changed one automatic match (in stratum U) and no verdict. A later check in an ordinary desktop browser agreed with the result (see "Browser check").
 
 ## Summary
 
@@ -50,7 +50,17 @@ As pre-registered (`hand_check.csv`):
 - **The first 10 matched pages in A and B** (sorted by repo and path, all in `SupportArticles-docs`): each matched sentence is Microsoft's standard note, which says how the article was made. All 10 are true positives. All 131 A and B matches are one of the two standard sentences, word for word.
 - **10 counted A or B pages with no match, opened in a browser:** there were none, because all 131 matched.
 
-Not pre-registered: we tried to confirm a few pages with a rendering reader service (r.jina.ai) on 2026-11-10. It showed the note on the Entra control page and on none of 3 C pages, but it also showed no note on 4 A and B pages that the tool's browser saw it on, because for most Learn pages it now returned the article without the page's end matter. So it cannot confirm or contradict the result, and we do not count it. A check of C pages in an ordinary desktop browser is planned and will be added here.
+Not pre-registered: we tried to confirm a few pages with a rendering reader service (r.jina.ai) on 2026-11-10. It showed the note on the Entra control page and on none of 3 C pages, but it also showed no note on 4 A and B pages that the tool's browser saw it on, because for most Learn pages it now returned the article without the page's end matter. So it cannot confirm or contradict the result, and we do not count it.
+
+## Browser check
+
+Not pre-registered; added 2026-11-10. At about 15:45 UTC, an AI agent working in MV2's name opened 8 counted pages in an ordinary desktop Chrome window, scrolled to the end of each article and searched the page for "with AI":
+
+- **5 C pages, none showing the note:** `azure/sre-agent/permissions` and `azure/sre-agent/file-attachments` (`ms.ai-usage`), `fabric/data-science/synapse-overview` (`ai.usage`), `visualstudio/ide/copilot-chat-context` (`ms.ai-usage`) and `dynamics365/customer-service/administer/enable-audit-tables` (`ai.usage`). The matches the search did find on two of them were product text ("Review cases with AI-generated summaries", "inline code assistance"), not a note.
+- **3 standard pages, all showing it** as a one-line "Note:" just above "Additional resources": `fabric/admin/map-settings` and `azure/dns/secure-dns` (A: "The author created this article with assistance from AI.") and `azure/container-apps/gpu-types` (B: "This article contains content created with AI.").
+- **Page source:** `sre-agent/permissions` carries `<meta name="ms.ai-usage" content="ai-assisted" />` and `fabric/admin/map-settings` carries `<meta name="ai-usage" content="ai-assisted" />`.
+
+Every page loaded with no sign-in wall or error. The browser shows what the headless renderer recorded: the note follows the key's spelling.
 
 ## URL mapping
 
@@ -66,7 +76,7 @@ Amendment 1's candidate rules confirmed 263 of 315 sampled files (breadcrumb bas
 
 - One sample, one day, en-us only. The sample leans towards the largest repos, as study 7's frame does, and 52 sampled files could not be mapped to live pages.
 - All 33 C pages were `ai-assisted`; the only `ai-generated` page with a variant key is the Dev Box control, read before the pre-registration. That the value does not matter rests on that one page.
-- Rendering depends on Learn's scripts and on timing (load, network quiet up to 15 seconds, scroll, 2 more seconds). A note added later, or only after a click, would be missed. The positive control and the 131 A and B pages show that the wait was long enough for the standard note.
+- Rendering depends on Learn's scripts and on timing (load, network quiet up to 15 seconds, scroll, 2 more seconds). A note added later, or only after a click, would be missed. The positive control, the 131 A and B pages and the browser check show that the wait was long enough for the standard note.
 - The 169 figure comes from study 7's snapshot of 2026-11-09; this study sampled 33 of them.
 - A missing heading in the Markdown copy may be a deliberate choice, not a loss. We report what is missing, not why.
 - Microsoft plans to retire most of these public repos by the end of December 2026, so the source side of this check may not be repeatable from the same repos.
@@ -80,4 +90,4 @@ Amendment 1's candidate rules confirmed 263 of 315 sampled files (breadcrumb bas
 - `hand_check.csv`: the pre-registered hand check, one row per sentence read.
 - `../../test_study8_result.py` recomputes the gates and predictions from `pages.csv` and `hand_check.csv`, checks them against `shown.json` and the table above, and checks that the hand check covers the pre-registered rows.
 
-Made by MV2 of Munim, Inc. (mv2@munimtech.com), with AI agents working in his name: the tool, the hand check and this text were made with AI. Data CC BY 4.0, code Apache-2.0. The notes quoted are Microsoft's; no article text is republished.
+Made by MV2 of Munim, Inc. (mv2@munimtech.com), with AI agents working in his name: the tool, the hand check, the browser check and this text were made with AI. Data CC BY 4.0, code Apache-2.0. The notes quoted are Microsoft's; no article text is republished.
