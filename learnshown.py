@@ -3,7 +3,7 @@
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
 # except in compliance with the License. You may obtain a copy of the License at
 # http://www.apache.org/licenses/LICENSE-2.0
-"""learnshown 0.1.0: does Microsoft Learn tell its readers, people and agents, that an article was made with AI?
+"""learnshown 0.2.0: does Microsoft Learn tell its readers, people and agents, that an article was made with AI?
 
 Study 8 of tech-writing-ai-rules. Microsoft's principles for AI-generated content say: "All
 articles that contain any AI-generated content include text acknowledging the role of AI.
@@ -20,18 +20,25 @@ PER_STRATUM articles per repo from each pre-registered stratum by a seeded rando
   C  another AI key spelling (ms.ai-usage, ai.usage, ...) with ai-assisted or ai-generated
   D  an AI key whose value names AI in another form   U  no AI key (unlabelled)
 
-Each article's live URL is derived from the repo's docfx.json and confirmed by the page's own
-`source_path` / `original_content_git_url`. Each page is fetched twice from
-learn.microsoft.com: as HTML (what people see) and as Markdown (`Accept: text/markdown`, what
-agents such as Copilot Chat and Claude Code ask for). The tool records whether each form
-carries the AI label and a sentence acknowledging AI, and which of the source's level-2
-headings the Markdown copy keeps. No article text is kept, only the matched disclosure
-sentence (at most 200 characters).
+0.2.0 (study 8, amendment 1). Each article's live URL is found by trying candidates in order:
+the base path of the nearest docfx.json's `globalMetadata.breadcrumb_path` (a final
+`breadcrumb` / `bread` folder dropped), its first segment, 0.1.0's `build.dest` rule (each also
+in lower case), and last the first 5 en-us results of Learn's public search API for the
+article's title. The first candidate whose fetched form names this exact repo file as its source
+(`source_path` / `original_content_git_url`) is used; pages no candidate confirms are reported,
+not counted. Each page is then fetched twice from learn.microsoft.com: as HTML (what people are
+served) and as Markdown (`Accept: text/markdown`, what agents such as Copilot Chat and Claude
+Code ask for). With --render, each counted page is also loaded in headless Chromium
+(Playwright), so text that page scripts add is seen; the acknowledgement predictions are then
+graded on the rendered text. The tool records whether each form carries the AI label and a
+sentence acknowledging AI, and which of the source's level-2 headings the Markdown copy keeps.
+No article text is kept, only the matched disclosure sentence (at most 200 characters).
 
-Usage: python learnshown.py --out-dir OUT [--wait-prereg-minutes 240] [--no-prereg-check]
+Usage: python learnshown.py --out-dir OUT [--render] [--wait-prereg-minutes 240] [--no-prereg-check]
 
 Outputs: frame.csv, pages.csv, shown.json, LEARNSHOWN_AUTO.md.
-Standard library only, plus the git command line and learnlabels.py. Apache-2.0.
+Standard library only, plus the git command line and learnlabels.py (and Playwright for
+--render). Apache-2.0.
 Made by MV2 of Munim, Inc. (mv2@munimtech.com), with AI agents working in his name.
 """
 
@@ -49,12 +56,13 @@ import sys
 import tempfile
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import urllib.robotparser
 
 import learnlabels as ll
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 USER_AGENT = ("tech-writing-ai-rules-learnshown/%s (+https://github.com/munimtechnologies/"
               "tech-writing-ai-rules; mv2@munimtech.com)" % VERSION)
 PREREG_PATH = "census/2026-11-ms-learn-ai-shown/PREREGISTRATION.md"
@@ -73,6 +81,11 @@ GATE_REPOS = 8
 GATE_MD_PCT = 90
 MIN_P = {"P1": 20, "P2": 10, "P3": 20, "P4": 20, "P5": 20, "P6": 20}
 END_HEADINGS = {"next steps", "next step", "related content"}
+BREAD_DIRS = {"breadcrumb", "_breadcrumb", "bread", "_bread"}
+SEARCH_TOP = 5
+RENDER_NAV_MS = 60000
+RENDER_IDLE_MS = 15000
+RENDER_SETTLE_MS = 2000
 
 # The two pages read by hand before the pre-registration was written; never sampled.
 SEEN = {("MicrosoftDocs/azure-docs", "articles/dev-box/overview-what-is-dev-box-mcp-server.md"),
@@ -99,10 +112,10 @@ BLOCK_RE = re.compile(r"</?(?:p|div|li|ul|ol|h[1-6]|br|tr|td|th|table|section|as
 H2_RE = re.compile(r"^ {0,3}##(?!#)[ \t]+(.+?)[ \t]*#*[ \t]*$")
 
 PAGE_COLUMNS = ["repo", "path", "stratum", "src_key", "src_value", "src_category", "src_year",
-                "url", "final_url", "md_status", "md_ctype", "md_served", "html_status", "mapped",
-                "md_ai_key", "md_ai_value", "html_ai_key", "html_ai_value", "note_html",
-                "note_html_text", "note_raw_html", "note_md", "note_md_text", "src_h2", "md_h2_missing",
-                "last_src_h2", "last_h2_missing"]
+                "url", "url_rule", "tried", "final_url", "md_status", "md_ctype", "md_served", "html_status",
+                "mapped", "md_ai_key", "md_ai_value", "html_ai_key", "html_ai_value", "note_html",
+                "note_html_text", "note_raw_html", "render_status", "note_rendered", "note_rendered_text",
+                "note_md", "note_md_text", "src_h2", "md_h2_missing", "last_src_h2", "last_h2_missing"]
 FRAME_COLUMNS = ["rank", "repo", "status", "commit", "articles", "labelled", "A", "B", "C", "D",
                  "U", "sampled", "docfx_files"]
 
@@ -156,8 +169,22 @@ def clean_path(p):
     return "/".join(x for x in str(p or "").replace("\\", "/").split("/") if x not in ("", "."))
 
 
+def breadcrumb_base(bp):
+    """Learn base path from a docfx breadcrumb_path: '/fabric/breadcrumb/toc.json' -> 'fabric',
+    '/azure/architecture/bread/toc.json' -> 'azure/architecture', '/dynamics365/ops-bc/toc.json'
+    -> 'dynamics365/ops-bc'. A relative or empty path gives ''."""
+    bp = str(bp or "").strip().replace("\\", "/")
+    if not bp.startswith("/"):
+        return ""
+    segs = [s for s in bp.split("/") if s][:-1]
+    if segs and segs[-1].lower() in BREAD_DIRS:
+        segs = segs[:-1]
+    return "/".join(segs)
+
+
 def docfx_map(text):
-    """{'dest': build.dest, 'content': [(src, dest), ...]} for content entries that take .md files."""
+    """{'dest': build.dest, 'bread': breadcrumb base, 'content': [(src, dest), ...]} for content
+    entries that take .md files."""
     obj = ll.load_json_loose(text)
     if not isinstance(obj, dict) or not isinstance(obj.get("build"), dict):
         return None
@@ -172,7 +199,9 @@ def docfx_map(text):
         if not any("md" in str(g).lower() or str(g).endswith("*") for g in globs):
             continue
         entries.append((clean_path(c.get("src")), clean_path(c.get("dest"))))
-    return {"dest": clean_path(build.get("dest")), "content": entries}
+    gm = build.get("globalMetadata") if isinstance(build.get("globalMetadata"), dict) else {}
+    return {"dest": clean_path(build.get("dest")), "bread": breadcrumb_base(gm.get("breadcrumb_path")),
+            "content": entries}
 
 
 def find_docfx(root):
@@ -197,33 +226,68 @@ def _under(path, prefix):
     return prefix == "" or path == prefix or path.startswith(prefix + "/")
 
 
-def page_url(path, maps):
-    """The en-us Learn URL docfx would publish `path` (repo-relative) at, or '' if none."""
+def _locate(path, maps):
+    """(mapping, entry dest, path below the entry's src without .md) for `path`, or None."""
     path = ll.norm_path(path)
     dirs = [d for d in maps if _under(path, d) and path != d]
     if not dirs:
-        return ""
+        return None
     d = max(dirs, key=len)
     rel = path[len(d) + 1:] if d else path
     m = maps[d]
     srcs = [(s, e) for s, e in m["content"] if _under(rel, s) and rel != s]
     if not srcs:
-        return ""
+        return None
     src, edest = max(srcs, key=lambda se: len(se[0]))
     sub = rel[len(src) + 1:] if src else rel
     if not sub.lower().endswith(".md"):
-        return ""
+        return None
     sub = sub[:-3]
     leaf = sub.split("/")[-1]
     if leaf.lower() == "index":
         sub = sub[:len(sub) - len(leaf)]
-    parts = [p for p in (m["dest"], edest) if p]
+    return m, edest, sub
+
+
+def _url(parts, sub):
+    parts = [p for p in parts if p]
     if sub:
-        parts.append(sub)
-        url_path = "/".join(parts)
+        url_path = "/".join(parts + [sub])
     else:
         url_path = "/".join(parts) + "/"
     return "%s/%s/%s" % (LEARN, LOCALE, url_path.lstrip("/"))
+
+
+def page_url(path, maps):
+    """0.1.0's rule: the en-us URL from build.dest / entry dest / path, or '' if none."""
+    loc = _locate(path, maps)
+    if not loc:
+        return ""
+    m, edest, sub = loc
+    return _url([m["dest"], edest], sub)
+
+
+def candidate_urls(path, maps):
+    """[(rule, url), ...] in the order amendment 1 tries them, without repeats."""
+    loc = _locate(path, maps)
+    if not loc:
+        return []
+    m, edest, sub = loc
+    bread = m.get("bread") or ""
+    raw = []
+    if bread:
+        raw.append(("breadcrumb", _url([bread, edest], sub)))
+        root = bread.split("/")[0]
+        if root != bread:
+            raw.append(("breadcrumb-root", _url([root, edest], sub)))
+    raw.append(("docfx-dest", _url([m["dest"], edest], sub)))
+    out, seen = [], set()
+    for rule, u in raw:
+        for r2, u2 in ((rule, u), (rule + "-lower", u.lower())):
+            if u2 not in seen:
+                seen.add(u2)
+                out.append((r2, u2))
+    return out
 
 
 # ---------------------------------------------------------------- reading the two forms
@@ -278,6 +342,11 @@ def disclosure(text):
             if ALT_RE.search(sent) or (DISCLOSE_RE.search(sent) and SUBJECT_RE.search(sent)):
                 return sent.strip()[:200]
     return ""
+
+
+def rendered_note(text):
+    """disclosure() over rendered text (document.body.innerText), each line its own paragraph."""
+    return disclosure(re.sub(r"\r?\n", "\n\n", text or ""))
 
 
 def is_html(text, ctype):
@@ -344,7 +413,7 @@ def mapped(path, *forms):
     return "no" if named else "unknown"
 
 
-# ---------------------------------------------------------------- HTTP
+# ---------------------------------------------------------------- HTTP and rendering
 
 def default_fetch(url, accept):
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": accept})
@@ -377,29 +446,142 @@ def robots_ok(fetch):
     return (lambda url: rp.can_fetch(USER_AGENT, url)), status
 
 
-def check_page(row, fetch, sleep, allowed):
-    """Fill the live columns of one sampled page row."""
-    url = row.get("url") or ""
+def make_renderer():
+    """(render(url) -> (status, text), close()) with headless Chromium through Playwright.
+    Raises if Playwright or its browser is missing."""
+    from playwright.sync_api import sync_playwright  # only needed with --render
+    pw = sync_playwright().start()
+    browser = pw.chromium.launch(headless=True)
+    probe = browser.new_page()
+    ua = probe.evaluate("navigator.userAgent")
+    probe.close()
+    ctx = browser.new_context(user_agent="%s %s" % (ua, USER_AGENT), locale="en-US")
+
+    def render(url):
+        page = ctx.new_page()
+        try:
+            resp = page.goto(url, wait_until="load", timeout=RENDER_NAV_MS)
+            try:
+                page.wait_for_load_state("networkidle", timeout=RENDER_IDLE_MS)
+            except Exception:
+                pass
+            page.evaluate("window.scrollTo(0, document.body ? document.body.scrollHeight : 0)")
+            page.wait_for_timeout(RENDER_SETTLE_MS)
+            text = page.evaluate("document.body ? document.body.innerText : ''")
+            return (resp.status if resp else 0), (text or "")
+        except Exception:
+            return 0, ""
+        finally:
+            try:
+                page.close()
+            except Exception:
+                pass
+
+    def close():
+        for f in (ctx.close, browser.close, pw.stop):
+            try:
+                f()
+            except Exception:
+                pass
+
+    return render, close
+
+
+def first_fetch(url, fetch, sleep):
+    """Fetch one candidate URL as Markdown; the answer tells us which source file it shows."""
+    st, ct, final, text = polite_fetch(fetch, url, "text/markdown", sleep)
+    served = md_served(st, ct, text)
+    md = {"source_path": "", "git_url": ""}
+    if served:
+        md = read_md_copy(text)
+    elif st == 200 and is_html(text, ct):
+        md = read_html(text)  # still tells us the source path
+    return {"status": st, "ctype": ct, "final": final, "served": served, "md": md}
+
+
+def search_urls(title, fetch, sleep, allowed, top=SEARCH_TOP):
+    """The first `top` en-us page URLs Learn's public search API returns for `title`."""
+    title = (title or "").strip()
+    if not title:
+        return []
+    url = "%s/api/search?search=%s&locale=%s&$top=%d" % (LEARN, urllib.parse.quote(title), LOCALE, top)
+    if not allowed(url):
+        return []
+    st, _ct, _f, text = polite_fetch(fetch, url, "application/json", sleep)
+    if st != 200:
+        return []
+    try:
+        obj = json.loads(text)
+    except ValueError:
+        return []
+    results = obj.get("results") if isinstance(obj, dict) else None
+    out = []
+    for r in results if isinstance(results, list) else []:
+        u = r.get("url") if isinstance(r, dict) else None
+        if isinstance(u, str) and u.startswith("%s/%s/" % (LEARN, LOCALE)):
+            u = u.split("#")[0].split("?")[0]
+            if u not in out:
+                out.append(u)
+    return out[:top]
+
+
+def check_page(row, fetch, sleep, allowed, render=None):
+    """Find the page's live URL and fill the live columns of one sampled page row."""
+    cands = list(row.get("_cands") or [])
+    if not cands and row.get("url"):
+        cands = [("given", row["url"])]
+    title = row.get("_title") or ""
     row.update(md_status="", md_ctype="", md_served=False, html_status="", mapped="unknown",
                md_ai_key="", md_ai_value="", html_ai_key="", html_ai_value="", note_html=False,
                note_html_text="", note_raw_html=False, note_md=False, note_md_text="", final_url="",
-               md_h2_missing="", last_h2_missing="")
-    if not url:
+               md_h2_missing="", last_h2_missing="", url_rule="", tried=0, render_status="",
+               note_rendered=False, note_rendered_text="")
+    chosen = first = None
+    tried = []
+    searched = False
+    i = 0
+    while True:
+        if i >= len(cands):
+            if searched or not title:
+                break
+            searched = True
+            known = set(u for _r, u in cands)
+            for u in search_urls(title, fetch, sleep, allowed):
+                if u not in known:
+                    cands.append(("search", u))
+            if i >= len(cands):
+                break
+        rule, url = cands[i]
+        i += 1
+        if url in tried:
+            continue
+        tried.append(url)
+        if not allowed(url):
+            if first is None:
+                first = (rule, url, None)
+            continue
+        got = first_fetch(url, fetch, sleep)
+        if first is None:
+            first = (rule, url, got)
+        if mapped(row["path"], got["md"]) == "yes":
+            chosen = (rule, url, got)
+            break
+    row["tried"] = len(tried)
+    pick = chosen or first
+    if pick is None:
         row["mapped"] = "no url"
         return row
-    if not allowed(url):
+    rule, url, got = pick
+    row.update(url=url, url_rule=rule)
+    if got is None:
         row["mapped"] = "robots"
         return row
-    st, ct, final, text = polite_fetch(fetch, url, "text/markdown", sleep)
-    row.update(md_status=st, md_ctype=(ct or "")[:60], final_url=final)
-    md = {"source_path": "", "git_url": ""}
-    if md_served(st, ct, text):
+    row.update(md_status=got["status"], md_ctype=(got["ctype"] or "")[:60], final_url=got["final"])
+    md = got["md"]
+    if got["served"]:
         row["md_served"] = True
-        md = read_md_copy(text)
         row.update(md_ai_key=md["ai_key"], md_ai_value=md["ai_value"], note_md=bool(md["note"]),
                    note_md_text=md["note"])
-    elif st == 200 and is_html(text, ct):
-        md = read_html(text)  # still tells us the source path
     st2, ct2, final2, text2 = polite_fetch(fetch, url, "text/html,application/xhtml+xml", sleep)
     row["html_status"] = st2
     h = {"source_path": "", "git_url": ""}
@@ -409,6 +591,11 @@ def check_page(row, fetch, sleep, allowed):
                    note_html_text=h["note"], note_raw_html=h["raw"])
         row["final_url"] = row["final_url"] or final2
     row["mapped"] = mapped(row["path"], md, h)
+    if render and row["mapped"] == "yes" and st2 == 200:
+        sleep(DELAY)
+        rst, rtext = render(url)
+        note = rendered_note(rtext)
+        row.update(render_status=rst, note_rendered=bool(note), note_rendered_text=note)
     src = row.get("_src_h2") or []
     if row["md_served"]:
         have = set(md.get("h2") or [])
@@ -428,14 +615,17 @@ def _share(rows, test):
     return sum(1 for r in rows if test(r)), len(rows)
 
 
-def summarise(pages, controls, rows):
+def summarise(pages, controls, rows, note_field="note_html"):
+    """Gates and predictions. `note_field` is the acknowledgement measure for G2 and P1 to P4:
+    'note_html' (served HTML, the pre-registration) or 'note_rendered' (amendment 1, --render)."""
+    nf = note_field
     ok = [p for p in pages if p.get("mapped") == "yes" and p.get("html_status") == 200]
     lab = [p for p in ok if p["stratum"] in LABELLED]
     lab_repos = sorted(set(p["repo"] for p in lab))
     md_ok = [p for p in ok if p.get("md_served")]
     pos = [c for c in controls if c["stratum"] == "control-positive"]
     g1 = len(lab) >= GATE_LABELLED and len(lab_repos) >= GATE_REPOS
-    g2 = bool(pos) and bool(pos[0].get("note_html"))
+    g2 = bool(pos) and bool(pos[0].get(nf))
     g3 = bool(ok) and 100 * len(md_ok) >= GATE_MD_PCT * len(ok)
 
     def grade(name, k, n, holds, needs_html=False, needs_md=False):
@@ -444,15 +634,15 @@ def summarise(pages, controls, rows):
 
     preds = collections.OrderedDict()
     ab = [p for p in ok if p["stratum"] in ("A", "B")]
-    k, n = _share(ab, lambda p: p.get("note_html"))
+    k, n = _share(ab, lambda p: p.get(nf))
     preds["P1"] = grade("P1", k, n, lambda k, n: 100 * k >= 90 * n, needs_html=True)
     c = [p for p in ok if p["stratum"] == "C"]
-    k, n = _share(c, lambda p: p.get("note_html"))
+    k, n = _share(c, lambda p: p.get(nf))
     preds["P2"] = grade("P2", k, n, lambda k, n: 100 * k <= 20 * n, needs_html=True)
     u = [p for p in ok if p["stratum"] == "U"]
-    k, n = _share(u, lambda p: p.get("note_html"))
+    k, n = _share(u, lambda p: p.get(nf))
     preds["P3"] = grade("P3", k, n, lambda k, n: 100 * k <= 5 * n, needs_html=True)
-    shown = [p for p in lab if p.get("note_html") and p.get("md_served")]
+    shown = [p for p in lab if p.get(nf) and p.get("md_served")]
     k, n = _share(shown, lambda p: p.get("note_md"))
     preds["P4"] = grade("P4", k, n, lambda k, n: 100 * k <= 20 * n, needs_html=True, needs_md=True)
     labmd = [p for p in lab if p.get("md_served")]
@@ -469,6 +659,7 @@ def summarise(pages, controls, rows):
         by_stratum[s] = {
             "sampled": sum(1 for p in pages if p["stratum"] == s), "mapped_ok": len(sp),
             "note_html": sum(1 for p in sp if p.get("note_html")),
+            "note_rendered": sum(1 for p in sp if p.get("note_rendered")),
             "note_raw_html": sum(1 for p in sp if p.get("note_raw_html")),
             "html_ai_meta": sum(1 for p in sp if p.get("html_ai_key")),
             "md_served": len(sm), "note_md": sum(1 for p in sm if p.get("note_md")),
@@ -478,21 +669,26 @@ def summarise(pages, controls, rows):
     by_value = collections.OrderedDict()
     for v in ("ai-assisted", "ai-generated"):
         vp = [p for p in lab if p.get("src_category") == v]
-        by_value[v] = {"pages": len(vp), "note_html": sum(1 for p in vp if p.get("note_html"))}
+        by_value[v] = {"pages": len(vp), "note": sum(1 for p in vp if p.get(nf))}
     keys = collections.Counter(p.get("src_key") for p in ok if p["stratum"] in ("C", "D"))
-    notes = collections.Counter(p.get("note_html_text") for p in ok if p.get("note_html"))
+    notes = collections.Counter(p.get(nf + "_text") for p in ok if p.get(nf))
     last = collections.Counter(p.get("last_src_h2") or "(none)" for p in md_ok)
     status = collections.Counter(p.get("mapped") for p in pages)
+    rules = collections.Counter(p.get("url_rule") or "(none)" for p in ok)
     return collections.OrderedDict([
+        ("note_measure", nf),
         ("pages_sampled", len(pages)), ("mapped_status", dict(status)), ("mapped_ok", len(ok)),
+        ("url_rules", dict(rules)),
         ("labelled_ok", len(lab)), ("labelled_repos", len(lab_repos)), ("md_served", len(md_ok)),
         ("by_stratum", by_stratum), ("by_value", by_value), ("other_keys", dict(keys)),
         ("note_texts", dict(notes.most_common(15))), ("last_src_h2", dict(last.most_common(15))),
-        ("controls", [{k2: c2.get(k2) for k2 in ("stratum", "url", "html_status", "md_served", "mapped",
-                                                   "note_html", "note_html_text", "note_md", "md_ai_key",
-                                                   "html_ai_key", "last_h2_missing")} for c2 in controls]),
+        ("controls", [{k2: c2.get(k2) for k2 in ("stratum", "url", "url_rule", "html_status", "md_served",
+                                                   "mapped", "note_html", "note_html_text", "render_status",
+                                                   "note_rendered", "note_rendered_text", "note_md",
+                                                   "md_ai_key", "html_ai_key", "last_h2_missing")}
+                      for c2 in controls]),
         ("gates", {"G1": {"labelled_ok": len(lab), "repos": len(lab_repos), "passed": g1},
-                   "G2": {"positive_control_note": g2, "passed": g2},
+                   "G2": {"positive_control_note": g2, "measure": nf, "passed": g2},
                    "G3": {"md_served_pct": pct(len(md_ok), len(ok)), "passed": g3}}),
         ("repos_read", sum(1 for r in rows if r.get("status") == "read")),
         ("predictions", preds),
@@ -514,25 +710,29 @@ def report(meta, s):
     out = ["# learnshown %s: does Microsoft Learn show readers that an article was made with AI? (automatic report)"
            % VERSION, "", "First pass written by the tool. The graded result is in RESULT.md.", "",
            "- Started %s, finished %s." % (meta["started"], meta.get("finished")),
-           "- Pre-registration first committed: %s." % (meta["prereg"].get("committed_at")
-                                                       or "not found (%s)" % meta["prereg"].get("error")),
+           "- Pre-registration (or amendment) file first committed: %s." % (
+               meta["prereg"].get("committed_at") or "not found (%s)" % meta["prereg"].get("error")),
+           "- Acknowledgement measure for G2 and P1 to P4: %s." % s["note_measure"],
            "- Repos read: %d. Pages sampled: %d; mapped and fetched as HTML: %d; labelled (A-C): %d from %d repos; "
            "Markdown copy served: %d." % (s["repos_read"], s["pages_sampled"], s["mapped_ok"], s["labelled_ok"],
                                           s["labelled_repos"], s["md_served"]),
            "- Mapping: %s." % ", ".join("%s %d" % kv for kv in sorted(s["mapped_status"].items(), key=str)),
+           "- URL rule of counted pages: %s." % (", ".join("%s %d" % kv for kv in sorted(s["url_rules"].items()))
+                                                 or "none"),
            "- Gates: G1 %s, G2 %s, G3 %s." % tuple(yn[s["gates"][g]["passed"]] for g in ("G1", "G2", "G3")),
            "", "## Predictions (automatic; boundaries as pre-registered)", "", "| | k | n | % | held |",
            "|---|---|---|---|---|"]
     for k, p in s["predictions"].items():
         out.append("| %s | %d | %d | %s | %s |" % (k, p["k"], p["n"], p["value_pct"], yn[p["held"]]))
     out += ["", "## By stratum", "",
-            "| stratum | sampled | mapped | note in HTML | AI meta in HTML | MD served | note in MD | AI key in MD | last h2 missing in MD |",
-            "|---|---|---|---|---|---|---|---|---|"]
+            "| stratum | sampled | mapped | note in served HTML | note rendered | AI meta in HTML | MD served | "
+            "note in MD | AI key in MD | last h2 missing in MD |",
+            "|---|---|---|---|---|---|---|---|---|---|"]
     for st, v in s["by_stratum"].items():
-        out.append("| %s | %d | %d | %d | %d | %d | %d | %d | %d |" % (
-            st, v["sampled"], v["mapped_ok"], v["note_html"], v["html_ai_meta"], v["md_served"], v["note_md"],
-            v["md_ai_key"], v["last_h2_missing"]))
-    out += ["", "## Disclosure sentences seen in HTML", ""]
+        out.append("| %s | %d | %d | %d | %d | %d | %d | %d | %d | %d |" % (
+            st, v["sampled"], v["mapped_ok"], v["note_html"], v["note_rendered"], v["html_ai_meta"],
+            v["md_served"], v["note_md"], v["md_ai_key"], v["last_h2_missing"]))
+    out += ["", "## Acknowledgement sentences seen (%s)" % s["note_measure"], ""]
     out += ["- %d x \"%s\"" % (n, t) for t, n in s["note_texts"].items()] or ["- none"]
     out += ["", "## Controls", ""]
     out += ["- %s" % json.dumps(c) for c in s["controls"]]
@@ -548,7 +748,7 @@ def read_text(path, limit=2000000):
         return fh.read(limit).decode("utf-8-sig", "replace")
 
 
-def main(argv=None, opener=None, lister=None, cloner=None, fetch=None, sleep=time.sleep):
+def main(argv=None, opener=None, lister=None, cloner=None, fetch=None, sleep=time.sleep, renderer=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--out-dir", required=True)
     ap.add_argument("--target", type=int, default=TARGET_REPOS)
@@ -557,23 +757,40 @@ def main(argv=None, opener=None, lister=None, cloner=None, fetch=None, sleep=tim
     ap.add_argument("--prereg-path", default=PREREG_PATH)
     ap.add_argument("--no-prereg-check", action="store_true")
     ap.add_argument("--wait-prereg-minutes", type=float, default=0)
+    ap.add_argument("--render", action="store_true",
+                    help="also load each counted page in headless Chromium (Playwright); amendment 1")
     a = ap.parse_args(argv)
     os.makedirs(a.out_dir, exist_ok=True)
     meta = {"version": VERSION, "learnlabels_version": ll.VERSION, "started": utcnow(),
             "settings": {"target": a.target, "max_clones": a.max_clones, "per_stratum": a.per_stratum,
-                         "min_labelled": MIN_LABELLED, "since": ll.PUSHED_SINCE}}
+                         "min_labelled": MIN_LABELLED, "since": ll.PUSHED_SINCE, "render": a.render,
+                         "search_top": SEARCH_TOP}}
 
     def dump(obj):
         with open(os.path.join(a.out_dir, "shown.json"), "w", encoding="utf-8") as fh:
             json.dump(obj, fh, indent=1, default=str)
 
+    render = close = None
+    if a.render:
+        try:
+            render, close = (renderer or make_renderer)()
+        except Exception as exc:
+            meta["error"] = "renderer: %s: %s" % (type(exc).__name__, exc)
+            print("cannot start the renderer (%s); nothing was read" % meta["error"])
+            dump(meta)
+            return 5
+    note_field = "note_rendered" if render else "note_html"
+
     if a.no_prereg_check:
         meta["prereg"] = {"committed_at": None, "error": "not checked"}
     else:
         meta["prereg"] = ll.wait_for_prereg(a.prereg_path, a.wait_prereg_minutes, opener, sleep)
+        meta["prereg"]["path"] = a.prereg_path
         if a.wait_prereg_minutes > 0 and meta["prereg"].get("committed_at") is None:
             print("pre-registration %s not found; nothing was read" % a.prereg_path)
             dump(meta)
+            if close:
+                close()
             return 3
     try:
         repos = (lister or (lambda: ll.list_org(opener, sleep)))()
@@ -581,6 +798,8 @@ def main(argv=None, opener=None, lister=None, cloner=None, fetch=None, sleep=tim
         meta["error"] = str(exc)
         print("cannot list the organisation: %s" % exc)
         dump(meta)
+        if close:
+            close()
         return 4
     eligible, excluded = ll.build_frame(repos)
     meta.update(listed=len(repos), eligible=len(eligible), excluded=dict(excluded))
@@ -611,13 +830,17 @@ def main(argv=None, opener=None, lister=None, cloner=None, fetch=None, sleep=tim
                     read += 1
                     picked = draw(files, r["full_name"], a.per_stratum)
                     for p in picked:
-                        p["url"] = page_url(p["path"], maps)
+                        p["_cands"] = candidate_urls(p["path"], maps)
+                        p["url"] = p["_cands"][0][1] if p["_cands"] else ""
                         p.update(src_key=p["ai_key"], src_value=p["ai_value"], src_category=p["category"],
                                  src_year=p["year"])
                         try:
-                            src = h2s(split_front(read_text(os.path.join(dest, p["path"])))[1])
+                            fm, body = split_front(read_text(os.path.join(dest, p["path"])))
                         except OSError:
-                            src = []
+                            fm, body = None, ""
+                        fields = ll.parse_fields(fm) if fm is not None else {}
+                        p["_title"] = fields.get("title", "")
+                        src = h2s(body)
                         p["_src_h2"] = src
                         p["src_h2"] = len(src)
                         p["last_src_h2"] = src[-1] if src else ""
@@ -635,14 +858,17 @@ def main(argv=None, opener=None, lister=None, cloner=None, fetch=None, sleep=tim
     allowed, meta["robots_status"] = robots_ok(fetch)
     controls = []
     for name, repo, path, url in CONTROLS:
-        controls.append(check_page({"repo": repo, "path": path, "stratum": name, "url": url}, fetch, sleep, allowed))
+        controls.append(check_page({"repo": repo, "path": path, "stratum": name, "url": url}, fetch, sleep,
+                                   allowed, render))
     for i, p in enumerate(pages, 1):
-        check_page(p, fetch, sleep, allowed)
+        check_page(p, fetch, sleep, allowed, render)
         if i % 25 == 0:
             print("checked %d of %d pages" % (i, len(pages)))
             sys.stdout.flush()
+    if close:
+        close()
 
-    summary = summarise(pages, controls, rows)
+    summary = summarise(pages, controls, rows, note_field)
     meta["finished"] = utcnow()
     meta["clones"] = clones
     write_csv(os.path.join(a.out_dir, "frame.csv"), rows, FRAME_COLUMNS)
