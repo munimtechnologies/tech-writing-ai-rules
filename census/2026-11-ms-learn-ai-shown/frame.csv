@@ -1,0 +1,130 @@
+rank,repo,status,commit,articles,labelled,A,B,C,D,U,sampled,docfx_files
+1,MicrosoftDocs/azure-docs,read,e86470eea8e1673b73f5a0b88b11cb88c2c891a4,13754,875,736,18,121,0,12879,32,2
+2,MicrosoftDocs/learn,too few labelled,338f485f94b776c8bc83261229e11d87d6952de0,0,0,0,0,0,0,0,,1
+3,MicrosoftDocs/fabric-docs,read,fe02381ce4f9422ca0180d55c93323ed3dd69e50,2822,1015,967,39,9,0,1807,32,1
+4,MicrosoftDocs/azure-docs-sdk-java,too few labelled,1368a826d24a622813244465946c7fe1b1357a43,1426,0,0,0,0,0,1426,,1
+5,MicrosoftDocs/microsoftgraph-docs-powershell,too few labelled,ee4ec05b3c952d0f7081a985f402e707325c329d,27344,0,0,0,0,0,27344,,0
+6,MicrosoftDocs/azure-docs-sdk-dotnet,too few labelled,945eab241cabf9ea831a913902bc3ebefb24485f,1872,0,0,0,0,0,1872,,1
+7,MicrosoftDocs/entra-docs,read,e358e605374df12a9c3de50222670f5104ef4723,4428,646,624,22,0,0,3781,24,1
+8,MicrosoftDocs/microsoft-365-docs,read,ee0f8f75d0045cc6397fe0a9c2c84d2aba1e01d6,1246,56,55,1,0,0,1187,17,2
+9,MicrosoftDocs/dynamics-365-customer-engagement,read,96c1d681eba46e99954e6c73f9a034b8f06c845a,4893,234,227,1,6,0,4659,23,1
+10,MicrosoftDocs/msteams-docs,too few labelled,065527be08a1ef97f4817855d18562dc05a5d947,352,0,0,0,0,0,352,,1
+11,MicrosoftDocs/powerapps-docs,read,1d310ee8b4f5426968f6d8d5a6b7000bffebda19,2881,104,98,6,0,0,2777,22,1
+12,MicrosoftDocs/dynamics-365-unified-operations-public,read,0dd314dadb11936258f4e4712732180147d7b8d4,6359,154,154,0,0,0,6205,16,1
+13,MicrosoftDocs/dynamics-365-mixed-reality,too few labelled,bec0a3a1ca3ba2d0bf7733ecbeaa3bb06b84a095,248,0,0,0,0,0,248,,1
+14,MicrosoftDocs/architecture-center,read,87a025a83c6afde695aefbd537e4d9e9d16b34ef,313,105,104,1,0,0,208,17,1
+15,MicrosoftDocs/windows-dev-docs,too few labelled,a3812316d9d6678be4e526ffb4b1c4f3958d956d,2160,1,1,0,0,0,2159,,5
+16,MicrosoftDocs/visualstudio-docs,read,c909850af2bb99ced29df945b90659905edf8614,5440,43,40,0,3,0,5397,19,7
+17,MicrosoftDocs/azure-docs-sdk-python,too few labelled,d9e1c7d434ac40e4c2222967d2c3660fb013a77a,1718,0,0,0,0,0,1718,,1
+18,MicrosoftDocs/sql-docs,read,ed2da125166d0cb78c47e2c5293ebdf4a3fa0fa6,13625,466,462,3,1,0,13159,20,3
+19,MicrosoftDocs/azure-monitor-docs,read,deafc7918fcb87288e06e88bb6c15053edc85f74,2739,288,288,0,0,0,2451,16,1
+20,MicrosoftDocs/azure-stack-docs,read,f076fd893ad7ac84edaa9c52f3b35dda2b282378,1217,40,40,0,0,0,1177,16,6
+21,MicrosoftDocs/edge-developer,too few labelled,6c8de50670f8a9b71428f21e74cf59897cc3222b,709,0,0,0,0,0,709,,1
+22,MicrosoftDocs/minecraft-creator,read,457cdeaa5aa428429884b092895f3979b1f69ad3,4251,1542,1542,0,0,0,2709,16,1
+23,MicrosoftDocs/SupportArticles-docs,read,aee5deb0299f00851f06ac2db644cb3198728a87,7827,523,487,5,31,0,7304,29,8
+24,MicrosoftDocs/sdk-api,too few labelled,656e9656bfaef34dd29cd7ee9e1146aec17e924c,65890,0,0,0,0,0,65890,,1
+25,MicrosoftDocs/cloud-adoption-framework,read,d9d5da6c8fb0baa3c2447464bfd1eef7f2a0bfda,215,26,26,0,0,0,189,16,1
+26,MicrosoftDocs/windowsserverdocs,not reached,,,,,,,,,,
+27,MicrosoftDocs/power-platform,not reached,,,,,,,,,,
+28,MicrosoftDocs/azure-compute-docs,not reached,,,,,,,,,,
+29,MicrosoftDocs/azure-docs-sdk-node,not reached,,,,,,,,,,
+30,MicrosoftDocs/power-automate-docs,not reached,,,,,,,,,,
+31,MicrosoftDocs/azure-dev-docs,not reached,,,,,,,,,,
+32,MicrosoftDocs/dataexplorer-docs,not reached,,,,,,,,,,
+33,MicrosoftDocs/windows-driver-docs,not reached,,,,,,,,,,
+34,MicrosoftDocs/win32,not reached,,,,,,,,,,
+35,MicrosoftDocs/cpp-docs,not reached,,,,,,,,,,
+36,MicrosoftDocs/community-content,not reached,,,,,,,,,,
+37,MicrosoftDocs/azure-management-docs,not reached,,,,,,,,,,
+38,MicrosoftDocs/customer-insights,not reached,,,,,,,,,,
+39,MicrosoftDocs/dynamics365-guidance,not reached,,,,,,,,,,
+40,MicrosoftDocs/VBA-Docs,not reached,,,,,,,,,,
+41,MicrosoftDocs/azure-aks-docs,not reached,,,,,,,,,,
+42,MicrosoftDocs/windows-driver-docs-ddi,not reached,,,,,,,,,,
+43,MicrosoftDocs/common-data-model-and-service,not reached,,,,,,,,,,
+44,MicrosoftDocs/power-pages-docs,not reached,,,,,,,,,,
+45,MicrosoftDocs/dynamics365smb-docs,not reached,,,,,,,,,,
+46,MicrosoftDocs/playfab-docs,not reached,,,,,,,,,,
+47,MicrosoftDocs/ai-builder,not reached,,,,,,,,,,
+48,MicrosoftDocs/dynamics365smb-devitpro-pb,not reached,,,,,,,,,,
+49,MicrosoftDocs/altspace-vr,not reached,,,,,,,,,,
+50,MicrosoftDocs/mip-sdk-docs,not reached,,,,,,,,,,
+51,MicrosoftDocs/cloud-developer-advocates,not reached,,,,,,,,,,
+52,MicrosoftDocs/m365copilot-docs,not reached,,,,,,,,,,
+53,MicrosoftDocs/azure-docs-cli,not reached,,,,,,,,,,
+54,MicrosoftDocs/winrt-api,not reached,,,,,,,,,,
+55,MicrosoftDocs/azure-docs-powershell,not reached,,,,,,,,,,
+56,MicrosoftDocs/Contribute,not reached,,,,,,,,,,
+57,MicrosoftDocs/Xandr-docs,not reached,,,,,,,,,,
+58,MicrosoftDocs/office-docs-powershell,not reached,,,,,,,,,,
+59,MicrosoftDocs/bingmaps-docs,not reached,,,,,,,,,,
+60,MicrosoftDocs/quantum-docs,not reached,,,,,,,,,,
+61,MicrosoftDocs/msftdynamicsgpdocs,not reached,,,,,,,,,,
+62,MicrosoftDocs/PowerShell-Docs,not reached,,,,,,,,,,
+63,MicrosoftDocs/Advertising,not reached,,,,,,,,,,
+64,MicrosoftDocs/terminal,not reached,,,,,,,,,,
+65,MicrosoftDocs/Virtualization-Documentation,not reached,,,,,,,,,,
+66,MicrosoftDocs/dynamics-365-project-operations,not reached,,,,,,,,,,
+67,MicrosoftDocs/copilot-connectors,not reached,,,,,,,,,,
+68,MicrosoftDocs/windows-ai-docs,not reached,,,,,,,,,,
+69,MicrosoftDocs/windows-powershell-docs,not reached,,,,,,,,,,
+70,MicrosoftDocs/microsoft-salescopilot-docs,not reached,,,,,,,,,,
+71,MicrosoftDocs/Agent-Skills,not reached,,,,,,,,,,
+72,MicrosoftDocs/semantic-kernel-docs,not reached,,,,,,,,,,
+73,MicrosoftDocs/data-tools,not reached,,,,,,,,,,
+74,MicrosoftDocs/CommunityToolkit,not reached,,,,,,,,,,
+75,MicrosoftDocs/supply-chain-center,not reached,,,,,,,,,,
+76,MicrosoftDocs/WSL,not reached,,,,,,,,,,
+77,MicrosoftDocs/winrt-related,not reached,,,,,,,,,,
+78,MicrosoftDocs/winapps-winrt-api,not reached,,,,,,,,,,
+79,MicrosoftDocs/PowerShell-Docs-Modules,not reached,,,,,,,,,,
+80,MicrosoftDocs/teams-ai-library,not reached,,,,,,,,,,
+81,MicrosoftDocs/customer-voice,not reached,,,,,,,,,,
+82,MicrosoftDocs/office-developer-client-docs,not reached,,,,,,,,,,
+83,MicrosoftDocs/dynamics-365-contact-center,not reached,,,,,,,,,,
+84,MicrosoftDocs/executable-docs,not reached,,,,,,,,,,
+85,MicrosoftDocs/dynamics-365-fraud-protection,not reached,,,,,,,,,,
+86,MicrosoftDocs/msix-docs,not reached,,,,,,,,,,
+87,MicrosoftDocs/dynamics-365-intelligent-order-management,not reached,,,,,,,,,,
+88,MicrosoftDocs/windows-iot-public,not reached,,,,,,,,,,
+89,MicrosoftDocs/globalization,not reached,,,,,,,,,,
+90,MicrosoftDocs/PlayReady,not reached,,,,,,,,,,
+91,MicrosoftDocs/teams-sdk-typescript,not reached,,,,,,,,,,
+92,MicrosoftDocs/quantum-api,not reached,,,,,,,,,,
+93,MicrosoftDocs/WDAC-Toolkit,not reached,,,,,,,,,,
+94,MicrosoftDocs/AdaptiveCards,not reached,,,,,,,,,,
+95,MicrosoftDocs/OfficeDocs-SharePoint-PowerShell,not reached,,,,,,,,,,
+96,MicrosoftDocs/office-developer-exchange-docs,not reached,,,,,,,,,,
+97,MicrosoftDocs/powerbi-docs-powershell,not reached,,,,,,,,,,
+98,MicrosoftDocs/azure-cloud-services-files,not reached,,,,,,,,,,
+99,MicrosoftDocs/nav-content,not reached,,,,,,,,,,
+100,MicrosoftDocs/webview2-win32-reference,not reached,,,,,,,,,,
+101,MicrosoftDocs/data-api-builder-docs,not reached,,,,,,,,,,
+102,MicrosoftDocs/anyscale-on-azure-docs,not reached,,,,,,,,,,
+103,MicrosoftDocs/OData-docs,not reached,,,,,,,,,,
+104,MicrosoftDocs/sysinternals,not reached,,,,,,,,,,
+105,MicrosoftDocs/azure-docs-sdk-python-archive,not reached,,,,,,,,,,
+106,MicrosoftDocs/office-365-management-api,not reached,,,,,,,,,,
+107,MicrosoftDocs/linux,not reached,,,,,,,,,,
+108,MicrosoftDocs/azure-docs-sdk-cpp,not reached,,,,,,,,,,
+109,MicrosoftDocs/PowerShell-Docs-DSC,not reached,,,,,,,,,,
+110,MicrosoftDocs/azure-docs-sdk-node-archive,not reached,,,,,,,,,,
+111,MicrosoftDocs/vcpkg-docs,not reached,,,,,,,,,,
+112,MicrosoftDocs/FastTrackBlogRepo,not reached,,,,,,,,,,
+113,MicrosoftDocs/webview2-winrt-reference,not reached,,,,,,,,,,
+114,MicrosoftDocs/MicrosoftCollaboratePortal,not reached,,,,,,,,,,
+115,MicrosoftDocs/PowerShell-Docs-PSGet,not reached,,,,,,,,,,
+116,MicrosoftDocs/openapi-docs,not reached,,,,,,,,,,
+117,MicrosoftDocs/ef-core-for-beginners,not reached,,,,,,,,,,
+118,MicrosoftDocs/node-essentials,not reached,,,,,,,,,,
+119,MicrosoftDocs/Console-Docs,not reached,,,,,,,,,,
+120,MicrosoftDocs/teams-sdk-python,not reached,,,,,,,,,,
+121,MicrosoftDocs/trace-processor-reference-docs,not reached,,,,,,,,,,
+122,MicrosoftDocs/windows-topic-specific-samples,not reached,,,,,,,,,,
+123,MicrosoftDocs/mcp,not reached,,,,,,,,,,
+124,MicrosoftDocs/CSIDev-Public,not reached,,,,,,,,,,
+125,MicrosoftDocs/tcp-workflows,not reached,,,,,,,,,,
+126,MicrosoftDocs/.github,not reached,,,,,,,,,,
+127,MicrosoftDocs/aspire-docs-samples,not reached,,,,,,,,,,
+128,MicrosoftDocs/MS-AppControl-AppManifests,not reached,,,,,,,,,,
+129,MicrosoftDocs/tcp-workflows-public,not reached,,,,,,,,,,

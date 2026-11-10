@@ -1,0 +1,246 @@
+{
+ "meta": {
+  "version": "0.2.0",
+  "learnlabels_version": "0.1.0",
+  "started": "2026-11-10T13:46:25Z",
+  "settings": {
+   "target": 15,
+   "max_clones": 30,
+   "per_stratum": 8,
+   "min_labelled": 10,
+   "since": "2026-05-01",
+   "render": true,
+   "search_top": 5
+  },
+  "prereg": {
+   "committed_at": "2026-11-10T13:24:42Z",
+   "sha": "edd768a3ecb6bb540ea373fe346280e50168da2a",
+   "error": null,
+   "waited_seconds": 0,
+   "path": "census/2026-11-ms-learn-ai-shown/AMENDMENT-1.md"
+  },
+  "listed": 711,
+  "eligible": 129,
+  "excluded": {
+   "archived": 399,
+   "not pushed since 2026-05-01": 144,
+   "fork": 10,
+   "localized copy": 29
+  },
+  "robots_status": 200,
+  "finished": "2026-11-10T14:36:39Z",
+  "clones": 25
+ },
+ "summary": {
+  "note_measure": "note_rendered",
+  "pages_sampled": 315,
+  "mapped_status": {
+   "yes": 263,
+   "no": 5,
+   "unknown": 47
+  },
+  "mapped_ok": 263,
+  "url_rules": {
+   "breadcrumb": 236,
+   "search": 11,
+   "breadcrumb-root": 16
+  },
+  "labelled_ok": 164,
+  "labelled_repos": 15,
+  "md_served": 263,
+  "by_stratum": {
+   "A": {
+    "sampled": 120,
+    "mapped_ok": 99,
+    "note_html": 0,
+    "note_rendered": 99,
+    "note_raw_html": 0,
+    "html_ai_meta": 99,
+    "md_served": 99,
+    "note_md": 0,
+    "md_ai_key": 99,
+    "any_h2_missing": 57,
+    "last_h2_missing": 56
+   },
+   "B": {
+    "sampled": 41,
+    "mapped_ok": 32,
+    "note_html": 0,
+    "note_rendered": 32,
+    "note_raw_html": 0,
+    "html_ai_meta": 32,
+    "md_served": 32,
+    "note_md": 0,
+    "md_ai_key": 32,
+    "any_h2_missing": 24,
+    "last_h2_missing": 24
+   },
+   "C": {
+    "sampled": 34,
+    "mapped_ok": 33,
+    "note_html": 0,
+    "note_rendered": 0,
+    "note_raw_html": 0,
+    "html_ai_meta": 33,
+    "md_served": 33,
+    "note_md": 0,
+    "md_ai_key": 33,
+    "any_h2_missing": 19,
+    "last_h2_missing": 19
+   },
+   "D": {
+    "sampled": 0,
+    "mapped_ok": 0,
+    "note_html": 0,
+    "note_rendered": 0,
+    "note_raw_html": 0,
+    "html_ai_meta": 0,
+    "md_served": 0,
+    "note_md": 0,
+    "md_ai_key": 0,
+    "any_h2_missing": 0,
+    "last_h2_missing": 0
+   },
+   "U": {
+    "sampled": 120,
+    "mapped_ok": 99,
+    "note_html": 1,
+    "note_rendered": 1,
+    "note_raw_html": 0,
+    "html_ai_meta": 0,
+    "md_served": 99,
+    "note_md": 1,
+    "md_ai_key": 0,
+    "any_h2_missing": 51,
+    "last_h2_missing": 50
+   }
+  },
+  "by_value": {
+   "ai-assisted": {
+    "pages": 132,
+    "note": 99
+   },
+   "ai-generated": {
+    "pages": 32,
+    "note": 32
+   }
+  },
+  "other_keys": {
+   "ms.ai-usage": 11,
+   "ai.usage": 22
+  },
+  "note_texts": {
+   "Note: The author created this article with assistance from AI.": 99,
+   "Note: This article contains content created with AI.": 32,
+   "Content Safety An AI service that detects harmful user-generated and AI-generated content.": 1
+  },
+  "last_src_h2": {
+   "related content": 81,
+   "next steps": 42,
+   "related information": 18,
+   "related resources": 9,
+   "references": 9,
+   "next step": 8,
+   "(none)": 7,
+   "constants": 5,
+   "resolution": 5,
+   "more information": 5,
+   "see also": 4,
+   "samples": 4,
+   "additional resources": 2,
+   "use office cloud policy service": 2,
+   "predefined events": 2
+  },
+  "controls": [
+   {
+    "stratum": "control-positive",
+    "url": "https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app",
+    "url_rule": "given",
+    "html_status": 200,
+    "md_served": true,
+    "mapped": "yes",
+    "note_html": false,
+    "note_html_text": "",
+    "render_status": 200,
+    "note_rendered": true,
+    "note_rendered_text": "Note: The author created this article with assistance from AI.",
+    "note_md": false,
+    "md_ai_key": "ai-usage",
+    "html_ai_key": "ai-usage",
+    "last_h2_missing": ""
+   },
+   {
+    "stratum": "control-seen",
+    "url": "https://learn.microsoft.com/en-us/azure/dev-box/overview-what-is-dev-box-mcp-server",
+    "url_rule": "given",
+    "html_status": 200,
+    "md_served": true,
+    "mapped": "yes",
+    "note_html": false,
+    "note_html_text": "",
+    "render_status": 200,
+    "note_rendered": false,
+    "note_rendered_text": "",
+    "note_md": false,
+    "md_ai_key": "ms.ai-usage",
+    "html_ai_key": "ms.ai-usage",
+    "last_h2_missing": ""
+   }
+  ],
+  "gates": {
+   "G1": {
+    "labelled_ok": 164,
+    "repos": 15,
+    "passed": true
+   },
+   "G2": {
+    "positive_control_note": true,
+    "measure": "note_rendered",
+    "passed": true
+   },
+   "G3": {
+    "md_served_pct": 100.0,
+    "passed": true
+   }
+  },
+  "repos_read": 15,
+  "predictions": {
+   "P1": {
+    "k": 131,
+    "n": 131,
+    "value_pct": 100.0,
+    "held": true
+   },
+   "P2": {
+    "k": 0,
+    "n": 33,
+    "value_pct": 0.0,
+    "held": true
+   },
+   "P3": {
+    "k": 1,
+    "n": 99,
+    "value_pct": 1.01,
+    "held": true
+   },
+   "P4": {
+    "k": 0,
+    "n": 131,
+    "value_pct": 0.0,
+    "held": true
+   },
+   "P5": {
+    "k": 164,
+    "n": 164,
+    "value_pct": 100.0,
+    "held": true
+   },
+   "P6": {
+    "k": 130,
+    "n": 131,
+    "value_pct": 99.24,
+    "held": true
+   }
+  }
+ }
+}
