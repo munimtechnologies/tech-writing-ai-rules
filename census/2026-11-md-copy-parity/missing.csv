@@ -1,0 +1,854 @@
+site,url,kind,group,in_tab,words,text
+docker,https://docs.docker.com/build/,heading,,False,3,Packaging your software
+docker,https://docs.docker.com/build/,prose,,False,14,Build and package your application to run it anywhere: locally or in the cloud.
+docker,https://docs.docker.com/build/,heading,,False,3,Multi-stage builds
+docker,https://docs.docker.com/build/,prose,,False,9,Keep your images small and secure with minimal dependencies.
+docker,https://docs.docker.com/build/,heading,,False,3,Multi-platform images
+docker,https://docs.docker.com/build/,prose,,False,11,"Build, push, pull, and run images seamlessly on different computer architectures."
+docker,https://docs.docker.com/build/,heading,,False,1,BuildKit
+docker,https://docs.docker.com/build/,heading,,False,2,Build drivers
+docker,https://docs.docker.com/build/,prose,,False,8,Configure where and how you run your builds.
+docker,https://docs.docker.com/build/,heading,,False,3,Docker Build Cloud
+docker,https://docs.docker.com/build/,prose,,False,10,Run builds on managed cloud builders with a shared cache.
+docker,https://docs.docker.com/build/,heading,,False,1,Exporters
+docker,https://docs.docker.com/build/,prose,,False,9,"Export any artifact you like, not just Docker images."
+docker,https://docs.docker.com/build/,heading,,False,2,Build caching
+docker,https://docs.docker.com/build/,prose,,False,10,"Avoid unnecessary repetitions of costly operations, such as package installs."
+docker,https://docs.docker.com/build/,heading,,False,1,Bake
+docker,https://docs.docker.com/guides/lab-building-images/,prose,,False,28,"Hands-on lab: Transform a basic Dockerfile into a production-ready image. Master layer caching, multi-stage builds, .dockerignore, non-root users, base image se"
+docker,https://docs.docker.com/offload/v1/,heading,,False,1,Quickstart
+docker,https://docs.docker.com/offload/v1/,prose,,False,8,Get up and running with Docker Offload v1.
+docker,https://docs.docker.com/offload/v1/,heading,,False,1,About
+docker,https://docs.docker.com/offload/v1/,prose,,False,9,Learn about Docker Offload v1 and how it works.
+docker,https://docs.docker.com/offload/v1/,heading,,False,1,Configure
+docker,https://docs.docker.com/offload/v1/,prose,,False,11,Manage Docker Offload v1 for your organization and in Docker Desktop.
+docker,https://docs.docker.com/offload/v1/,prose,,False,8,Monitor Docker Offload v1 sessions for your organization.
+docker,https://docs.docker.com/offload/v1/,heading,,False,1,Troubleshoot
+docker,https://docs.docker.com/reference/cli/docker/image/build/,prose,,False,13,Aliases An alias is a short or memorable alternative for a longer command.
+docker,https://docs.docker.com/reference/cli/docker/mcp/catalog/,prose,,False,13,Aliases An alias is a short or memorable alternative for a longer command.
+docker,https://docs.docker.com/reference/cli/docker/plugin/rm/,prose,,False,13,Aliases An alias is a short or memorable alternative for a longer command.
+docker,https://docs.docker.com/reference/cli/docker/service/update/,prose,,False,8,Swarm This command works with the Swarm orchestrator.
+docker,https://docs.docker.com/reference/cli/dockerd/,prose,,False,33,"The key of the entry (<runtime> in the previous example) represents the name of the runtime. This is the name that you reference when you run a container, using"
+docker,https://docs.docker.com/reference/cli/sbx/volume/create/,heading,,False,1,Description
+docker,https://docs.docker.com/reference/cli/sbx/volume/create/,prose,,False,22,The volume name must be unique per account; an attempt to create a volume with a name already in use is rejected.
+docker,https://docs.docker.com/reference/cli/sbx/volume/create/,heading,,False,1,Options
+docker,https://docs.docker.com/reference/cli/sbx/volume/create/,heading,,False,2,Global options
+docker,https://docs.docker.com/reference/cli/sbx/volume/create/,prose,,False,25,Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)
+docker,https://docs.docker.com/reference/cli/sbx/volume/create/,prose,,False,14,Never prompt; commands that need an answer fail with the command to run instead
+docker,https://docs.docker.com/reference/cli/sbx/volume/create/,heading,,False,1,Examples
+docker,https://docs.docker.com/reference/cli/sbx/volume/create/,code,,False,6,sbx --cloud volume create my-cache
+docker,https://docs.docker.com/reference/cli/sbx/volume/rm/,heading,,False,1,Description
+docker,https://docs.docker.com/reference/cli/sbx/volume/rm/,prose,,False,22,Volumes attached to active sandboxes cannot be deleted; detach them first by stopping or deleting the sandbox(es) that mount the volume.
+docker,https://docs.docker.com/reference/cli/sbx/volume/rm/,heading,,False,1,Options
+docker,https://docs.docker.com/reference/cli/sbx/volume/rm/,heading,,False,2,Global options
+docker,https://docs.docker.com/reference/cli/sbx/volume/rm/,prose,,False,25,Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)
+docker,https://docs.docker.com/reference/cli/sbx/volume/rm/,prose,,False,14,Never prompt; commands that need an answer fail with the command to run instead
+docker,https://docs.docker.com/reference/cli/sbx/volume/rm/,heading,,False,1,Examples
+docker,https://docs.docker.com/reference/cli/sbx/volume/rm/,code,,False,6,sbx --cloud volume rm my-cache
+docker,https://docs.docker.com/security/authentication/oidc-connections/create-manage/,prose,,False,28,Add the following to your workflow YAML. Replace <YOUR_ORG_NAME> with your Docker organization name and <YOUR_CONNECTION_ID> with the ID you copied from Docker 
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/document-history.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/document-history.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/document-history.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/document-history.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/individual-console.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/individual-console.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/individual-console.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/individual-console.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/multisession.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/multisession.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/multisession.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/multisession.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/myApp-app-dash.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/myApp-app-dash.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/myApp-app-dash.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/myApp-app-dash.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/uxc.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/uxc.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/uxc.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/uxc.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/view-services.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/view-services.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/view-services.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/view-services.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/UsingWithRDS.IAM.AccessControl.IdentityBased.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/UsingWithRDS.IAM.AccessControl.IdentityBased.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/UsingWithRDS.IAM.AccessControl.IdentityBased.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/UsingWithRDS.IAM.AccessControl.IdentityBased.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/anti-pattern-compound-index.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/anti-pattern-compound-index.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/anti-pattern-compound-index.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/anti-pattern-compound-index.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-compare_automatic_manual_snapshots.html,prose,,False,32,"Automatic snapshot naming — Automatic snapshot names follow the pattern rds:<cluster-name>-yyyy-mm-dd-hh-mm, with yyyy-mm-dd-hh-mm representing the date and tim"
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-compare_automatic_manual_snapshots.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-compare_automatic_manual_snapshots.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-compare_automatic_manual_snapshots.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-compare_automatic_manual_snapshots.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-create_manual_cluster_snapshot.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-create_manual_cluster_snapshot.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-create_manual_cluster_snapshot.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-create_manual_cluster_snapshot.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-dump_restore_import_export_data.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-dump_restore_import_export_data.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-dump_restore_import_export_data.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/backup_restore-dump_restore_import_export_data.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/bit.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/bit.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/bit.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/bit.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/bitXor.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/bitXor.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/bitXor.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/bitXor.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/cluster_parameter_groups-list_of_parameters.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/cluster_parameter_groups-list_of_parameters.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/cluster_parameter_groups-list_of_parameters.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/cluster_parameter_groups-list_of_parameters.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/connect-jdbc-sqlandlimits.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/connect-jdbc-sqlandlimits.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/connect-jdbc-sqlandlimits.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/connect-jdbc-sqlandlimits.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/connect-odbc-sql-support.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/connect-odbc-sql-support.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/connect-odbc-sql-support.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/connect-odbc-sql-support.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/divide.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/divide.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/divide.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/divide.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/document-db-subnet-group-modify.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/document-db-subnet-group-modify.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/document-db-subnet-group-modify.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/document-db-subnet-group-modify.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/generative-ai.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/generative-ai.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/generative-ai.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/generative-ai.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/percentile.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/percentile.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/percentile.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/percentile.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/regex.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/regex.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/regex.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/regex.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/release-notes.html,prose,,False,8,4.0 (Engine Patch Version 2.0.5170)
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/release-notes.html,prose,,False,8,4.0 (Engine Patch Version 2.0.5706)
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/release-notes.html,prose,,False,8,4.0 (Engine Patch Version 2.0.3371)
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/release-notes.html,prose,,False,8,4.0 (Engine Patch Version 2.0.3371)
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/release-notes.html,prose,,False,8,4.0 (Engine Patch Version 2.0.3371)
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/release-notes.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/release-notes.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/release-notes.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/release-notes.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/security.data-protection.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/security.data-protection.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/security.data-protection.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/security.data-protection.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/security.managing-users.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/security.managing-users.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/security.managing-users.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/security.managing-users.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/service-linked-roles.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/service-linked-roles.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/service-linked-roles.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/service-linked-roles.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/sortByCount.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/sortByCount.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/sortByCount.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/sortByCount.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/unset-stage.html,prose,,False,11,Thanks for letting us know we're doing a good job!
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/unset-stage.html,prose,,False,20,"If you've got a moment, please tell us what we did right so we can do more of it."
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/unset-stage.html,prose,,False,16,Thanks for letting us know this page needs work. We're sorry we let you down.
+aws,https://docs.aws.amazon.com/documentdb/latest/devguide/unset-stage.html,prose,,False,16,"If you've got a moment, please tell us how we can make the documentation better."
+gcloud,https://docs.cloud.google.com/application-design-center/docs,heading,,False,10,Start your proof of concept with $300 in free credit
+gcloud,https://docs.cloud.google.com/application-design-center/docs,prose,,False,9,Develop with our latest Generative AI models and tools.
+gcloud,https://docs.cloud.google.com/application-design-center/docs,prose,,False,13,"Get free usage of 20+ popular products, including Compute Engine and AI APIs."
+gcloud,https://docs.cloud.google.com/application-design-center/docs,heading,,False,7,Keep exploring with 20+ always-free products.
+gcloud,https://docs.cloud.google.com/application-design-center/docs,prose,,False,16,"Access 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more."
+gcloud,https://docs.cloud.google.com/application-integration/docs,heading,,False,10,Start your proof of concept with $300 in free credit
+gcloud,https://docs.cloud.google.com/application-integration/docs,prose,,False,9,Develop with our latest Generative AI models and tools.
+gcloud,https://docs.cloud.google.com/application-integration/docs,prose,,False,13,"Get free usage of 20+ popular products, including Compute Engine and AI APIs."
+gcloud,https://docs.cloud.google.com/application-integration/docs,heading,,False,7,Keep exploring with 20+ always-free products.
+gcloud,https://docs.cloud.google.com/application-integration/docs,prose,,False,16,"Access 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more."
+gcloud,https://docs.cloud.google.com/certificate-authority-service/docs,heading,,False,10,Start your proof of concept with $300 in free credit
+gcloud,https://docs.cloud.google.com/certificate-authority-service/docs,prose,,False,9,Develop with our latest Generative AI models and tools.
+gcloud,https://docs.cloud.google.com/certificate-authority-service/docs,prose,,False,13,"Get free usage of 20+ popular products, including Compute Engine and AI APIs."
+gcloud,https://docs.cloud.google.com/certificate-authority-service/docs,heading,,False,7,Keep exploring with 20+ always-free products.
+gcloud,https://docs.cloud.google.com/certificate-authority-service/docs,prose,,False,16,"Access 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more."
+gcloud,https://docs.cloud.google.com/chronicle/docs,heading,,False,10,Start your proof of concept with $300 in free credit
+gcloud,https://docs.cloud.google.com/chronicle/docs,prose,,False,9,Develop with our latest Generative AI models and tools.
+gcloud,https://docs.cloud.google.com/chronicle/docs,prose,,False,13,"Get free usage of 20+ popular products, including Compute Engine and AI APIs."
+gcloud,https://docs.cloud.google.com/chronicle/docs,heading,,False,7,Keep exploring with 20+ always-free products.
+gcloud,https://docs.cloud.google.com/chronicle/docs,prose,,False,16,"Access 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more."
+gcloud,https://docs.cloud.google.com/compute/docs/instances/create-flex-start-vm,heading,,False,4,Try it for yourself
+gcloud,https://docs.cloud.google.com/compute/docs/instances/create-flex-start-vm,prose,,False,34,"If you're new to Google Cloud, create an account to evaluate how Compute Engine performs in real-world scenarios. New customers also get $300 in free credits to"
+gcloud,https://docs.cloud.google.com/compute/docs/instances/placement-policies-overview,prose,,False,19,"Accelerator-optimized machines: A4X Max, A4X, A4, G4, A3 Ultra, A3 Mega1, A3 High1, A3 Edge1, A2, and G2"
+gcloud,https://docs.cloud.google.com/compute/docs/instances/placement-policies-overview,prose,,False,14,"Accelerator-optimized machines: A4, G4, A3 Mega1, A3 High1, A3 Edge1, A2, and G2"
+gcloud,https://docs.cloud.google.com/compute/docs/instances/placement-policies-overview,prose,,False,16,"Accelerator-optimized machines: A4, G4, A3 Ultra, A3 Mega1, A3 High1, A3 Edge1, A2, and G2"
+gcloud,https://docs.cloud.google.com/compute/docs/instances/placement-policies-overview,prose,,False,9,"Accelerator-optimized machines: G4, A3 Edge1, A2, and G2"
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,prose,,False,41,"Sign in to your Google Cloud account. If you're new to Google Cloud, create an account to evaluate how our products perform in real-world scenarios. New custome"
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,prose,,False,17,"In the Google Cloud console, on the project selector page, select or create a Google Cloud project."
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,prose,,False,8,Roles required to select or create a project
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,prose,,False,26,Select a project: Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on.
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,prose,,False,28,"Create a project: To create a project, you need the Project Creator role (roles/resourcemanager.projectCreator), which contains the resourcemanager.projects.cre"
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,callout,note,False,41,"Note: If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish the"
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,prose,,False,10,Verify that billing is enabled for your Google Cloud project.
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,prose,,False,17,"In the Google Cloud console, on the project selector page, select or create a Google Cloud project."
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,prose,,False,8,Roles required to select or create a project
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,prose,,False,26,Select a project: Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on.
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,prose,,False,28,"Create a project: To create a project, you need the Project Creator role (roles/resourcemanager.projectCreator), which contains the resourcemanager.projects.cre"
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,callout,note,False,41,"Note: If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish the"
+gcloud,https://docs.cloud.google.com/compute/docs/instances/sql-server/configure-failover-cluster-instance-with-multi-writer,prose,,False,10,Verify that billing is enabled for your Google Cloud project.
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,41,"Sign in to your Google Cloud account. If you're new to Google Cloud, create an account to evaluate how our products perform in real-world scenarios. New custome"
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,17,"In the Google Cloud console, on the project selector page, select or create a Google Cloud project."
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,8,Roles required to select or create a project
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,26,Select a project: Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on.
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,28,"Create a project: To create a project, you need the Project Creator role (roles/resourcemanager.projectCreator), which contains the resourcemanager.projects.cre"
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,callout,note,False,41,"Note: If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish the"
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,10,Verify that billing is enabled for your Google Cloud project.
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,15,"Enable the Compute Engine and Cloud Machine Learning APIs, if any are not already enabled."
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,48,"To enable APIs, you need the serviceusage.services.enable permission. If you created the project, then you likely already have this permission through the Owner"
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,17,"In the Google Cloud console, on the project selector page, select or create a Google Cloud project."
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,8,Roles required to select or create a project
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,26,Select a project: Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on.
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,28,"Create a project: To create a project, you need the Project Creator role (roles/resourcemanager.projectCreator), which contains the resourcemanager.projects.cre"
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,callout,note,False,41,"Note: If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish the"
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,10,Verify that billing is enabled for your Google Cloud project.
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,15,"Enable the Compute Engine and Cloud Machine Learning APIs, if any are not already enabled."
+gcloud,https://docs.cloud.google.com/compute/docs/tutorials/ml-inference-t4,prose,,False,48,"To enable APIs, you need the serviceusage.services.enable permission. If you created the project, then you likely already have this permission through the Owner"
+gcloud,https://docs.cloud.google.com/deep-learning-vm/docs,heading,,False,10,Start your proof of concept with $300 in free credit
+gcloud,https://docs.cloud.google.com/deep-learning-vm/docs,prose,,False,9,Develop with our latest Generative AI models and tools.
+gcloud,https://docs.cloud.google.com/deep-learning-vm/docs,prose,,False,13,"Get free usage of 20+ popular products, including Compute Engine and AI APIs."
+gcloud,https://docs.cloud.google.com/deep-learning-vm/docs,heading,,False,7,Keep exploring with 20+ always-free products.
+gcloud,https://docs.cloud.google.com/deep-learning-vm/docs,prose,,False,16,"Access 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more."
+gcloud,https://docs.cloud.google.com/docs/quotas,heading,,False,10,Start your proof of concept with $300 in free credit
+gcloud,https://docs.cloud.google.com/docs/quotas,prose,,False,9,Develop with our latest Generative AI models and tools.
+gcloud,https://docs.cloud.google.com/docs/quotas,prose,,False,13,"Get free usage of 20+ popular products, including Compute Engine and AI APIs."
+gcloud,https://docs.cloud.google.com/docs/quotas,heading,,False,7,Keep exploring with 20+ always-free products.
+gcloud,https://docs.cloud.google.com/docs/quotas,prose,,False,16,"Access 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more."
+gcloud,https://docs.cloud.google.com/financial-services/anti-money-laundering/docs,heading,,False,10,Start your proof of concept with $300 in free credit
+gcloud,https://docs.cloud.google.com/financial-services/anti-money-laundering/docs,prose,,False,9,Develop with our latest Generative AI models and tools.
+gcloud,https://docs.cloud.google.com/financial-services/anti-money-laundering/docs,prose,,False,13,"Get free usage of 20+ popular products, including Compute Engine and AI APIs."
+gcloud,https://docs.cloud.google.com/financial-services/anti-money-laundering/docs,heading,,False,7,Keep exploring with 20+ always-free products.
+gcloud,https://docs.cloud.google.com/financial-services/anti-money-laundering/docs,prose,,False,16,"Access 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more."
+gcloud,https://docs.cloud.google.com/iam/docs,heading,,False,10,Start your proof of concept with $300 in free credit
+gcloud,https://docs.cloud.google.com/iam/docs,prose,,False,9,Develop with our latest Generative AI models and tools.
+gcloud,https://docs.cloud.google.com/iam/docs,prose,,False,13,"Get free usage of 20+ popular products, including Compute Engine and AI APIs."
+gcloud,https://docs.cloud.google.com/iam/docs,heading,,False,7,Keep exploring with 20+ always-free products.
+gcloud,https://docs.cloud.google.com/iam/docs,prose,,False,16,"Access 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more."
+gcloud,https://docs.cloud.google.com/iam/docs,heading,,False,5,Try Google Cloud for yourself
+gcloud,https://docs.cloud.google.com/logging/docs,heading,,False,10,Start your proof of concept with $300 in free credit
+gcloud,https://docs.cloud.google.com/logging/docs,prose,,False,9,Develop with our latest Generative AI models and tools.
+gcloud,https://docs.cloud.google.com/logging/docs,prose,,False,13,"Get free usage of 20+ popular products, including Compute Engine and AI APIs."
+gcloud,https://docs.cloud.google.com/logging/docs,heading,,False,7,Keep exploring with 20+ always-free products.
+gcloud,https://docs.cloud.google.com/logging/docs,prose,,False,16,"Access 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more."
+cloudflare,https://developers.cloudflare.com/cloudflare-one/team-and-resources/devices/cloudflare-one-client/deployment/mdm-deployment/path-mtu-discovery/,prose,,False,10,Open the resulting warp-debugging-info-<date>-<time>.zip file.
+cloudflare,https://developers.cloudflare.com/dns/zone-setups/troubleshooting/pending-nameservers/,prose,,False,23,"One nameserver in each of <color>.foundationdns.com, <color>.foundationdns.net, and <color>.foundationdns.org — all three must be set at the registrar."
+cloudflare,https://developers.cloudflare.com/dns/zone-setups/troubleshooting/pending-nameservers/,prose,,False,8,The output of dig +trace <YOUR_DOMAIN> NS.
+firebase,https://firebase.google.com/docs/firestore/reference/rest/v1/projects.databases.documents/get,prose,,False,13,Choose a location: GET https://firestore.googleapis.com/v1/{name=projects/*/databases/*/documents/*/**}
+firebase,https://firebase.google.com/docs/reference/admin/java/reference/com/google/firebase/cloud/StorageClient,prose,,False,47,"StorageClient provides access to Google Cloud Storage APIs. You can specify a default cloud storage bucket via FirebaseOptions, and then get a reference to this"
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/auth/MultiFactor,prose,,False,14,Enrolls a second factor as identified by the MultiFactorAssertion parameter for the current user.
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/auth/MultiFactor,prose,,False,11,Returns a list of the MultiFactorInfo already associated with this user.
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/auth/MultiFactor,prose,,False,14,Enrolls a second factor as identified by the MultiFactorAssertion parameter for the current user.
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/auth/MultiFactor,prose,,False,24,A MultiFactorAssertion can be generated using getAssertion for enrolling phone number as a second factor or getAssertionForEnrollment for enrolling TOTP as a se
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/auth/MultiFactor,prose,,False,11,Returns a list of the MultiFactorInfo already associated with this user.
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/auth/MultiFactor,prose,,False,25,"To be used when building a PhoneAuthOptions instance to call verifyPhoneNumber for phone factor enrollment, or when generating a TotpSecret instance for TOTP fa"
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/auth/MultiFactor,prose,,False,11,The MultiFactorInfo to be passed in can be gotten from getEnrolledFactors.
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,8,Gets the body Text associated with this message
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,12,Gets the ImageData displayed when the phone is in a landscape orientation
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,12,Gets the ImageData displayed when the phone is in a portrait orientation
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,8,Gets the primary Action associated with this message.
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,8,Gets the secondary Action associated with this message
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,8,Gets the title Text associated with this message
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,11,"Use the message specific methods (see CardMessage, ModalMessage, BannerMessage, ImageOnlyMessage) instead."
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,11,"Use the message specific methods (see CardMessage, ModalMessage, BannerMessage, ImageOnlyMessage) instead."
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,callout,warning,False,9,This method is deprecated. Use getPrimaryAction or getSecondaryAction instead.
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,8,Gets the body Text associated with this message
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,callout,warning,False,9,This method is deprecated. Use getPortraitImageData or getLandscapeImageData instead.
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,12,Gets the ImageData displayed when the phone is in a landscape orientation
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,12,Gets the ImageData displayed when the phone is in a portrait orientation
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,17,"Gets the primary Action associated with this message. If none is defined, the primary action is 'dismiss'"
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,8,Gets the secondary Action associated with this message
+firebase,https://firebase.google.com/docs/reference/android/com/google/firebase/inappmessaging/model/CardMessage,prose,,False,8,Gets the title Text associated with this message
+firebase,https://firebase.google.com/docs/reference/apphosting/rest/v1/projects.locations.backends.domains/create,prose,,False,8,The request body contains an instance of Domain.
+firebase,https://firebase.google.com/docs/reference/cpp/class/firebase/functions/functions,prose,,False,8,HttpsCallableReference Get a FunctionsReference for the specified path.
+firebase,https://firebase.google.com/docs/reference/cpp/class/firebase/functions/functions,prose,,False,8,HttpsCallableReference Get a FunctionsReference for the specified URL.
+firebase,https://firebase.google.com/docs/reference/hosting/rest/v1beta1/sites.versions,code,,False,30,"{ ""name"": string, ""status"": enum (VersionStatus), ""config"": { object (ServingConfig) }, ""labels"": { string: string, ... }, ""createTime"": string, ""createUser"": {"
+firebase,https://firebase.google.com/docs/reference/hosting/rest/v1beta1/sites.versions,code,,False,17,"{ ""headers"": [ { object (Header) } ], ""redirects"": [ { object (Redirect) } ], ""rewrites"": [ { object (Rewrite) } ], ""cleanUrls"": boolean, ""trailingSlashBehavior"
+firebase,https://firebase.google.com/docs/reference/ios/firebasedynamiclinks/api/reference/Classes/FIRDynamicLinkComponentsOptions,code,,False,4,@property (nonatomic) FIRShortDynamicLinkPathLength pathLength;
+firebase,https://firebase.google.com/docs/reference/ios/firebasefirestore/api/reference/Classes/FIRAggregateQuery,code,,False,6,"@property (nonatomic, readonly) FIRQuery *_Nonnull query;"
+firebase,https://firebase.google.com/docs/reference/ios/firebasefirestore/api/reference/Classes/FIRAggregateQuery,code,,False,12,"- (void)aggregationWithSource:(FIRAggregateSource)source completion: (nonnull void (^)(FIRAggregateQuerySnapshot *_Nullable, NSError *_Nullable))completion;"
+firebase,https://firebase.google.com/docs/reference/ios/googlemobileads/api/reference/Classes/GADNativeAd,code,,False,7,"@property (readwrite, nonatomic, nullable) id<GADNativeAdDelegate> delegate;"
+firebase,https://firebase.google.com/docs/reference/kotlin/com/google/firebase/auth/PhoneAuthOptions,prose,,False,14,Returns a new instance of PhoneAuthOptions.Builder tied to the default instance of FirebaseAuth.
+firebase,https://firebase.google.com/docs/reference/kotlin/com/google/firebase/auth/PhoneAuthOptions,prose,,False,13,Returns a new instance of PhoneAuthOptions.Builder tied to given instance of FirebaseAuth.
+firebase,https://firebase.google.com/docs/reference/kotlin/com/google/firebase/auth/PhoneAuthOptions,prose,,False,14,Returns a new instance of PhoneAuthOptions.Builder tied to the default instance of FirebaseAuth.
+firebase,https://firebase.google.com/docs/reference/kotlin/com/google/firebase/auth/PhoneAuthOptions,prose,,False,13,Returns a new instance of PhoneAuthOptions.Builder tied to given instance of FirebaseAuth.
+firebase,https://firebase.google.com/docs/reference/kotlin/com/google/firebase/remoteconfig/FirebaseRemoteConfigException,prose,,False,9,An exception thrown when a fetch call is throttled.
+firebase,https://firebase.google.com/docs/reference/swift/firebasefirestore/api/reference/Structs/Field,code,,False,9,"public struct Field: Expression, Selectable, BridgeWrapper, SelectableWrapper, @unchecked Sendable"
+firebase,https://firebase.google.com/docs/reference/swift/firebasefirestore/api/reference/Structs/Field,prose,,False,13,A Field is an Expression that represents a field in a Firestore document.
+firebase,https://firebase.google.com/docs/reference/swift/firebasefirestore/api/reference/Structs/Field,prose,,False,9,Create complex BooleanExpressions for filtering in a where clause.
+firebase,https://firebase.google.com/docs/reference/swift/firebasefirestore/api/reference/Structs/Field,prose,,False,8,Creates a new Field expression from a FieldPath.
+firebase,https://firebase.google.com/docs/reference/swift/firebasefirestore/api/reference/Structs/Field,code,,False,4,public init(_ path: FieldPath)
+firebase,https://firebase.google.com/docs/reference/swift/firebasefirestore/api/reference/Structs/Field,code,,False,7,public func geoDistance(_ location: FirebaseFirestore.GeoPoint) -> Expression
+firebase,https://firebase.google.com/docs/test-lab/reference/toolresults/rest/v1beta3/ToolOutputReference,code,,False,9,"{ ""output"": { object (FileReference) }, ""creationTime"": { object (Timestamp) }, ""testCase"": { object (TestCaseReference) } }"
+ansible,https://docs.ansible.com/projects/ansible/latest/collections/check_point/mgmt/cp_mgmt_export_management_module.html,prose,,False,25,Domain name to be exported.<br><font color=”red”>Required only for</font> exporting a Domain from the Multi-Domain Server or backing up Domain.
+ansible,https://docs.ansible.com/projects/ansible/latest/collections/check_point/mgmt/cp_mgmt_export_management_module.html,prose,,False,24,Path in which the exported database file is saved.<br><font color=”red”>Required only</font> when not using pre-export-verification-only flag.
+ansible,https://docs.ansible.com/projects/ansible/latest/collections/cisco/iosxr/iosxr_l3_interfaces_module.html,prose,,False,21,"The address format is <ipv4 address>/<mask>, the mask is number in range 0-32 eg. 192.168.0.1/24"
+ansible,https://docs.ansible.com/projects/ansible/latest/collections/cisco/iosxr/iosxr_l3_interfaces_module.html,prose,,False,22,"The address format is <ipv6 address>/<mask>, the mask is number in range 0-128 eg. fd5d:12c9:2201:1::1/64"
+ansible,https://docs.ansible.com/projects/ansible/latest/collections/fortinet/fortimanager/fmgr_system_global_module.html,prose,,False,11,disable - FCP service doesn&apos;t process configuration requests from web
+ansible,https://docs.ansible.com/projects/ansible/latest/collections/fortinet/fortimanager/fmgr_system_global_module.html,prose,,False,10,disable - Don&apos;t allow VM platform connection in FGFM.
+ansible,https://docs.ansible.com/projects/ansible/latest/collections/fortinet/fortios/fortios_firewall_ipmacbinding_table_module.html,prose,,False,8,Entry number. see <a href=’#notes’>Notes</a>.
+ansible,https://docs.ansible.com/projects/ansible/latest/collections/netapp/ontap/na_ontap_lun_map_reporting_nodes_module.html,prose,,False,13,"For ASA r2 systems, The path should match the format <name>[@<snapshot-name>]."
+digitalocean,https://docs.digitalocean.com/products/databases/valkey/how-to/forward-logs/,prose,,False,30,"For the custom message format template, use the following, replacing <your-datadog-api-key> with your Datadog API key and <your-cluster-name> with the name of y"
+vercel,https://vercel.com/docs/environment-variables/manage-across-environments,callout,note,False,20,Install the Vercel plugin to audit environment variables across environments with your coding agent. npx plugins add vercel/vercel-plugin
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,prose,,False,36,"The Marketplace API consists of two sets of endpoints: the Partner API (called by Vercel) and the Vercel API (called by your integration). Together, they enable"
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,callout,note,False,16,"Select an endpoint to view complete documentation with request/response schemas, authentication requirements, and code examples."
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,prose,,False,15,"When a customer uses your integration, these two APIs communicate to handle the integration lifecycle:"
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,prose,,False,20,"Vercel calls Partner API — When users install, configure, or interact with your integration, Vercel sends requests to your integration server"
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,prose,,False,21,"Integration calls Vercel API — Your server makes requests to Vercel to get account info, manage resources, submit billing data, and more"
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,prose,,False,17,See Native Integration Flows to understand how these APIs work together throughout the installation and usage lifecycle.
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,heading,,False,3,Partner API Endpoints
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,prose,,False,19,"Vercel calls these endpoints on your integration server. Implement them to handle installation lifecycle, resource provisioning, and billing operations."
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,heading,,False,3,Vercel API Endpoints
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,prose,,False,18,"Your integration calls these endpoints on Vercel servers to interact with resources like projects, deployments, billing, and configuration."
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,heading,,False,2,Related documentation
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,prose,,False,9,Marketplace API Overview — Learn about authentication and common patterns
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,prose,,False,8,"Native Integration Concepts — Understand installations, resources, and configurations"
+vercel,https://vercel.com/docs/integrations/create-integration/marketplace-api/reference,prose,,False,8,Webhooks Documentation — Handle real-time events from Vercel
+vercel,https://vercel.com/docs/rest-api/ai-gateway/delete-virtual-model-config,heading,,False,1,Errors
+vercel,https://vercel.com/docs/rest-api/environment/delete-one-or-more-env-var,heading,,False,1,Errors
+vercel,https://vercel.com/docs/rest-api/feature-flags/list-all-flags-for-a-team,heading,,False,1,Errors
+vercel,https://vercel.com/docs/rest-api/feature-flags/list-flags,heading,,False,1,Errors
+vercel,https://vercel.com/docs/rest-api/networking/list-privatelink-endpoints,heading,,False,1,Errors
+vercel,https://vercel.com/docs/rest-api/projects/edit-an-environment-variable,heading,,False,1,Errors
+vercel,https://vercel.com/docs/rest-api/sandboxes/write-to-command-stdin,heading,,False,1,Errors
+vercel,https://vercel.com/docs/rest-api/sdk/connect/list-connectors-for-a-project,code,,False,25,"{ ""connectors"": [ { ""connectorId"": ""example_id"", ""createdAt"": ""123"", ""enabledEnvironments"": [], ""project"": { ""customEnvironments"": [ { ""id"": ""icfg_1234567890"", "
+vercel,https://vercel.com/docs/rest-api/sdk/connect/list-connectors-for-a-project,code,,False,5,"{ ""error"": { ""code"": ""string"", ""message"": ""string"" } }"
+vercel,https://vercel.com/docs/rest-api/sdk/connect/list-connectors-for-a-project,heading,,False,1,Errors
+vercel,https://vercel.com/docs/rest-api/sdk/domains-registrar/get-supported-tlds,code,,False,6,"{ ""issues"": [ { ""path"": [], ""message"": ""string"" } ], ""message"": ""string"" }"
+vercel,https://vercel.com/docs/rest-api/sdk/domains-registrar/get-supported-tlds,heading,,False,1,Errors
+vercel,https://vercel.com/docs/rest-api/sdk/feature-flags/create-an-sdk-key,heading,,False,1,Errors
+vercel,https://vercel.com/docs/sandbox/concepts/drives,prose,,False,15,An eve agent that reads and saves your team's files on a Vercel Drive.
+vercel,https://vercel.com/docs/sandbox/concepts/drives,prose,,False,17,"Slack-based Contentful assistant built on eve, with Vercel Drives providing a searchable copy of your content."
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" go run ""main.go"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,19,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" go run ""main.go"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,20,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" go run ""main.go"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""us3.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""us5.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,17,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""ap1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""ap2.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""uk1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,19,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""us3.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""us5.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,17,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""ap1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""ap2.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""uk1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,19,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""us3.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""us5.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,17,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""ap1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""ap2.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""uk1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,19,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""datadoghq.eu"" DD_API_KEY=""<DD_API_KEY>"" DD_APP_KEY=""<DD_APP_KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,19,"DD_SITE=""ddog-gov.com"" DD_API_KEY=""<DD_API_KEY>"" DD_APP_KEY=""<DD_APP_KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,20,"DD_SITE=""us2.ddog-gov.com"" DD_API_KEY=""<DD_API_KEY>"" DD_APP_KEY=""<DD_APP_KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,18,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" npx tsx ""example.ts"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,19,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" npx tsx ""example.ts"""
+datadog,https://docs.datadoghq.com/api/latest/cloud-cost-management/get-google-cloud-usage-cost-config/,code,,True,20,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" npx tsx ""example.ts"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" go run ""main.go"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,19,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" go run ""main.go"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,20,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" go run ""main.go"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""us3.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""us5.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,17,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""ap1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""ap2.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""uk1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,19,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""us3.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""us5.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,17,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""ap1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""ap2.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""uk1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,19,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""us3.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""us5.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,17,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""ap1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""ap2.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""uk1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,19,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""datadoghq.eu"" DD_API_KEY=""<DD_API_KEY>"" DD_APP_KEY=""<DD_APP_KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,19,"DD_SITE=""ddog-gov.com"" DD_API_KEY=""<DD_API_KEY>"" DD_APP_KEY=""<DD_APP_KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,20,"DD_SITE=""us2.ddog-gov.com"" DD_API_KEY=""<DD_API_KEY>"" DD_APP_KEY=""<DD_APP_KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,18,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" npx tsx ""example.ts"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,19,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" npx tsx ""example.ts"""
+datadog,https://docs.datadoghq.com/api/latest/dashboards/get-a-shared-dashboard/,code,,True,20,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" npx tsx ""example.ts"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" go run ""main.go"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,19,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" go run ""main.go"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,20,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" go run ""main.go"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""us3.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""us5.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,17,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""ap1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""ap2.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""uk1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,19,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" java ""Example.java"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""us3.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""us5.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,17,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""ap1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""ap2.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""uk1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,19,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" python3 ""example.py"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""us3.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""us5.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,17,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""ap1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""ap2.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""uk1.datadoghq.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,19,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" ruby ""example.rb"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,17,"DD_SITE=""us3.datadoghq.com"" DD_API_KEY=""<API-KEY>"" DD_APP_KEY=""<APP-KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,17,"DD_SITE=""us5.datadoghq.com"" DD_API_KEY=""<API-KEY>"" DD_APP_KEY=""<APP-KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,16,"DD_SITE=""datadoghq.eu"" DD_API_KEY=""<API-KEY>"" DD_APP_KEY=""<APP-KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,17,"DD_SITE=""ap1.datadoghq.com"" DD_API_KEY=""<API-KEY>"" DD_APP_KEY=""<APP-KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,17,"DD_SITE=""ap2.datadoghq.com"" DD_API_KEY=""<API-KEY>"" DD_APP_KEY=""<APP-KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,17,"DD_SITE=""uk1.datadoghq.com"" DD_API_KEY=""<API-KEY>"" DD_APP_KEY=""<APP-KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,17,"DD_SITE=""ddog-gov.com"" DD_API_KEY=""<API-KEY>"" DD_APP_KEY=""<APP-KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""us2.ddog-gov.com"" DD_API_KEY=""<API-KEY>"" DD_APP_KEY=""<APP-KEY>"" cargo run"
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,18,"DD_SITE=""datadoghq.eu"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" npx tsx ""example.ts"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,19,"DD_SITE=""ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" npx tsx ""example.ts"""
+datadog,https://docs.datadoghq.com/api/latest/incidents/delete-postmortem-template/,code,,True,20,"DD_SITE=""us2.ddog-gov.com"" DD_BEARER_TOKEN=""<PERSONAL_ACCESS_TOKEN OR SERVICE_ACCESS_TOKEN>"" npx tsx ""example.ts"""
+datadog,https://docs.datadoghq.com/ddsql_reference/data_directory/aws/aws.sfn_activity.dataset/,prose,,False,91,The name of the activity. A name must <i>not</i> contain: <ul> <li> white space </li> <li> brackets <code>&lt; &gt; { } [ ]</code> </li> <li> wildcard character
+datadog,https://docs.datadoghq.com/ddsql_reference/data_directory/aws/aws.sfn_activity.dataset/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/ddsql_reference/data_directory/aws/aws.sfn_activity.dataset/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/ddsql_reference/data_directory/aws/aws.sso_trusted_token_issuer.dataset/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/ddsql_reference/data_directory/aws/aws.sso_trusted_token_issuer.dataset/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/ddsql_reference/data_directory/gcp/gcp.dialogflow_conversation_profile.dataset/,prose,,False,46,"Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-US languages. "
+datadog,https://docs.datadoghq.com/ddsql_reference/data_directory/gcp/gcp.dialogflow_conversation_profile.dataset/,prose,,False,30,"The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to A"
+datadog,https://docs.datadoghq.com/ddsql_reference/data_directory/gcp/gcp.dialogflow_conversation_profile.dataset/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/ddsql_reference/data_directory/gcp/gcp.dialogflow_conversation_profile.dataset/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_ami/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_ami/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_codeguru_security_finding/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_codeguru_security_finding/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_efs_file_system/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_efs_file_system/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_iotfleetwise_model_manifest/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_iotfleetwise_model_manifest/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_ivs_playback_restriction_policy/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_ivs_playback_restriction_policy/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_route53_domain/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/infrastructure/resource_catalog/aws_route53_domain/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/integrations/crest-data-systems-dell-emc-ecs/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/integrations/crest-data-systems-dell-emc-ecs/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/integrations/hdfs-datanode/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/integrations/hdfs-datanode/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/integrations/octoprint/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/integrations/octoprint/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/observability_pipelines/sources/logstash/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/observability_pipelines/sources/logstash/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/real_user_monitoring/application_monitoring/cpp/advanced_build_configuration/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/real_user_monitoring/application_monitoring/cpp/advanced_build_configuration/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/security/application_security/setup/go/troubleshooting/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/security/application_security/setup/go/troubleshooting/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/security/cloud_security_management/crown_jewels/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/security/cloud_security_management/crown_jewels/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/security/cloud_security_management/guide/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/security/cloud_security_management/guide/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/security/code_security/dev_tool_int/mcp_server/tools_reference/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/security/code_security/iac_security/iac_rules/ansible-aws-lambda-permission-misconfigured/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/security/code_security/iac_security/iac_rules/ansible-aws-lambda-permission-misconfigured/,code,,False,7,rulesets: - Ansible / AWS # Rules to enforce / AWS.
+datadog,https://docs.datadoghq.com/security/code_security/iac_security/iac_rules/dockerfile-apt-get-missing-flags-to-avoid-manual-input/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/security/code_security/iac_security/iac_rules/dockerfile-apt-get-missing-flags-to-avoid-manual-input/,code,,False,5,rulesets: - Dockerfile # Rules to enforce .
+datadog,https://docs.datadoghq.com/security/code_security/static_analysis/static_analysis_rules/typescript-express/path-traversal/,heading,,False,5,How to use this rule
+datadog,https://docs.datadoghq.com/security/code_security/static_analysis/static_analysis_rules/typescript-express/path-traversal/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/security/code_security/static_analysis/static_analysis_rules/typescript-express/path-traversal/,code,,False,8,rulesets: - typescript-express # Rules to enforce TypeScript express.
+datadog,https://docs.datadoghq.com/security/code_security/static_analysis/static_analysis_rules/typescript-express/path-traversal/,prose,,False,16,Create a static-analysis.datadog.yml with the content above at the root of your repository
+datadog,https://docs.datadoghq.com/security/code_security/static_analysis/static_analysis_rules/typescript-express/path-traversal/,prose,,False,14,Use our free IDE Plugins or add Code Security scans to your CI pipelines
+datadog,https://docs.datadoghq.com/security/code_security/static_analysis/static_analysis_rules/typescript-express/path-traversal/,prose,,False,9,"For more information, please read the Code Security documentation"
+datadog,https://docs.datadoghq.com/security/code_security/static_analysis/static_analysis_rules/typescript-express/path-traversal/,heading,,False,3,VS Code Extension
+datadog,https://docs.datadoghq.com/security/code_security/static_analysis/static_analysis_rules/typescript-express/path-traversal/,prose,,False,8,Identify code vulnerabilities directly in yourVS Code editor
+datadog,https://docs.datadoghq.com/security/code_security/static_analysis/static_analysis_rules/typescript-express/path-traversal/,heading,,False,2,JetBrains Plugin
+datadog,https://docs.datadoghq.com/security/code_security/static_analysis/static_analysis_rules/typescript-express/path-traversal/,prose,,False,15,Use Datadog Code Security to catch code issues at every step of your development process
+datadog,https://docs.datadoghq.com/security/default_rules/def-000-abi/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/security/default_rules/def-000-abi/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/security/default_rules/def-000-ak9/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/security/default_rules/def-000-ak9/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/security/default_rules/def-000-j9q/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/security/default_rules/def-000-j9q/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/security/default_rules/def-000-siy/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/security/default_rules/def-000-siy/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/serverless/azure_database_messaging_services/azure_service_bus/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/serverless/azure_database_messaging_services/azure_service_bus/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+datadog,https://docs.datadoghq.com/tracing/guide/tutorial-enable-java-aws-eks/,prose,,False,32,"If you don’t already have an EKS cluster that you want to re-use, create one by running the following command, replacing <CLUSTER_NAME> with the name you want t"
+datadog,https://docs.datadoghq.com/tracing/guide/tutorial-enable-java-aws-eks/,prose,,False,9,curl -X POST '<EXTERNAL_IP>:30080/notes?desc=hello'
+datadog,https://docs.datadoghq.com/tracing/guide/tutorial-enable-java-aws-eks/,prose,,False,9,curl -X POST '<EXTERNAL_IP>:30080/notes?desc=hello'
+datadog,https://docs.datadoghq.com/tracing/guide/tutorial-enable-java-aws-eks/,prose,,False,13,curl -X POST '<EXTERNAL_IP>:30080/notes?desc=hello_again&add_date=y'
+datadog,https://docs.datadoghq.com/tracing/guide/tutorial-enable-java-aws-eks/,code,,False,2,1 2
+datadog,https://docs.datadoghq.com/tracing/guide/tutorial-enable-java-aws-eks/,code,,False,6,rulesets: - %!s(<nil>) # Rules to enforce .
+netlify,https://docs.netlify.com/build/configure-builds/environment-variables/,prose,,False,66,Netlify environment variablesenvironment variablesNamed values stored outside your code that your site can read at build time or runtime. are accessible during 
+netlify,https://docs.netlify.com/build/configure-builds/environment-variables/,prose,,False,63,"NETLIFY_IMAGE_CDN: value defaults to false. When set to true, the Essential Gatsby build plugin or Gatsby adapter for Netlify will use Netlify Image CDNCDNA net"
+netlify,https://docs.netlify.com/build/configure-builds/environment-variables/,prose,,False,53,AWS_LAMBDA_JS_RUNTIME: value that sets the Node.js runtime version for Netlify Functions. This environment variableenvironment variableNamed values stored outsi
+netlify,https://docs.netlify.com/build/configure-builds/environment-variables/,prose,,False,54,"CI: value that defaults to true, indicating that the build is running in a Continuous Integration (CI) environment. If this causes issues for your build, you ca"
+netlify,https://docs.netlify.com/build/configure-builds/environment-variables/,prose,,False,56,REVIEW_ID: ID of the request and the Deploy PreviewDeploy PreviewA type of deploy that lets you preview and share changes for feedback before they go live. it g
+netlify,https://docs.netlify.com/build/configure-builds/environment-variables/,prose,,False,61,"URL: URL representing the main address to your site. It can be either a Netlify subdomainsubdomainA prefix added to a domain name, such as blog in blog.yoursite"
+netlify,https://docs.netlify.com/build/configure-builds/environment-variables/,prose,,False,50,"For example, to print a not-sensitive variable (GREETING = ""hi there"") to the deploy logdeploy logA record of everything that happened during a build and deploy"
+netlify,https://docs.netlify.com/build/configure-builds/environment-variables/,prose,,False,87,"To use an environment variable for private npm module installs, you can set an NPM_TOKEN value in your build environment. Whenever Netlify runs an install and b"
+netlify,https://docs.netlify.com/build/frameworks/framework-setup-guides/hugo/,prose,,False,120,"When you link a repository for a project, Netlify tries to detect the framework your site is using. If your site is built with Hugo, Netlify provides a suggeste"
+netlify,https://docs.netlify.com/build/frameworks/framework-setup-guides/hugo/,prose,,False,56,"In order to install Hugo on the build image, you will need to set a HUGO_VERSION environment variableenvironment variableNamed values stored outside your code t"
+netlify,https://docs.netlify.com/build/frameworks/framework-setup-guides/vue-cli/,prose,,False,128,"When you link a repository for a project, Netlify tries to detect the framework your site is using. If your site is built with Vue CLI, Netlify provides a sugge"
+netlify,https://docs.netlify.com/build/frameworks/framework-setup-guides/vue-cli/,prose,,False,58,Environment variablesEnvironment variablesNamed values stored outside your code that your site can read at build time or runtime. prefixed with VUE_APP_ are pro
+netlify,https://docs.netlify.com/deploy/deploy-types/production-deploy/,prose,,False,72,A production deploy is a type of deploy that is optimized to work as the production-ready version of your app or site that shows up at your primary domaindomain
+netlify,https://docs.netlify.com/deploy/deploy-types/production-deploy/,prose,,False,56,"You can publish to production using Netlify DropNetlify DropThe simplest way to publish a site: drag and drop a folder of files and it goes live instantly, no a"
+netlify,https://docs.netlify.com/extend/building-code-agents/overview/,prose,,False,31,Global CDNCDNA network of servers around the world that delivers your site’s files from the location closest to each visitor. (content delivery network) so proj
+netlify,https://docs.netlify.com/extend/building-code-agents/overview/,prose,,False,15,"Custom domaindomainThe web address people use to visit your site, such as yoursite.com. support"
+netlify,https://docs.netlify.com/extend/building-code-agents/overview/,prose,,False,14,"Secret scanningSecretSensitive credentials, like passwords and API keys, that must be kept private. management"
+netlify,https://docs.netlify.com/extend/building-code-agents/overview/,prose,,False,27,"Build settings, environment variablesenvironment variablesNamed values stored outside your code that your site can read at build time or runtime., and domain ru"
+netlify,https://docs.netlify.com/extend/install-and-use/setup-guides/supabase-integration/,prose,,False,37,"Supabase is an open-source platform that provides a suite of tools including a PostgreSQL database, authenticationauthenticationThe process of verifying who som"
+netlify,https://docs.netlify.com/extend/install-and-use/setup-guides/supabase-integration/,prose,,False,29,Automated environment configuration. We’ll set up these crucial environment variablesenvironment variablesNamed values stored outside your code that your site c
+netlify,https://docs.netlify.com/extend/install-and-use/setup-guides/supabase-integration/,prose,,False,14,"In the Netlify UI, navigate to the Team settings Extensions page for your team."
+netlify,https://docs.netlify.com/extend/install-and-use/setup-guides/supabase-integration/,prose,,False,22,"From your team’s Sites list, select the site you plan to use with Supabase, and navigate to Project configuration General Supabase."
+netlify,https://docs.netlify.com/extend/install-and-use/setup-guides/supabase-integration/,prose,,False,17,"In the Netlify UI, navigate to Project configuration General Supabase for the site you want to edit."
+netlify,https://docs.netlify.com/extend/install-and-use/setup-guides/supabase-integration/,prose,,False,14,"In the Netlify UI, navigate to the Team settings Extensions page for your team."
+netlify,https://docs.netlify.com/manage/accounts-and-billing/team-management/team-owned-sites/,prose,,False,65,"Legacy Global sites use a dedicated CDNCDNA network of servers around the world that delivers your site’s files from the location closest to each visitor., and "
+netlify,https://docs.netlify.com/manage/accounts-and-billing/team-management/team-owned-sites/,prose,,False,17,"To change the setting, go to Team settings Access & security Transfer site settings and select Edit settings."
+netlify,https://docs.netlify.com/manage/accounts-and-billing/team-management/team-owned-sites/,prose,,False,19,"You can also find, create, and edit all your team’s labels by navigating to Team settings Site labels."
+netlify,https://docs.netlify.com/manage/monitoring/monitor-builds/,prose,,False,34,"Select any build to visit its detail page where you can examine the deploy logdeploy logA record of everything that happened during a build and deploy, includin"
+netlify,https://docs.netlify.com/manage/monitoring/monitor-builds/,prose,,False,21,You can find additional data about your team’s builds under Billing Account usage insights. Learn more about usage and insights.
+netlify,https://docs.netlify.com/manage/preview-servers/set-up-preview-server-for-content-sites/,prose,,False,78,It is very common for sites to read CMS API keysAPI keysA unique code that identifies your app when it makes requests to an external service. and related connec
+netlify,https://docs.netlify.com/manage/preview-servers/set-up-preview-server-for-content-sites/,prose,,False,45,"Note that values set for the Preview Server context can be stored as a secretsecretSensitive credentials, like passwords and API keys, that must be kept private"
+netlify,https://docs.netlify.com/manage/projects/how-projects-work/,prose,,False,47,"If you rename your project, the default URL changes to match. You can also connect a custom domaindomainThe web address people use to visit your site, such as y"
+netlify,https://docs.netlify.com/manage/projects/how-projects-work/,prose,,False,26,Deploy PreviewsDeploy PreviewsA type of deploy that lets you preview and share changes for feedback before they go live. - uses settings for your project's prev
+netlify,https://docs.netlify.com/manage/routing/headers/,prose,,False,35,Save a plain text file called _headers to the publish directorypublish directoryThe folder containing the finished files Netlify deploys after running your buil
+netlify,https://docs.netlify.com/manage/routing/headers/,callout,warning,False,64,"netlify.app is listed in the Mozilla Foundation’s Public Suffix List, which prevents setting cookies across subdomainssubdomainsA prefix added to a domain name,"
+netlify,https://docs.netlify.com/manage/routing/headers/,prose,,False,64,"netlify.app is listed in the Mozilla Foundation’s Public Suffix List, which prevents setting cookies across subdomainssubdomainsA prefix added to a domain name,"
+netlify,https://docs.netlify.com/manage/routing/headers/,callout,warning,False,63,"If you’re running a build commandbuild commandThe instruction Netlify runs to prepare your site’s files before deploying them. or site generator, the _headers f"
+netlify,https://docs.netlify.com/manage/routing/headers/,prose,,False,63,"If you’re running a build commandbuild commandThe instruction Netlify runs to prepare your site’s files before deploying them. or site generator, the _headers f"
+netlify,https://docs.netlify.com/manage/routing/headers/,prose,,False,30,You can configure Netlify to provide basic authenticationauthenticationThe process of verifying who someone is before letting them access your site. headers on 
+netlify,https://docs.netlify.com/manage/security/private-connectivity/,prose,,False,18,Get the IP addresses for your private networks by going to Team settings General Team details Private Connectivity.
+netlify,https://docs.netlify.com/manage/security/secure-access-to-sites/identity/manage-existing-users/,prose,,False,9,Navigate to the Identity Users section for your project.
+netlify,https://docs.netlify.com/manage/security/secure-access-to-sites/password-protection/,prose,,False,32,You can configure protection for all site deploys or only Deploy PreviewsDeploy PreviewsA type of deploy that lets you preview and share changes for feedback be
+netlify,https://docs.netlify.com/manage/security/secure-access-to-sites/password-protection/,prose,,False,17,"In the Netlify UI, go to your project and select Project configuration General Visitor access Project visibility."
+netlify,https://docs.netlify.com/manage/security/secure-access-to-sites/password-protection/,prose,,False,15,"For your team, go to Team settings Access & security Visitor access Default Password Protection settings."
+netlify,https://docs.netlify.com/manage/security/secure-access-to-sites/password-protection/,prose,,False,15,"For your team, go to Team settings Access & security Visitor access Default Password Protection settings."
+netlify,https://docs.netlify.com/manage/security/secure-access-to-sites/password-protection/,prose,,False,18,"In the Netlify UI, navigate to your site and go to Project configuration General Visitor access Password Protection."
+netlify,https://docs.netlify.com/manage/security/secure-access-to-sites/password-protection/,prose,,False,18,"In the Netlify UI, navigate to your site and go to Project configuration General Visitor access Password Protection."
+netlify,https://docs.netlify.com/manage/security/secure-netlify-access/configure-organization-saml-sso/,prose,,False,67,"Users who log in with Organization SSO must have an email address that matches their user ID in your identity provider. For example, a Netlify user with the ema"
+netlify,https://docs.netlify.com/manage/security/secure-netlify-access/configure-organization-saml-sso/,prose,,False,31,Netlify will redirect you to your identity provider’s login page. Follow the prompts there to complete your authenticationauthenticationThe process of verifying
+netlify,https://docs.netlify.com/manage/security/secure-netlify-access/configure-organization-saml-sso/,prose,,False,10,"Go to Access & security Organization SSO, and select Edit configuration."
+netlify,https://docs.netlify.com/manage/security/secure-netlify-access/configure-organization-saml-sso/,callout,note,False,54,"Once you enforce Organization SSO, any existing personal access tokenspersonal access tokensA credential tied to your personal account that lets tools and scrip"
+netlify,https://docs.netlify.com/manage/security/secure-netlify-access/configure-organization-saml-sso/,prose,,False,54,"Once you enforce Organization SSO, any existing personal access tokenspersonal access tokensA credential tied to your personal account that lets tools and scrip"
+netlify,https://docs.netlify.com/manage/security/secure-netlify-access/configure-organization-saml-sso/,prose,,False,9,"Go to Team settings Members, and select Add members."
+netlify,https://docs.netlify.com/manage/visual-editor/asset-sources/aprimo/,prose,,False,27,"The value is the collection of characters before the first dot (.) in your Aprimo domaindomainThe web address people use to visit your site, such as yoursite.co"
+netlify,https://docs.netlify.com/manage/visual-editor/content-sources/datocms/,prose,,False,34,"A full-access API token and ID of the project, both stored as environment variablesenvironment variablesNamed values stored outside your code that your site can"
+netlify,https://docs.netlify.com/manage/visual-editor/personalization/,prose,,False,55,This behavior should only exist in your application when it is running in development mode. This is commonly achieved using the NODE_ENV environment variableenv
+netlify,https://docs.netlify.com/manage/visual-editor/personalization/,prose,,False,31,"Visual Editor can also handle content that is behind a gate or paywall, or content that requires user authenticationauthenticationThe process of verifying who s"
+netlify,https://docs.netlify.com/resources/checklists/onboard-to-pro/,prose,,False,26,"Protect your team's code, secretssecretsSensitive credentials, like passwords and API keys, that must be kept private., and sites with the security features ava"
+netlify,https://docs.netlify.com/resources/checklists/onboard-to-pro/,prose,,False,34,Make environment variablesenvironment variablesNamed values stored outside your code that your site can read at build time or runtime. available to only the sco
+netlify,https://docs.netlify.com/resources/checklists/onboard-to-pro/,prose,,False,33,"If your site is connected to a public repository, review the untrusted deploys policy and deploy log visibilitydeploy logA record of everything that happened du"
+netlify,https://docs.netlify.com/resources/checklists/onboard-to-pro/,prose,,False,37,Optimize the size and format of your images with Netlify Image CDNCDNA network of servers around the world that delivers your site’s files from the location clo
+netlify,https://docs.netlify.com/resources/troubleshooting/fix-a-failed-deploy/,prose,,False,56,Selecting Why did it fail? doesn’t consume any credits. If you go on to start an agent runagent runA single task or batch of tasks you or a team member prompted
+netlify,https://docs.netlify.com/resources/troubleshooting/fix-a-failed-deploy/,prose,,False,34,"a subsection of the build log entries in your deploy logdeploy logA record of everything that happened during a build and deploy, including any errors. at or ar"
+netlify,https://docs.netlify.com/resources/troubleshooting/fix-a-failed-deploy/,prose,,False,10,"For your team, go to Team settings General AI enablement"
+netlify,https://docs.netlify.com/resources/troubleshooting/fix-a-failed-deploy/,prose,,False,10,"For your team, go to Team settings General AI enablement"
+netlify,https://docs.netlify.com/resources/troubleshooting/fix-a-failed-deploy/,prose,,False,37,"Agent RunnersAgent RunnersAn AI coding tool that makes changes to your site on your behalf, right from the Netlify dashboard. have their own requirements, inclu"
+netlify,https://docs.netlify.com/resources/troubleshooting/fix-a-failed-deploy/,callout,note,False,122,"To help you control costs for Agent RunnersAgent RunnersAn AI coding tool that makes changes to your site on your behalf, right from the Netlify dashboard., you"
+netlify,https://docs.netlify.com/resources/troubleshooting/fix-a-failed-deploy/,prose,,False,122,"To help you control costs for Agent RunnersAgent RunnersAn AI coding tool that makes changes to your site on your behalf, right from the Netlify dashboard., you"
+netlify,https://docs.netlify.com/resources/troubleshooting/overview/,prose,,False,19,DNSDNSThe system that translates a domain name like yoursite.com into the address computers use to find your site.
+netlify,https://docs.netlify.com/resources/troubleshooting/overview/,prose,,False,14,"Domains troubleshootingDomainsThe web address people use to visit your site, such as yoursite.com."
+netlify,https://docs.netlify.com/resources/troubleshooting/overview/,prose,,False,42,"If you have a Credit-based plan or certain kinds of Enterprise plans, you can use Agent RunnersAgent RunnersAn AI coding tool that makes changes to your site on"
+netlify,https://docs.netlify.com/resources/troubleshooting/overview/,prose,,False,22,"To change your project name, go to Project configuration General Project details Project information and choose Manage project name and cover image."
+netlify,https://docs.netlify.com/resources/troubleshooting/overview/,prose,,False,61,Getting a diagnosis and suggested solution with Why did it fail? doesn’t consume any credits. Selecting Fix with agent starts an agent runagent runA single task
+netlify,https://docs.netlify.com/resources/troubleshooting/overview/,prose,,False,64,Deploy a demo project on Netlify to make it available on the web. Get to know some key features including Deploy PreviewsDeploy PreviewsA type of deploy that le
+netlify,https://docs.netlify.com/start/core-concepts/version-control/,prose,,False,57,"You don't need to use Git to publish a project on Netlify. If you built your project with an AI tool and downloaded the files, you can publish instantly using N"
+netlify,https://docs.netlify.com/start/core-concepts/version-control/,prose,,False,31,Deploy PreviewsDeploy PreviewsA type of deploy that lets you preview and share changes for feedback before they go live.: every proposed change gets its own pre
+supabase,https://supabase.com/docs/guides/auth/passwords,code,,True,14,"async function () { const { , } = await ..({ : 'valid.email@supabase.io', : 'example-password', : { : 'https://example.com/welcome', }, }) }"
+supabase,https://supabase.com/docs/guides/auth/passwords,code,,True,10,"async function () { const { , } = await ..({ : 'valid.email@supabase.io', : 'example-password', }) }"
+supabase,https://supabase.com/docs/guides/auth/passwords,code,,True,11,"await ..('valid.email@supabase.io', { : 'http://example.com/account/update-password', })"
+supabase,https://supabase.com/docs/guides/auth/passwords,code,,True,3,await ..({ : 'new_password' })
+supabase,https://supabase.com/docs/guides/auth/passwords,code,,True,5,"const { , } = await ..({ : '+13334445555', : 'some-password', })"
+supabase,https://supabase.com/docs/guides/auth/passwords,code,,True,5,"const { : { }, , } = await ..({ : '+13334445555', : '123456', : 'sms', })"
+supabase,https://supabase.com/docs/guides/auth/passwords,code,,True,5,"const { , } = await ..({ : '+13334445555', : 'some-password', })"
+heroku,https://devcenter.heroku.com/articles/cli-prompt,prose,,False,12,Start prompting by adding --prompt after any command: term $ heroku COMMAND --prompt
+heroku,https://devcenter.heroku.com/articles/dedup,heading,,False,8,This add-on is operated by Softtrends LLC
+heroku,https://devcenter.heroku.com/articles/dedup,prose,,False,20,"You can set up the Default Database configuration as Heroku Postgres',AWS Postgres, orAzure Postgres`along with its connection string."
+heroku,https://devcenter.heroku.com/articles/heroku-dev-center-style-guidelines,code,,False,103,## Section header Use the H2 header (`##`) for your article's top-level sections. Dev Center parses these titles to construct the article's table of contents. D
+heroku,https://devcenter.heroku.com/articles/heroku-dev-center-style-guidelines,prose,,False,15,"When demonstrating a command with an ID, use angle brackets (<id>) to replace the ID."
+heroku,https://devcenter.heroku.com/articles/heroku-dev-center-style-guidelines,prose,,False,12,"Use ordered lists for instruction steps, unless the steps are too lengthy."
+heroku,https://devcenter.heroku.com/articles/heroku-local,callout,note,False,10,Replace <your-image-name> with an identifier of your choosing.
+heroku,https://devcenter.heroku.com/articles/heroku-local,prose,,False,10,Replace <your-image-name> with an identifier of your choosing.
+heroku,https://devcenter.heroku.com/articles/heroku-local,callout,note,False,12,Replace <your-image-name> with the identifier from the previous build step.
+heroku,https://devcenter.heroku.com/articles/heroku-local,prose,,False,12,Replace <your-image-name> with the identifier from the previous build step.
+heroku,https://devcenter.heroku.com/articles/heroku-local,callout,note,False,12,Replace <your-image-name> with the identifier from the previous build step.
+heroku,https://devcenter.heroku.com/articles/heroku-local,prose,,False,12,Replace <your-image-name> with the identifier from the previous build step.
+heroku,https://devcenter.heroku.com/articles/popsql,callout,warning,False,8,The PopSQL add-on is currently in beta.
+heroku,https://devcenter.heroku.com/articles/popsql,prose,,False,8,The PopSQL add-on is currently in beta.
+heroku,https://devcenter.heroku.com/articles/popsql,heading,,False,8,"This add-on is operated by PopSQL, Inc."
+heroku,https://devcenter.heroku.com/articles/searchbox,heading,,False,11,This add-on is operated by Sebula Bilisim Teknolojileri LTD STI
+heroku,https://devcenter.heroku.com/articles/searchbox,prose,,False,20,Update application dependencies with bundler. term $ bundle install Configure Rails Elasticsearch in configure/application.rb or configure/environment/productio
+heroku,https://devcenter.heroku.com/articles/simple-file-upload,heading,,False,9,This add-on is operated by Bitmapped Designs LLC
+heroku,https://devcenter.heroku.com/articles/simple-file-upload,prose,,False,10,"AI-augmented file uploads: alt-tags, face crop, background removal"
+heroku,https://devcenter.heroku.com/articles/simple-file-upload,prose,,False,13,Install the JavaScript library by adding this to the <head> of your site:
+heroku,https://devcenter.heroku.com/articles/simple-file-upload,prose,,False,10,Example: “`javascript // Original URL const { cdnUrl } = event.detail.allFiles[0];
+newrelic,https://docs.newrelic.com/docs/new-relic-solutions/build-nr-ui/sdk-component/structure/TileGroup/,prose,,False,15,Size of the gap between tiles.<One of TileGroup.GAP_TYPE.MEDIUMTileGroup.GAP_TYPE.SMALL >
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,1,Improvements
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,38,"DotNet/Agent/Installed: Updated the task to detect .NET agent DLLs when newrelic.config is absent, and enabled case-insensitive matching for newrelic.config. Pr"
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,20,DotNet/Config/Agent: Updated the task to issue a warning rather than a failure when newrelic.config is missing (#276).
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,34,.NET Core configuration: Updated file collection to gather and analyze environment-specific configuration files (such as appsettings.Production.json). Unrelated
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,24,".NET Core custom instrumentation: Updated XML reader tasks to inspect the agent extensions and extensions/netcore directories, aligning with profiler file-resol"
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,33,".NET agent logs: Updated log filtering so the 1-day cutoff applies exclusively to profiler logs, preserving agent logs from the preceding 7 days. Profiler logs "
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,48,.NET agent version and EOL checks: Updated end-of-life (EOL) and supported version parameters for the .NET agent. Added discrete detection for .NET Framework ve
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,20,".NET agent log level: Updated log level configurations to evaluate settings case-insensitively, matching the .NET agent runtime behavior (#274)."
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,53,".NET TLS check: Updated registry validation so a missing SchUseStrongCrypto key is no longer flagged as an error, as supported .NET Framework versions default t"
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,2,Bug fixes
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,21,Fixed an issue where uploads to the Japan data region failed due to an unassigned upload URL in release builds (#277).
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,35,Fixed an issue in .NET Framework profiling environment variable validation to correctly check COR_ENABLE_PROFILING. Added support for both NEW_RELIC_LOG_DIRECTO
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,15,Fixed an issue where environment variable values containing equal signs (=) were truncated during parsing (#272).
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,2,Task Updates
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,10,K8s/AgentControl/Logs - Updated to collect all log lines (#267).
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,2,New Feature
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,26,"onhost-agent-control suite - Gathers information about agent-control logs, status, connectivity, and resources on the host. To use it, run nrdiag -suites onhost"
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,35,"AgentControl/Config/Agent - Detects agent-control via PATH, known install paths, and data directory fallback; collects all YAML files from fleet-data and local-"
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,20,AgentControl/Config/DirTree - Writes a formatted directory tree of all agent-control installation paths to the zip for structure inspection
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,38,"AgentControl/Agent/Connect - Checks TCP/TLS reachability of the OpAMP, JWKS, and OAuth2 token endpoints (reading URLs from local_config.yaml); validates that th"
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,29,"AgentControl/Agent/Logs - On Linux, collects logs via journalctl -u newrelic-agent-control; on Windows, globs all date-rotated *.newrelic-agent-control.log file"
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,32,AgentControl/Agent/StatusServer - Queries the local status server at the host/port configured in local_config.yaml (default 127.0.0.1:51200) and saves the JSON 
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,2,New features
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,28,"The Diagnostics CLI now supports New Relic's Japan data region. If your account is in the Japan region, specify the region flag when running the CLI (#263):"
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,code,,False,3,$ ./nrdiag -region JP
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,14,"The region flag accepts US, EU, or JP (case insensitive) and defaults to US."
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,2,Dependency updates
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,14,Updated golang.org/x/net from 0.33.0 to 0.55.0 (#264).
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,1,Fixes
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,28,Sensitive values such as License Keys and passwords are now obfuscated in all task outputs including in the JSON file and any config files that are collected (#
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,2,Task Updates
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,13,Updated Infra/Agent/Connect to handle additional success responses from the endpoints (#260).
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,1,Fix
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,13,"Update supported versions for .NET, Ruby, Python and Node.JS APM agents (#258)."
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,1,Fixes
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,1,Fix
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,19,GLIBC related errors such as /lib64/libc.so.6: version 'GLIBC_2.34' not found have been resolved (#252).
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,2,Task Updates
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,9,Update the Java/Appserver/JbossEapCheck version compatibility check (#251).
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,2,New Task
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,15,K8s/AgentControl/agent-control-install-job-logs - Collects logs generated by the agent-control installation
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,2,Task Updates
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,1,Fixes
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,19,GLIBC related errors such as /lib64/libc.so.6: version 'GLIBC_2.34' not found have been resolved (#244).
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,2,Task Updates
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,25,Infra/Agent/Version - Updated to return a warning instead of an error when there is an issue connecting to github to verify the version (#231)
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,heading,,False,2,New Feature
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,11,K8s/AgentControl/helm-controller - Collects Agent Control helm-controller pod logs
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,11,K8s/AgentControl/source-controller - Collects Agent Control source-controller pod logs
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,11,K8s/AgentControl/agent-control - Collects Agent Control agent-control pod logs
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,8,K8s/Flux/Charts - Collects Flux Helm Charts information
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,8,K8s/Flux/Repositories - Collects Flux Helm Repositories information
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,8,K8s/Flux/Releases - Collects Flux Helm Releases information
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,13,K8s/Resources/Config - Collects K8s configMaps for the given namespace in YAML format
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,14,K8s/Resources/Deploy - Collects K8s deployments information for the given namespace in YAML format
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,14,K8s/Resources/Pods - Collects K8s pods information for the given namespace in YAML format
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,14,K8s/Resources/Daemonset - Collects K8s daemonsets information for the given namespace in YAML format
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,14,K8s/Env/Version - Retrieves the version of the kubectl client and of the cluster
+newrelic,https://docs.newrelic.com/docs/release-notes/diagnostics-release-notes/diagnostics-cli-release-notes/,prose,,False,9,K8s/Helm/Releases - Collects the list of helm releases
+newrelic,https://docs.newrelic.com/docs/tutorial-peak-demand/organize-data-workloads/,heading,,False,2,1Get started
+newrelic,https://docs.newrelic.com/docs/tutorial-peak-demand/organize-data-workloads/,heading,,False,5,2Create service levels for gameday
+newrelic,https://docs.newrelic.com/docs/tutorial-peak-demand/organize-data-workloads/,heading,,False,5,3Reduce noise with quality alerts
+newrelic,https://docs.newrelic.com/docs/tutorial-peak-demand/organize-data-workloads/,heading,,False,5,4Align your teams with workloads
+newrelic,https://docs.newrelic.com/docs/tutorial-peak-demand/organize-data-workloads/,heading,,False,5,5Autoscale your infrastructure with Kubernetes
+railway,https://docs.railway.com/networking/cdn,callout,note,False,5,This feature is in beta.
+mslearn,https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/error-codes/bad-request-or-invalid-client-secret-error,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/error-codes/bad-request-or-invalid-client-secret-error,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/error-codes/bad-request-or-invalid-client-secret-error,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/error-codes/bad-request-or-invalid-client-secret-error,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-kuberay-extension-errors,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-kuberay-extension-errors,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-kuberay-extension-errors,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-kuberay-extension-errors,prose,,False,10,Deploy and manage cluster extensions by using the Azure CLI.
+mslearn,https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-kuberay-extension-errors,prose,,False,32,"The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or ot"
+mslearn,https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-kuberay-extension-errors,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-kuberay-extension-errors,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/azure/api-management/secure-api-management,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/api-management/secure-api-management,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/api-management/secure-api-management,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/azure/api-management/secure-api-management,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/azure/api-management/secure-api-management,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/azure/event-hubs/test-locally-with-event-hub-emulator,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/event-hubs/test-locally-with-event-hub-emulator,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/event-hubs/test-locally-with-event-hub-emulator,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/azure/event-hubs/test-locally-with-event-hub-emulator,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/azure/event-hubs/test-locally-with-event-hub-emulator,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/azure/iot/concepts-certificate-policy-management,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/iot/concepts-certificate-policy-management,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/iot/concepts-certificate-policy-management,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/azure/iot/concepts-certificate-policy-management,prose,,False,9,Azure role-based access control (RBAC) for IoT Hub
+mslearn,https://learn.microsoft.com/en-us/azure/iot/concepts-certificate-policy-management,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/azure/iot/concepts-certificate-policy-management,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/deploy/about-private-endpoints?view=azloc-2610,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/deploy/about-private-endpoints?view=azloc-2610,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/deploy/about-private-endpoints?view=azloc-2610,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/deploy/about-private-endpoints?view=azloc-2610,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/manage/virtual-machine-azure-marketplace-red-hat?view=azloc-2610,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/manage/virtual-machine-azure-marketplace-red-hat?view=azloc-2610,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/manage/virtual-machine-azure-marketplace-red-hat?view=azloc-2610,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/manage/virtual-machine-azure-marketplace-red-hat?view=azloc-2610,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/migrate/migrate-via-powershell?view=azloc-2610,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/migrate/migrate-via-powershell?view=azloc-2610,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/migrate/migrate-via-powershell?view=azloc-2610,heading,,False,2,Next steps
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/migrate/migrate-via-powershell?view=azloc-2610,prose,,False,10,"Alternatively, you can replicate and migrate using the Azure portal."
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/migrate/migrate-via-powershell?view=azloc-2610,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/azure/azure-local/migrate/migrate-via-powershell?view=azloc-2610,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/azure/azure-managed-lustre/use-csi-driver-kubernetes,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/azure-managed-lustre/use-csi-driver-kubernetes,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/azure-managed-lustre/use-csi-driver-kubernetes,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/azure/azure-managed-lustre/use-csi-driver-kubernetes,prose,,False,9,Export data from Azure Managed Lustre to Blob Storage
+mslearn,https://learn.microsoft.com/en-us/azure/azure-managed-lustre/use-csi-driver-kubernetes,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/azure/azure-managed-lustre/use-csi-driver-kubernetes,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-enterprise-agreement,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-enterprise-agreement,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-enterprise-agreement,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-enterprise-agreement,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entity-attribute-metadata-messages?view=op-9-1,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entity-attribute-metadata-messages?view=op-9-1,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entity-attribute-metadata-messages?view=op-9-1,prose,,False,9,DeleteOptionValue Delete an option from PicklistAttributeMetadata or StatusAttributeMetadata attributes
+mslearn,https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entity-attribute-metadata-messages?view=op-9-1,prose,,False,8,InsertOptionValue Add an option to a PicklistAttributeMetadata attribute
+mslearn,https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entity-attribute-metadata-messages?view=op-9-1,prose,,False,8,InsertStatusValue Add an option to a StatusAttributeMetadata attribute
+mslearn,https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entity-attribute-metadata-messages?view=op-9-1,prose,,False,8,UpdateStateValue Update a label for a StateAttributeMetadata attribute
+mslearn,https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entity-attribute-metadata-messages?view=op-9-1,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entity-attribute-metadata-messages?view=op-9-1,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/dynamics365/developer/reference/mcp-tools/get_entity_record,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/developer/reference/mcp-tools/get_entity_record,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/developer/reference/mcp-tools/get_entity_record,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/dynamics365/developer/reference/mcp-tools/get_entity_record,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/dynamics365/field-service/configure-settings-common-scenarios,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/field-service/configure-settings-common-scenarios,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/field-service/configure-settings-common-scenarios,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/dynamics365/field-service/configure-settings-common-scenarios,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/dynamics365/sales/open-sales-opportunity-agent-settings,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/sales/open-sales-opportunity-agent-settings,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/sales/open-sales-opportunity-agent-settings,heading,,False,2,Next step
+mslearn,https://learn.microsoft.com/en-us/dynamics365/sales/open-sales-opportunity-agent-settings,heading,,False,2,Related information
+mslearn,https://learn.microsoft.com/en-us/dynamics365/sales/open-sales-opportunity-agent-settings,prose,,False,8,Set up and configure the Sales Opportunity Agent
+mslearn,https://learn.microsoft.com/en-us/dynamics365/sales/open-sales-opportunity-agent-settings,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/dynamics365/sales/open-sales-opportunity-agent-settings,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/lcs-solutions/separate-localization-models,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/lcs-solutions/separate-localization-models,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/lcs-solutions/separate-localization-models,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/lcs-solutions/separate-localization-models,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/dynamics365/supply-chain/supplier-engagement/deploy-configure-scm,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/supply-chain/supplier-engagement/deploy-configure-scm,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/dynamics365/supply-chain/supplier-engagement/deploy-configure-scm,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/dynamics365/supply-chain/supplier-engagement/deploy-configure-scm,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/entra/identity/saas-apps/gong-provisioning-tutorial,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/entra/identity/saas-apps/gong-provisioning-tutorial,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/entra/identity/saas-apps/gong-provisioning-tutorial,heading,,False,2,More resources
+mslearn,https://learn.microsoft.com/en-us/entra/identity/saas-apps/gong-provisioning-tutorial,prose,,False,12,What is application access and single sign-on with Microsoft Entra ID?
+mslearn,https://learn.microsoft.com/en-us/entra/identity/saas-apps/gong-provisioning-tutorial,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/entra/identity/saas-apps/gong-provisioning-tutorial,prose,,False,11,Learn how to review logs and get reports on provisioning activity
+mslearn,https://learn.microsoft.com/en-us/entra/identity/saas-apps/gong-provisioning-tutorial,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/entra/identity/saas-apps/gong-provisioning-tutorial,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/fabric/data-factory/apache-airflow-jobs-variable-library-integration,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/data-factory/apache-airflow-jobs-variable-library-integration,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/data-factory/apache-airflow-jobs-variable-library-integration,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/fabric/data-factory/apache-airflow-jobs-variable-library-integration,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/fabric/data-factory/apache-airflow-jobs-variable-library-integration,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,heading,,False,5,Using AI services in Fabric
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,prose,,False,9,AI Functions overview - Simplest approach for text transformation operations
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,prose,,False,11,Use Azure OpenAI with SynapseML - Distributed processing for large-scale workloads
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,prose,,False,20,Use Azure OpenAI with OpenAI Python SDK for the OpenAI package or built-in synchronous and asynchronous OpenAI-compatible clients.
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,prose,,False,12,Foundry Tools in SynapseML with bring-your-own-key - Specialized Foundry Tools
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,heading,,False,2,SynapseML resources
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,prose,,False,9,Learn more about SynapseML in the SynapseML blog post
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/synapse-overview,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-evaluate-rag-performance,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-evaluate-rag-performance,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-evaluate-rag-performance,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-evaluate-rag-performance,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-power-bi-dependencies,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-power-bi-dependencies,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-power-bi-dependencies,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-power-bi-dependencies,prose,,False,9,Check out other tutorials for semantic link and SemPy:
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-power-bi-dependencies,prose,,False,11,Tutorial: Extract and calculate Power BI measures from a Jupyter notebook
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-power-bi-dependencies,prose,,False,10,"Tutorial: Discover relationships in a semantic model, using semantic link"
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-power-bi-dependencies,prose,,False,10,"Tutorial: Discover relationships in the Synthea dataset, using semantic link"
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-power-bi-dependencies,prose,,False,9,Tutorial: Validate data using SemPy and Great Expectations (GX)
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-power-bi-dependencies,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/fabric/data-science/tutorial-power-bi-dependencies,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/fabric/database/sql/skills,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/database/sql/skills,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/database/sql/skills,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/fabric/database/sql/skills,prose,,False,10,What is Copilot in the SQL database in Fabric workload?
+mslearn,https://learn.microsoft.com/en-us/fabric/database/sql/skills,prose,,False,12,How to use the Copilot chat pane in the SQL database workload
+mslearn,https://learn.microsoft.com/en-us/fabric/database/sql/skills,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/fabric/database/sql/skills,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/ontology/how-to-use-namespaces,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/ontology/how-to-use-namespaces,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/ontology/how-to-use-namespaces,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/ontology/how-to-use-namespaces,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/ontology/how-to-use-namespaces,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,prose,,False,10,"After creating your first PowerTable application, explore these other features:"
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,prose,,False,41,Reference data management: Manage master and reference data centrally while maintaining synchronization with enterprise data platforms. PowerTable sheets provid
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,prose,,False,19,"Project management: PowerTable sheets provide Gantt layouts and timeline views to manage project schedules, track progress, and monitor dependencies."
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,prose,,False,17,Workflow management: Approval workflows enable governance over sensitive data updates by routing change requests through designated approvers.
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,prose,,False,22,Operational automation: Event‑driven automation enables teams to automate repetitive processes such as record updates and notify them via email/Teams notificati
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,prose,,False,18,"Collaborative data management: Comments, threaded discussions, mentions, and notifications allow teams to collaborate directly within the data application."
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,prose,,False,31,"Productivity: Use forms for structured data collection and insertion without coding. Use the master-detail view, cross-tab view, and resource layout for time ma"
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,prose,,False,36,Connected planning: Link PowerTable tables to plans so updates in PowerTable sheets become inputs for a plan. This process allows a change in your revenue forec
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/fabric/iq/plan/powertable-how-to-create-table-app,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/fabric/security/security-conditional-access,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/security/security-conditional-access,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/fabric/security/security-conditional-access,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/fabric/security/security-conditional-access,prose,,False,16,"Microsoft Entra Conditional Access documentation - Learn more about Conditional Access features, policy design, and best practices."
+mslearn,https://learn.microsoft.com/en-us/fabric/security/security-conditional-access,prose,,False,14,Azure security baseline for Microsoft Fabric – Review recommendations from Microsoft cloud security benchmark standards.
+mslearn,https://learn.microsoft.com/en-us/fabric/security/security-conditional-access,prose,,False,20,Protect inbound traffic to Microsoft Fabric – Understand how Conditional Access works alongside private links to control inbound access to Fabric.
+mslearn,https://learn.microsoft.com/en-us/fabric/security/security-conditional-access,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/fabric/security/security-conditional-access,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entitycomponents/minecraftcomponent_hide?view=minecraft-bedrock-stable,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entitycomponents/minecraftcomponent_hide?view=minecraft-bedrock-stable,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entitycomponents/minecraftcomponent_hide?view=minecraft-bedrock-stable,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entitycomponents/minecraftcomponent_hide?view=minecraft-bedrock-stable,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/add-ai-copilot,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/add-ai-copilot,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/add-ai-copilot,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/add-ai-copilot,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/sql/connect/jdbc/reference/getunicodestream-method-java-lang-string?view=sql-server-ver17,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/sql/connect/jdbc/reference/getunicodestream-method-java-lang-string?view=sql-server-ver17,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/sql/connect/jdbc/reference/getunicodestream-method-java-lang-string?view=sql-server-ver17,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/sql/connect/jdbc/reference/getunicodestream-method-java-lang-string?view=sql-server-ver17,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/sql/connect/jdbc/reference/getunicodestream-method-java-lang-string?view=sql-server-ver17,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/visualstudio/ide/copilot-agent-skills?view=visualstudio,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/visualstudio/ide/copilot-agent-skills?view=visualstudio,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/visualstudio/ide/copilot-agent-skills?view=visualstudio,heading,,False,2,Related content
+mslearn,https://learn.microsoft.com/en-us/visualstudio/ide/copilot-agent-skills?view=visualstudio,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/visualstudio/ide/copilot-agent-skills?view=visualstudio,heading,,False,2,Additional resources
+mslearn,https://learn.microsoft.com/en-us/visualstudio/msbuild/errors/msb3894?view=visualstudio,prose,,False,14,Access to this page requires authorization. You can try signing in or changing directories.
+mslearn,https://learn.microsoft.com/en-us/visualstudio/msbuild/errors/msb3894?view=visualstudio,prose,,False,11,Access to this page requires authorization. You can try changing directories.
+mslearn,https://learn.microsoft.com/en-us/visualstudio/msbuild/errors/msb3894?view=visualstudio,prose,,False,14,Want to try using Ask Learn to clarify or guide you through this topic?
+mslearn,https://learn.microsoft.com/en-us/visualstudio/msbuild/errors/msb3894?view=visualstudio,heading,,False,2,Additional resources

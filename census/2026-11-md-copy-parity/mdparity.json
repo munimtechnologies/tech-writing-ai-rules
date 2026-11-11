@@ -1,0 +1,425 @@
+{
+ "meta": {
+  "version": "0.1.0",
+  "started": "2026-11-11T00:05:39Z",
+  "settings": {
+   "min_prose_words": 8,
+   "min_callout_words": 3,
+   "shingle": 5,
+   "contain": 0.8,
+   "min_counted_prose": 3,
+   "learn_sample": 30,
+   "learn_seed": "study10|learn"
+  },
+  "prereg": {
+   "committed_at": "2026-11-10T18:02:43Z",
+   "sha": "06301e86238dbf4d82600964326a19a6848b8c18",
+   "error": null,
+   "waited_seconds": 0
+  },
+  "frame_files": {
+   "vendor_pages": {
+    "source": "https://raw.githubusercontent.com/munimtechnologies/tech-writing-ai-rules/af74d232303eb5e1039d0c4c66acb11f727a184f/census/2026-11-vendor-docs-ai-labels/pages.csv",
+    "sha256": "6ce55efa46a745b472eb32e8fb90993700b3289604f8d860ba3b40c495250815"
+   },
+   "learn_pages": {
+    "source": "https://raw.githubusercontent.com/munimtechnologies/tech-writing-ai-rules/af74d232303eb5e1039d0c4c66acb11f727a184f/census/2026-11-ms-learn-ai-shown/pages.csv",
+    "sha256": "5763f55585a6b415a6684b8ffc6146cccea9de1fb72b7a48e77e5ab34211f904"
+   }
+  },
+  "frame_pages": 425,
+  "finished": "2026-11-11T00:25:07Z"
+ },
+ "summary": {
+  "sampled": 425,
+  "counted": 384,
+  "totals": {
+   "prose": 11646,
+   "prose_present": 11126,
+   "heading": 3624,
+   "heading_present": 3500,
+   "code": 1869,
+   "code_present": 1697,
+   "callout": 410,
+   "callout_present": 393,
+   "warn": 92,
+   "warn_present": 87,
+   "tab": 173,
+   "tab_present": 173
+  },
+  "status": {
+   "ok": 384,
+   "few-blocks": 40,
+   "md-missing": 1
+  },
+  "median_coverage": 1.0,
+  "sites_counted_min": 14,
+  "gates": {
+   "G1": {
+    "sites": 14,
+    "counted": 384,
+    "passed": true
+   },
+   "G2": {
+    "callouts": 410,
+    "sites": 14,
+    "passed": true
+   }
+  },
+  "predictions": {
+   "P1": {
+    "value": 1.0,
+    "held": true
+   },
+   "P2": {
+    "value": 1,
+    "sites": [
+     "aws"
+    ],
+    "held": false
+   },
+   "P3": {
+    "k": 17,
+    "n": 410,
+    "held": false
+   },
+   "P4": {
+    "value": 1,
+    "sites": [
+     "firebase"
+    ],
+    "held": true
+   },
+   "P5": {
+    "k": 1697,
+    "n": 1869,
+    "held": false
+   },
+   "P6": {
+    "k": 3500,
+    "n": 3624,
+    "held": true
+   }
+  },
+  "descriptive": {
+   "warning_callouts": [
+    87,
+    92
+   ],
+   "note_callouts": [
+    306,
+    318
+   ],
+   "tab_prose": [
+    173,
+    173
+   ],
+   "other_prose": [
+    10953,
+    11473
+   ]
+  }
+ },
+ "sites": [
+  {
+   "site": "docker",
+   "sampled": 30,
+   "counted": 23,
+   "prose": 980,
+   "prose_present": 957,
+   "heading": 415,
+   "heading_present": 394,
+   "code": 244,
+   "code_present": 242,
+   "callout": 39,
+   "callout_present": 39,
+   "warn": 12,
+   "warn_present": 12,
+   "tab": 0,
+   "tab_present": 0,
+   "md_markers": 38,
+   "median_coverage": 1.0,
+   "md_html_words": 1.151
+  },
+  {
+   "site": "aws",
+   "sampled": 28,
+   "counted": 28,
+   "prose": 968,
+   "prose_present": 850,
+   "heading": 66,
+   "heading_present": 66,
+   "code": 78,
+   "code_present": 78,
+   "callout": 21,
+   "callout_present": 21,
+   "warn": 2,
+   "warn_present": 2,
+   "tab": 0,
+   "tab_present": 0,
+   "md_markers": 0,
+   "median_coverage": 0.7322,
+   "md_html_words": 1.009
+  },
+  {
+   "site": "gcloud",
+   "sampled": 30,
+   "counted": 30,
+   "prose": 1458,
+   "prose_present": 1400,
+   "heading": 389,
+   "heading_present": 369,
+   "code": 217,
+   "code_present": 217,
+   "callout": 47,
+   "callout_present": 43,
+   "warn": 3,
+   "warn_present": 3,
+   "tab": 0,
+   "tab_present": 0,
+   "md_markers": 99,
+   "median_coverage": 1.0,
+   "md_html_words": 1.233
+  },
+  {
+   "site": "cloudflare",
+   "sampled": 30,
+   "counted": 24,
+   "prose": 431,
+   "prose_present": 428,
+   "heading": 139,
+   "heading_present": 139,
+   "code": 87,
+   "code_present": 87,
+   "callout": 17,
+   "callout_present": 17,
+   "warn": 3,
+   "warn_present": 3,
+   "tab": 20,
+   "tab_present": 20,
+   "md_markers": 0,
+   "median_coverage": 1.0,
+   "md_html_words": 2.073
+  },
+  {
+   "site": "firebase",
+   "sampled": 28,
+   "counted": 23,
+   "prose": 841,
+   "prose_present": 807,
+   "heading": 265,
+   "heading_present": 265,
+   "code": 103,
+   "code_present": 93,
+   "callout": 5,
+   "callout_present": 3,
+   "warn": 3,
+   "warn_present": 1,
+   "tab": 0,
+   "tab_present": 0,
+   "md_markers": 7,
+   "median_coverage": 1.0,
+   "md_html_words": 1.611
+  },
+  {
+   "site": "ansible",
+   "sampled": 30,
+   "counted": 29,
+   "prose": 805,
+   "prose_present": 797,
+   "heading": 197,
+   "heading_present": 197,
+   "code": 28,
+   "code_present": 28,
+   "callout": 55,
+   "callout_present": 55,
+   "warn": 1,
+   "warn_present": 1,
+   "tab": 0,
+   "tab_present": 0,
+   "md_markers": 0,
+   "median_coverage": 1.0,
+   "md_html_words": 1.393
+  },
+  {
+   "site": "digitalocean",
+   "sampled": 29,
+   "counted": 28,
+   "prose": 855,
+   "prose_present": 854,
+   "heading": 180,
+   "heading_present": 180,
+   "code": 126,
+   "code_present": 126,
+   "callout": 3,
+   "callout_present": 3,
+   "warn": 0,
+   "warn_present": 0,
+   "tab": 3,
+   "tab_present": 3,
+   "md_markers": 0,
+   "median_coverage": 1.0,
+   "md_html_words": 1.377
+  },
+  {
+   "site": "vercel",
+   "sampled": 30,
+   "counted": 19,
+   "prose": 509,
+   "prose_present": 497,
+   "heading": 179,
+   "heading_present": 176,
+   "code": 81,
+   "code_present": 81,
+   "callout": 20,
+   "callout_present": 18,
+   "warn": 0,
+   "warn_present": 0,
+   "tab": 9,
+   "tab_present": 9,
+   "md_markers": 0,
+   "median_coverage": 1.0,
+   "md_html_words": 1.639
+  },
+  {
+   "site": "datadog",
+   "sampled": 30,
+   "counted": 27,
+   "prose": 642,
+   "prose_present": 630,
+   "heading": 287,
+   "heading_present": 284,
+   "code": 320,
+   "code_present": 169,
+   "callout": 16,
+   "callout_present": 16,
+   "warn": 10,
+   "warn_present": 10,
+   "tab": 70,
+   "tab_present": 70,
+   "md_markers": 0,
+   "median_coverage": 1.0,
+   "md_html_words": 0.193
+  },
+  {
+   "site": "netlify",
+   "sampled": 30,
+   "counted": 29,
+   "prose": 777,
+   "prose_present": 705,
+   "heading": 201,
+   "heading_present": 201,
+   "code": 39,
+   "code_present": 39,
+   "callout": 41,
+   "callout_present": 37,
+   "warn": 15,
+   "warn_present": 13,
+   "tab": 0,
+   "tab_present": 0,
+   "md_markers": 4,
+   "median_coverage": 0.914,
+   "md_html_words": 1.178
+  },
+  {
+   "site": "supabase",
+   "sampled": 11,
+   "counted": 10,
+   "prose": 216,
+   "prose_present": 216,
+   "heading": 82,
+   "heading_present": 82,
+   "code": 38,
+   "code_present": 31,
+   "callout": 9,
+   "callout_present": 9,
+   "warn": 1,
+   "warn_present": 1,
+   "tab": 11,
+   "tab_present": 11,
+   "md_markers": 0,
+   "median_coverage": 1.0,
+   "md_html_words": 1.484
+  },
+  {
+   "site": "heroku",
+   "sampled": 30,
+   "counted": 30,
+   "prose": 944,
+   "prose_present": 932,
+   "heading": 372,
+   "heading_present": 368,
+   "code": 243,
+   "code_present": 242,
+   "callout": 87,
+   "callout_present": 83,
+   "warn": 21,
+   "warn_present": 20,
+   "tab": 0,
+   "tab_present": 0,
+   "md_markers": 1,
+   "median_coverage": 1.0,
+   "md_html_words": 1.187
+  },
+  {
+   "site": "newrelic",
+   "sampled": 29,
+   "counted": 25,
+   "prose": 331,
+   "prose_present": 289,
+   "heading": 158,
+   "heading_present": 136,
+   "code": 40,
+   "code_present": 39,
+   "callout": 0,
+   "callout_present": 0,
+   "warn": 0,
+   "warn_present": 0,
+   "tab": 10,
+   "tab_present": 10,
+   "md_markers": 5,
+   "median_coverage": 1.0,
+   "md_html_words": 1.225
+  },
+  {
+   "site": "railway",
+   "sampled": 30,
+   "counted": 29,
+   "prose": 744,
+   "prose_present": 744,
+   "heading": 387,
+   "heading_present": 387,
+   "code": 94,
+   "code_present": 94,
+   "callout": 12,
+   "callout_present": 11,
+   "warn": 6,
+   "warn_present": 6,
+   "tab": 0,
+   "tab_present": 0,
+   "md_markers": 0,
+   "median_coverage": 1.0,
+   "md_html_words": 1.141
+  },
+  {
+   "site": "mslearn",
+   "sampled": 30,
+   "counted": 30,
+   "prose": 1145,
+   "prose_present": 1020,
+   "heading": 307,
+   "heading_present": 256,
+   "code": 131,
+   "code_present": 131,
+   "callout": 38,
+   "callout_present": 38,
+   "warn": 15,
+   "warn_present": 15,
+   "tab": 50,
+   "tab_present": 50,
+   "md_markers": 0,
+   "median_coverage": 0.8947,
+   "md_html_words": 1.516
+  }
+ ]
+}
