@@ -1,0 +1,9 @@
+repo,path,code,key,value,line,source_read,seen_key,seen_value,seen_line,agrees,note
+MicrosoftDocs/azure-docs,articles/container-apps/migrate-heroku.md,variant-key,ms.ai-usage,ai-assisted,11,raw file at the checked commit,ms.ai-usage,ai-assisted,11,yes,in study 7
+MicrosoftDocs/azure-docs,articles/container-apps/migrate-overview.md,variant-key,ms.ai-usage,ai-assisted,9,raw file at the checked commit,ms.ai-usage,ai-assisted,9,yes,new since study 7: not in study 7's file list; ms.date 11/09/2026
+MicrosoftDocs/fabric-docs,docs/data-science/synapse-overview.md,variant-key,ai.usage,ai-assisted,10,raw file at the checked commit and Learn's live Markdown copy,ai.usage,ai-assisted,10,yes,the live copy's header also says ai.usage
+MicrosoftDocs/SupportArticles-docs,Exchange/ExchangeServer/administration/start-dag-fails.md,variant-key,ai.usage,ai-assisted,19,raw file at the checked commit,ai.usage,ai-assisted,19,yes,
+MicrosoftDocs/dynamics-365-customer-engagement,ce/customer-service/administer/enable-audit-tables.md,variant-key,ai.usage,ai-assisted,11,raw file at the checked commit,ai.usage,ai-assisted,11,yes,
+MicrosoftDocs/visualstudio-docs,docs/ide/configure-windows-forms-designer-options.md,variant-key,ms.ai-usage,ai-assisted,19,raw file at the checked commit,ms.ai-usage,ai-assisted,19,yes,
+MicrosoftDocs/visualstudio-docs,docs/ide/copilot-chat-context.md,variant-key,ms.ai-usage,ai-assisted,15,raw file on main and Learn's live Markdown copy,ms.ai-usage,ai-assisted,,yes,line not counted; the live copy's header also says ms.ai-usage
+MicrosoftDocs/entra-docs,docs/global-secure-access/how-to-manage-ssh-server-administration.md,other-value,ai-usage,human-only,7,raw file at the checked commit,ai-usage,human-only,7,yes,a value Microsoft's instructions do not name; reported as info only

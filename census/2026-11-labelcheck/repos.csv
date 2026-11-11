@@ -1,0 +1,10 @@
+repo,scope,status,commit,markdown,with_front_matter,ai_assisted,ai_generated,variant_key,bad_value,empty_value,other_value,duplicate_key,nested,commented,stray_token,include_label,variant_keys
+MicrosoftDocs/azure-docs,"articles/sre-agent,articles/container-apps",ok,bc02767692214b108c26a7a91f411d6ffeb2dc90,386,386,5,3,119,0,0,0,0,0,0,0,0,ms.ai-usage=119
+MicrosoftDocs/fabric-docs,all,ok,5d3507944c347425956bb19cca082ae4ac12a1a1,3258,3252,1181,39,9,0,0,0,0,0,0,0,213,ai.usage=9
+MicrosoftDocs/SupportArticles-docs,all,ok,f35d5396cb94e2ff813f0e643d6b227d885aa8df,7944,7868,505,5,31,0,0,0,0,0,0,0,0,ai.usage=31
+MicrosoftDocs/dynamics-365-customer-engagement,all,ok,96c1d681eba46e99954e6c73f9a034b8f06c845a,6899,4899,227,1,6,0,0,0,0,0,0,0,0,ai.usage=6
+MicrosoftDocs/visualstudio-docs,all,ok,c9f7302ea0268939faa741794f1b52b01131cfce,5685,5661,40,0,3,0,0,0,0,0,0,0,0,ms.ai-usage=3
+MicrosoftDocs/entra-docs,all,ok,8d06c99b1fe9842e934c12a01637b1a5bb09618d,5027,5019,640,22,0,0,0,1,0,0,0,0,14,
+dotnet/docs,all,ok,0dad19ab65b096f0b86430c01b1b6a9e5832ea22,13960,13490,983,70,0,0,0,0,0,0,0,0,2,
+dotnet/AspNetCore.Docs,all,ok,00d95b975dd57f1d97708fa056e17f03bbb882ba,1666,930,416,1,0,0,0,0,0,0,0,0,33,
+MicrosoftDocs/PowerShell-Docs,all,ok,ebaa235784a688ec72ab642186c4c17460fb438b,3097,3091,0,0,0,0,0,0,0,0,0,0,0,
