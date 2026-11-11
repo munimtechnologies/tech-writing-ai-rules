@@ -2,7 +2,7 @@
 
 What do the people who pay for or accept technical writing say about AI?
 
-This repository holds ten pre-registered studies, all graded. Each reads its sources' own pages, keeps every AI sentence or answer as found, and codes them against a rubric fixed in advance. It also ships two agent skills: [one built on studies 2 and 3](#agent-skill-check-a-projects-ai-rule-before-contributing), and [one built on studies 7 and 8](#agent-skill-check-microsoft-learn-ai-labels).
+This repository holds ten pre-registered studies, all graded. Each reads its sources' own pages, keeps every AI sentence or answer as found, and codes them against a rubric fixed in advance. It also ships three agent skills: [one built on studies 2 and 3](#agent-skill-check-a-projects-ai-rule-before-contributing), [one built on studies 7 and 8](#agent-skill-check-microsoft-learn-ai-labels), and [one built on study 10](#agent-skill-check-a-docs-pages-markdown-copy).
 
 1. **Paid technical-writing programs** (graded 2026-11-03): many software companies and developer publications pay $100 to $900 per tutorial or how-to. Community lists give each program's pay and topics, but not its rule on AI-written or AI-assisted work.
 2. **Open-source AI contribution policies and documentation** (graded 2026-11-05): do projects' AI rules say whether they cover docs, READMEs, tutorials and translations, or only code?
@@ -44,6 +44,17 @@ python skills/docs-ai-label-check/scripts/ai_label_check.py --url https://learn.
 ```
 
 It reports variant keys, values not written exactly `ai-assisted` or `ai-generated`, empty values, duplicate keys, nested and commented labels, stray AI tokens, labels in include files, the same keys in `docfx.json`, and (with `--require`) articles with no label. Only variant keys and value spelling are fixed automatically. `--url` reads a live page's label from the Markdown copy Learn serves. Only `ms.ai-usage` and `ai.usage` were tested on rendered pages; the other findings flag departures from the documented form. Install: `npx skills add munimtechnologies/tech-writing-ai-rules --skill docs-ai-label-check`. It is listed on [skills.sh](https://skills.sh/munimtechnologies/tech-writing-ai-rules/docs-ai-label-check). Tests: `python -m unittest -v test_ai_label_check`.
+
+## Agent skill: check a docs page's Markdown copy
+
+[`skills/md-copy-check/`](skills/md-copy-check/SKILL.md) is for docs teams that export Markdown copies of their pages for AI agents (for `Accept: text/markdown`, `<page>.md` addresses or llms.txt), and for agents that read such copies. Study 10 found that most copies keep the page, but that a copy fails silently when the export skips a template or component, and that the failure leaves traces in the copy: "**Snippet** component (self-closing)" where a tip should be, `<PriorityBoardingBanner />` where a beta notice should be, a "Project setup" heading with nothing under it, a copy that is only a title, or one that is a line of MDX code. The checker looks for those traces (Python standard library only, offline unless `--url` is given):
+
+```
+python skills/md-copy-check/scripts/md_copy_check.py public/docs/ --json
+python skills/md-copy-check/scripts/md_copy_check.py --url https://docs.example.com/some/page/
+```
+
+It reports exporter placeholders, MDX code, empty self-closing components, unrendered includes, empty sections and near-empty copies (errors and warnings), plus other component and template tags and lead-in sentences that introduce nothing (info). Every finding is a sign to check against the page, not proof; it does not compare the copy with the page (`mdparity.py` does). Install: `npx skills add munimtechnologies/tech-writing-ai-rules --skill md-copy-check`. Tests: `python -m unittest -v test_md_copy_check`.
 
 ## Result 1: paid programs (census of 2026-11-02, graded 2026-11-03)
 
@@ -143,7 +154,7 @@ The frame is every page of study 9 with a Markdown copy (14 company docs sites) 
 
 - **Most copies keep most of the page.** The median page keeps 100% of its prose blocks; pooled, 95.5% are kept, and 97.5% once page furniture (AWS's feedback widget, Learn's hidden sign-in notice, Google Cloud's free-trial cards) is set aside.
 - **Warnings almost always survive.** Of 17 callouts the tool found missing, a hand check shows 7 really lost (7 of 409, 1.7%), and only 1 of 92 warnings.
-- **When a copy fails, it fails silently and often completely**, because the Markdown export skips templates and components: Google Cloud's shared project-setup block (sign in, project, roles, billing) is missing; a Netlify tip reads "**Snippet** component (self-closing)"; a Railway beta notice is left as `<PriorityBoardingBanner />`; two Docker `sbx` CLI pages are a bare title; New Relic's Diagnostics CLI release notes are one line of MDX code.
+- **When a copy fails, it fails silently and often completely**, because the Markdown export skips templates and components: Google Cloud's shared project-setup block (sign in, project, roles, billing) is missing; a Netlify tip reads "**Snippet** component (self-closing)"; a Railway beta notice is left as `<PriorityBoardingBanner />`; two Docker `sbx` CLI pages are a bare title; New Relic's Diagnostics CLI release notes are one line of MDX code. The [md-copy-check skill](#agent-skill-check-a-docs-pages-markdown-copy) looks for these traces.
 - Code blocks: 1,697 of 1,869 are kept (90.8%). Almost all the missing ones are on Datadog, whose pages repeat each API call once per region; without Datadog it is 98.6%.
 - Predictions: **both gates passed; P1 (median coverage at least 90%) and P6 (headings) held; P2, P3, P4 and P5 failed (2 of 6).** P3 and P4 are graded on the hand check; P4 changed from held to failed there, because Firebase's "missing" warnings are in its copies with names replaced by URLs. The matcher also misses text with angle-bracket placeholders and tooltip text, so its missing counts overstate losses (see RESULT.md).
 
@@ -166,6 +177,7 @@ The frame is every page of study 9 with a Markdown copy (14 company docs sites) 
 - `test_study10_result.py`: recomputes study 10's gates and predictions from the published `pages.csv`, `sites.csv`, `missing.csv` and `hand_check.csv`, checks that the hand check covers exactly the pre-registered rows, and recomputes the adjusted figures in RESULT.md (`python -m unittest -v test_study10_result`).
 - `skills/oss-ai-contribution-rules/`: the agent skill, version 0.1.1 (lookup script 0.1.0): `SKILL.md`, `scripts/ai_rules_lookup.py` and `assets/` (unchanged copies of study 2's and study 3's `coding.csv`, plus `repo_slugs.csv`, a lookup map from each study 2 row to GitHub slugs that is not part of the studies' coding). Offline tests: `test_ai_rules_skill.py`.
 - `skills/docs-ai-label-check/`: the Microsoft Learn label skill, version 0.1.0: `SKILL.md` and `scripts/ai_label_check.py` (standard library only). Offline tests: `test_ai_label_check.py`. `labelcheck_repos.py` runs the checker over shallow, Markdown-only sparse clones of a few public Learn docs repos and writes per-repo counts and a list of findings (paths, keys and values only), to test the checker on real repos.
+- `skills/md-copy-check/`: the Markdown copy skill, version 0.1.0: `SKILL.md` and `scripts/md_copy_check.py` (standard library only; network only with `--url`). Offline tests: `test_md_copy_check.py`.
 - `CHANGELOG.md`: what changed in each version.
 - `census/2026-11/`: study 1's pre-registration, result, coding, AI sentences (rows from personal author pages are left out), frame and first-pass output.
 - `census/2026-11-oss-docs/`: study 2's pre-registration, result, `coding.csv` (one row per project with its code and one short quote), frame and first-pass output. Page texts are not republished.
