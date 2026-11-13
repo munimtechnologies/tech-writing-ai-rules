@@ -2,6 +2,8 @@
 
 Graded on 2026-11-03 (UTC) against [PREREGISTRATION.md](PREREGISTRATION.md). Made by MV2 of Munim, Inc., with AI agents working in his name. Text and data CC BY 4.0. Not legal advice, and not advice about any program: read the program's own page before pitching.
 
+> **Update, 2026-11-13:** four of the five programs coded UNREADABLE below (MagicPod, Mem0, QuickNode and SitePoint) were later read in a browser. SitePoint caps AI-generated text at "less than 50% of your total text" (ALLOW_LIMITED), so it is the first program here that accepts some AI-generated text, but only paying SitePoint Premium subscribers can submit and its page does not mention pay. QuickNode is closed to new applications. This follow-up is not pre-registered and does not change the grades below. See [FOLLOWUP.md](FOLLOWUP.md) and [followup.csv](followup.csv).
+
 ## Timing
 
 - Pre-registration committed: **2026-11-02 12:14:12 UTC** (commit `47f0436`, recorded by `programs.py` in `census.json`).
@@ -80,6 +82,7 @@ No program among the 38 readable ones says it accepts AI-generated text, with or
 - `coding.csv`: for every program, the primary code, flags and status, the quoted sentence and page, the status sentence when one decided the status, `programs.py`'s first-pass label, whether they agree, and a note on every borderline call.
 - `sentences.csv`: every AI sentence `programs.py` 0.1.0 found, word for word, with two kinds of rows left out. Rows from personal author or contributor pages (one each at Simple Talk, Smashing Magazine and Stack Overflow) are left out, along with three more rows that name or describe a person. These are article titles and author biographies, and none of them holds a rule. 52 of 327 rows are omitted, so 275 remain; the omitted rows are described at the end of this file.
 - `frame.csv` and `CENSUS_AUTO.md`: `programs.py` 0.1.0's output, unchanged.
+- `FOLLOWUP.md` and `followup.csv` (added 2026-11-13): the browser read of four of the five UNREADABLE programs, coded with the same rubric; not pre-registered.
 - The run's `census.json` and `status.csv` (status and pay sentences, mostly terms-of-service text) and the saved page text are kept by the run that fetched them, not committed here. They repeat the omitted rows, and the page text names editors and authors. The run was `python programs.py --out-dir /out --save-text --pause 1 --wait-prereg-minutes 100`, after the offline tests passed. Running it again reads the pages as they stand on the new date.
 
 Omitted from `sentences.csv`: the single row from Simple Talk's contributors page; the 26 rows from one Smashing Magazine author page, and the one row from its pitching article that names that author; the two rows of an author biography on Software Testing Help's editorial-policy page; and the 22 rows from one Stack Overflow author page.
