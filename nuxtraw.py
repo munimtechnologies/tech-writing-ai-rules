@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# nuxtraw.py 0.1.0 - Apache-2.0
+# nuxtraw.py 0.2.0 - Apache-2.0
 # By MV2 of Munim, Inc. (mv2@munimtech.com). Made with AI agents.
 #
 # Study 15 tool: on docs sites whose llms.txt sends AI agents to Nuxt Content's
@@ -12,6 +12,18 @@
 # [...slug].md.get.ts, read 2026-11-12) stringifies the page's stored body with
 # minimark's 'markdown/html' format, so a component that gets its content only
 # when the page is rendered (a Vue component, a partial) is printed as a tag.
+#
+# 0.2.0 fixes two measurement errors found when grading the 0.1.0 run
+# (census/2026-11-nuxt-raw/DEVIATIONS.md):
+#  1. 0.1.0 deleted fenced code before testing whether a tag was empty, so a
+#     wrapper such as <code-group> around code blocks counted as empty. Code now
+#     counts as content inside a tag (tags inside code are still ignored). The
+#     0.1.0 rule is still computed and reported as empty_tags_v1.
+#  2. 0.1.0 fetched the live page with "Accept: text/markdown" first, so sites
+#     that negotiate content sent Markdown instead of the rendered page. The page
+#     is now fetched with an HTML Accept header and its Content-Type is recorded;
+#     the ratio is only computed when the answer is HTML. A third request asks
+#     the page URL for Markdown and records what comes back (exploratory).
 #
 # Standard library only. Polite: robots.txt honoured (token "nuxtraw"), one
 # request at a time, one second apart, an identifying User-Agent.
@@ -31,7 +43,7 @@ import urllib.request
 import urllib.robotparser
 from html.parser import HTMLParser
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 UA = ("nuxtraw/%s (+https://github.com/munimtechnologies/tech-writing-ai-rules; "
       "MV2 of Munim, Inc., mv2@munimtech.com)" % VERSION)
 ROBOTS_TOKEN = "nuxtraw"
@@ -40,6 +52,10 @@ PREREG_URL = ("https://raw.githubusercontent.com/munimtechnologies/tech-writing-
 SAMPLE = 30
 MIN_LINKS = 10      # eligibility: at least this many /raw/ links in llms.txt
 MIN_READ = 10       # a site is counted if at least this many copies are read
+
+ACCEPT_ANY = "text/markdown, text/html;q=0.9, */*;q=0.5"     # llms.txt and /raw/ copies (as 0.1.0)
+ACCEPT_HTML = "text/html,application/xhtml+xml;q=0.9,*/*;q=0.1"
+ACCEPT_MD = "text/markdown"
 
 # The frame (fixed in PREREG.md): candidate llms.txt addresses.
 SITES = [
@@ -87,12 +103,16 @@ OPEN_RE = re.compile(r"<([A-Za-z][A-Za-z0-9]*(?:-[A-Za-z0-9]+)*)((?:\s[^<>]*?)?)
 ATTR_RE = re.compile(r"""[:@#]?([A-Za-z_][\w:.-]*)(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s"'>]+))?""")
 TAG_RE = re.compile(r"</?[A-Za-z][^<>\n]*>")
 WORD_RE = re.compile(r"\w+")
+CODE_MARK = " codeblock "      # stands in for code: content, but holds no tags
 
 
 # ---------- text analysis (offline, tested) ----------
 
-def strip_code(text):
-    """Remove fenced code blocks, inline code spans and HTML comments."""
+def strip_code(text, mark=False):
+    """Remove fenced code blocks, inline code spans and HTML comments.
+
+    With mark=True each code block or span is replaced by a placeholder word,
+    so a tag that wraps only code is not empty (0.2.0 rule)."""
     text = COMMENT_RE.sub(" ", text)
     out, fence = [], None
     for line in text.splitlines():
@@ -100,8 +120,10 @@ def strip_code(text):
         if fence is None:
             if m:
                 fence = m.group(1)[0] * 3
+                if mark:
+                    out.append(CODE_MARK)
                 continue
-            out.append(INLINE_CODE_RE.sub(" ", line))
+            out.append(INLINE_CODE_RE.sub(CODE_MARK if mark else " ", line))
         elif m and m.group(1).startswith(fence):
             fence = None
     return "\n".join(out)
@@ -116,13 +138,14 @@ def attr_names(attrs):
     return sorted({m.group(1).lower() for m in ATTR_RE.finditer(attrs or "")})
 
 
-def components(text):
+def components(text, rule="v2"):
     """Every component element outside code: dicts with name, attrs, empty.
 
     An element is empty if it is self-closing or nothing but whitespace and
     tags stands between its opening tag and its matching closing tag (same
-    name, nesting counted)."""
-    body = strip_code(text)
+    name, nesting counted). rule="v2" counts code inside the element as
+    content; rule="v1" is the 0.1.0 rule (code deleted first)."""
+    body = strip_code(text, mark=(rule == "v2"))
     found = []
     for m in OPEN_RE.finditer(body):
         name = m.group(1).lower()
@@ -246,14 +269,21 @@ def looks_html(ctype, text):
     return "html" in (ctype or "").lower() or head.startswith("<!doctype html") or head.startswith("<html")
 
 
+def same_text(a, b):
+    """True if two texts are equal after normalising whitespace."""
+    return " ".join(a.split()) == " ".join(b.split())
+
+
 def analyse(raw_text, html_text):
-    comps = components(raw_text)
+    """html_text must be an HTML page (or empty); the ratio is blank without it."""
+    comps = components(raw_text, "v2")
     empties = [c for c in comps if c["empty"]]
+    empties_v1 = [c for c in components(raw_text, "v1") if c["empty"]]
     mw = md_words(raw_text)
     pw = page_words(html_text) if html_text else 0
     return {
         "md_words": mw,
-        "page_words": pw,
+        "page_words": pw if html_text else "",
         "ratio": round(mw / pw, 3) if pw else "",
         "component_tags": len(comps),
         "empty_tags": len(empties),
@@ -261,6 +291,8 @@ def analyse(raw_text, html_text):
         "empty_names": ";".join(sorted({c["name"] for c in empties})),
         "first_empty": (("<%s %s>" % (empties[0]["name"], " ".join(empties[0]["attrs"]))).strip()
                         if empties else ""),
+        "empty_tags_v1": len(empties_v1),
+        "empty_names_v1": ";".join(sorted({c["name"] for c in empties_v1})),
         "_empties": empties,
     }
 
@@ -269,8 +301,8 @@ def analyse(raw_text, html_text):
 
 def grade(sites, pages):
     """sites: rows with key, counted (bool). pages: rows with key, read (bool), empty_tags, ratio."""
-    counted = [s["key"] for s in sites if s["counted"]]
-    read = [p for p in pages if p["read"] and p["key"] in counted]
+    counted = [s["key"] for s in sites if str(s["counted"]) in ("True", "true", "1") or s["counted"] is True]
+    read = [p for p in pages if str(p["read"]) in ("True", "true", "1") and p["key"] in counted]
     by = {k: [p for p in read if p["key"] == k] for k in counted}
     with_empty = lambda rows: [p for p in rows if int(p["empty_tags"]) > 0]
     g1 = len(counted) >= 4
@@ -286,6 +318,7 @@ def grade(sites, pages):
     res.update({
         "share_with_empty_by_site": {k: round(v, 3) for k, v in sorted(share.items())},
         "pooled_share_with_empty": round(pooled, 3),
+        "copies_with_ratio": len(ratios_e) + len(ratios_n),
         "median_ratio_with_empty": round(statistics.median(ratios_e), 3) if ratios_e else None,
         "median_ratio_without_empty": round(statistics.median(ratios_n), 3) if ratios_n else None,
         "median_ratio_by_site": {k: round(v, 3) for k, v in sorted(med.items())},
@@ -294,7 +327,7 @@ def grade(sites, pages):
         "P3": sum(1 for k, v in share.items() if v >= 0.10 and not k.startswith("directus.com")) >= 2,
         "P4": (bool(ratios_e) and bool(ratios_n)
                and statistics.median(ratios_e) < statistics.median(ratios_n)),
-        "P5": all(v >= 0.5 for v in med.values()),
+        "P5": bool(med) and all(v >= 0.5 for v in med.values()),
     })
     if not g1:
         for k in ("P1", "P2", "P3", "P4", "P5"):
@@ -302,11 +335,24 @@ def grade(sites, pages):
     return res
 
 
+def negotiation_summary(pages):
+    """Exploratory: per site, how often the page URL answered Markdown when asked for it."""
+    out = {}
+    for p in pages:
+        if str(p.get("read")) not in ("True", "true", "1"):
+            continue
+        s = out.setdefault(p["key"], {"copies": 0, "page_html": 0, "md_on_ask": 0, "md_same_as_raw": 0})
+        s["copies"] += 1
+        s["page_html"] += 1 if str(p.get("page_is_html")) in ("True", "true", "1") else 0
+        s["md_on_ask"] += 1 if str(p.get("neg_is_md")) in ("True", "true", "1") else 0
+        s["md_same_as_raw"] += 1 if str(p.get("neg_same_as_raw")) in ("True", "true", "1") else 0
+    return dict(sorted(out.items()))
+
+
 # ---------- network ----------
 
-def fetch(url, timeout=30):
-    req = urllib.request.Request(url, headers={"User-Agent": UA,
-                                               "Accept": "text/markdown, text/html;q=0.9, */*;q=0.5"})
+def fetch(url, accept=ACCEPT_ANY, timeout=30):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": accept})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return r.status, r.headers.get("Content-Type", ""), r.read().decode("utf-8", "replace")
@@ -338,9 +384,11 @@ class Robots:
 
 
 SITE_FIELDS = ["key", "llms_url", "llms_status", "raw_links", "eligible", "sampled", "read", "counted"]
-PAGE_FIELDS = ["key", "raw_url", "raw_status", "raw_is_html", "page_url", "page_status", "read",
+PAGE_FIELDS = ["key", "raw_url", "raw_status", "raw_is_html", "page_url", "page_status",
+               "page_ctype", "page_is_html", "read",
                "md_words", "page_words", "ratio", "component_tags", "empty_tags", "empty_bare",
-               "empty_names", "first_empty"]
+               "empty_names", "first_empty", "empty_tags_v1", "empty_names_v1",
+               "neg_status", "neg_ctype", "neg_is_md", "neg_same_as_raw"]
 
 
 def run(out_dir, delay, check_prereg=True, sites=None):
@@ -377,11 +425,18 @@ def run(out_dir, delay, check_prereg=True, sites=None):
                     continue
                 rs, rct, rt = fetch(u)
                 time.sleep(delay)
-                ps, _pct, pt = fetch(pr["page_url"])
+                ps, pct, pt = fetch(pr["page_url"], ACCEPT_HTML)
                 time.sleep(delay)
-                pr.update({"raw_status": rs, "raw_is_html": looks_html(rct, rt), "page_status": ps})
+                ns, nct, nt = fetch(pr["page_url"], ACCEPT_MD)
+                time.sleep(delay)
+                page_html = ps == 200 and looks_html(pct, pt)
+                pr.update({"raw_status": rs, "raw_is_html": looks_html(rct, rt), "page_status": ps,
+                           "page_ctype": pct, "page_is_html": page_html,
+                           "neg_status": ns, "neg_ctype": nct,
+                           "neg_is_md": ns == 200 and bool(nt.strip()) and not looks_html(nct, nt),
+                           "neg_same_as_raw": ns == 200 and bool(nt.strip()) and same_text(nt, rt)})
                 if rs == 200 and rt.strip() and not pr["raw_is_html"]:
-                    a = analyse(rt, pt if ps == 200 else "")
+                    a = analyse(rt, pt if page_html else "")
                     for c in a.pop("_empties"):
                         t = tag_rows.setdefault((key, c["name"], kind_of(c)),
                                                 {"key": key, "tag": c["name"], "kind": kind_of(c),
@@ -424,10 +479,13 @@ def run(out_dir, delay, check_prereg=True, sites=None):
         w.writeheader()
         w.writerows(hc)
     g = grade(site_rows, page_rows)
+    neg = negotiation_summary(page_rows)
     with open(os.path.join(out_dir, "nuxtraw.json"), "w", encoding="utf-8") as f:
-        json.dump({"tool": "nuxtraw", "version": VERSION, "grade": g}, f, indent=2)
+        json.dump({"tool": "nuxtraw", "version": VERSION, "grade": g, "negotiation": neg}, f, indent=2)
     lines = ["# nuxtraw %s (automatic, not hand-checked)" % VERSION, ""]
     lines += ["- %s: %s" % (k, v) for k, v in g.items()]
+    lines += ["", "## Exploratory: page URL asked for Markdown", ""]
+    lines += ["- %s: %s" % (k, v) for k, v in neg.items()]
     lines.append("")
     with open(os.path.join(out_dir, "NUXTRAW_AUTO.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(lines))

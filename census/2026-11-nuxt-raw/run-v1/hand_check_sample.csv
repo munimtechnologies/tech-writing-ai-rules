@@ -1,0 +1,20 @@
+key,raw_url,raw_status,raw_is_html,page_url,page_status,read,md_words,page_words,ratio,component_tags,empty_tags,empty_bare,empty_names,first_empty
+nuxt.com,https://nuxt.com/raw/modules/icon/bundles.md,200,False,https://nuxt.com/modules/icon/bundles,200,True,1166,1166,1.0,2,2,2,icon,<icon name>
+nuxt.com,https://nuxt.com/raw/blog/v3-15.md,200,False,https://nuxt.com/blog/v3-15,200,True,759,759,1.0,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/drawer.md,200,False,https://ui.nuxt.com/docs/components/drawer,200,True,1810,1604,1.128,3,1,1,nuxtpage,<nuxtpage >
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components.md,200,False,https://ui.nuxt.com/docs/components,200,True,1943,1943,1.0,0,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/deploy/serverless.md,200,False,https://content.nuxt.com/docs/deploy/serverless,200,True,578,578,1.0,4,1,1,code-group,<code-group >
+content.nuxt.com,https://content.nuxt.com/raw/docs/files/json.md,200,False,https://content.nuxt.com/docs/files/json,200,True,199,165,1.206,2,1,1,code-group,<code-group >
+content.nuxt.com,https://content.nuxt.com/raw/blog/ai-assistant.md,200,False,https://content.nuxt.com/blog/ai-assistant,200,True,1108,1108,1.0,6,0,0,,
+docus.dev,https://docus.dev/raw/en/concepts/edition.md,200,False,https://docus.dev/en/concepts/edition,200,True,859,859,1.0,11,4,1,tabs;tabs-item,<tabs >
+docus.dev,https://docus.dev/raw/en/concepts/nuxt.md,200,False,https://docus.dev/en/concepts/nuxt,200,True,534,516,1.035,7,2,0,tabs-item,<tabs-item classname icon label>
+docus.dev,https://docus.dev/raw/en/ai/llms.md,200,False,https://docus.dev/en/ai/llms,200,True,1507,1507,1.0,4,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide.md,200,False,https://i18n.nuxtjs.org/docs/guide,200,True,384,402,0.955,3,1,1,code-group,<code-group >
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/ignoring-localized-routes.md,200,False,https://i18n.nuxtjs.org/docs/guide/ignoring-localized-routes,200,True,172,198,0.869,4,2,2,code-group,<code-group >
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/api/nuxt.md,200,False,https://i18n.nuxtjs.org/docs/api/nuxt,200,True,203,194,1.046,0,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/getting-started/introduction.md,200,False,https://supabase.nuxtjs.org/getting-started/introduction,200,True,1464,1464,1.0,14,1,0,u-badge,<u-badge color label>
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/getting-started/migration.md,200,False,https://supabase.nuxtjs.org/getting-started/migration,200,True,717,717,1.0,7,1,1,code-group,<code-group >
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/composables/usesupabaseclient.md,200,False,https://supabase.nuxtjs.org/composables/usesupabaseclient,200,True,633,464,1.364,1,0,0,,
+directus.com/docs,https://directus.com/docs/raw/configuration/logging.md,200,False,https://directus.com/docs/configuration/logging,200,True,593,627,0.946,3,2,2,partial;product-link,<partial content>
+directus.com/docs,https://directus.com/docs/raw/guides/auth/email-login.md,200,False,https://directus.com/docs/guides/auth/email-login,200,True,785,800,0.981,12,8,8,code-group;partial,<code-group >
+directus.com/docs,https://directus.com/docs/raw/guides/ai/mcp/oauth.md,200,False,https://directus.com/docs/guides/ai/mcp/oauth,200,True,1339,1357,0.987,2,0,0,,

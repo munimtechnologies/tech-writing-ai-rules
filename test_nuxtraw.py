@@ -1,5 +1,5 @@
 # test_nuxtraw.py - Apache-2.0 - MV2, Munim, Inc. (made with AI agents)
-# Offline tests for nuxtraw.py (no network).
+# Offline tests for nuxtraw.py 0.2.0 (no network).
 import unittest
 
 import nuxtraw as n
@@ -40,6 +40,35 @@ Read this first.
 Replace <your-token> with your token. A <br> and <div></div>.
 """
 
+CODE_GROUP = """<code-group>
+
+```yaml [a.yml]
+name: A
+```
+
+```yaml [b.yml]
+name: B
+```
+
+</code-group>
+
+<tabs>
+<tabs-item label="npm">
+
+```bash
+npm i x
+```
+
+</tabs-item>
+</tabs>
+
+<badge>`v1`</badge>
+
+<code-group>
+
+</code-group>
+"""
+
 LLMS = """# Site
 - [Intro](https://ex.com/raw/docs/intro.md): intro
 - [Intro again](https://ex.com/raw/docs/intro.md#top)
@@ -58,17 +87,28 @@ class Components(unittest.TestCase):
     def test_code_and_comments_ignored(self):
         for name in ("inline-code", "ubutton", "code-in-fence", "hidden-comment"):
             self.assertNotIn(name, self.names)
+            self.assertNotIn(name, [x["name"] for x in n.components(RAW, "v1")])
 
     def test_html_elements_ignored(self):
         self.assertNotIn("div", self.names)
         self.assertNotIn("br", self.names)
 
     def test_empty_detection(self):
-        empty = {x["name"] for x in self.c if x["empty"]}
-        self.assertEqual(empty, {"component-code", "partial", "read-more", "field",
-                                 "icon-link", "nested-ex", "tab", "tabs"})
+        expected = {"component-code", "partial", "read-more", "field",
+                    "icon-link", "nested-ex", "tab", "tabs"}
+        self.assertEqual({x["name"] for x in self.c if x["empty"]}, expected)
+        self.assertEqual({x["name"] for x in n.components(RAW, "v1") if x["empty"]}, expected)
         self.assertIn("callout", self.names)
-        self.assertNotIn("callout", empty)
+
+    def test_code_wrapper_not_empty_v2(self):
+        v2 = n.components(CODE_GROUP, "v2")
+        self.assertEqual([(x["name"], x["empty"]) for x in v2],
+                         [("code-group", False), ("tabs", False), ("tabs-item", False),
+                          ("badge", False), ("code-group", True)])
+
+    def test_code_wrapper_empty_v1(self):
+        v1 = n.components(CODE_GROUP, "v1")
+        self.assertEqual([x["empty"] for x in v1], [True, True, True, True, True])
 
     def test_unclosed_placeholder_not_empty(self):
         tok = [x for x in self.c if x["name"] == "your-token"]
@@ -129,14 +169,26 @@ class Words(unittest.TestCase):
     def test_analyse(self):
         a = n.analyse(RAW, "<main>" + "w " * 400 + "</main>")
         self.assertEqual(a["empty_tags"], 8)
+        self.assertEqual(a["empty_tags_v1"], 8)
         self.assertEqual(a["page_words"], 400)
         self.assertTrue(0 < a["ratio"] < 1)
         self.assertIn("partial", a["empty_names"].split(";"))
+
+    def test_analyse_code_group(self):
+        a = n.analyse(CODE_GROUP, "")
+        self.assertEqual(a["empty_tags"], 1)
+        self.assertEqual(a["empty_tags_v1"], 5)
+        self.assertEqual(a["ratio"], "")
+        self.assertEqual(a["page_words"], "")
 
     def test_looks_html(self):
         self.assertTrue(n.looks_html("text/html; charset=utf-8", "x"))
         self.assertTrue(n.looks_html("", "  <!DOCTYPE html><html>"))
         self.assertFalse(n.looks_html("text/markdown", "# Hi"))
+
+    def test_same_text(self):
+        self.assertTrue(n.same_text("# A\n\nb  c\n", "# A b c"))
+        self.assertFalse(n.same_text("# A", "# B"))
 
 
 class Grade(unittest.TestCase):
@@ -176,16 +228,32 @@ class Grade(unittest.TestCase):
         self.assertTrue(str(g["P2"]).startswith("not graded"))
 
     def test_string_rows(self):
-        sites = [{"key": k, "counted": True} for k in "abcd"]
-        pages = [{"key": k, "read": True, "empty_tags": "1", "ratio": "0.5"} for k in "abcd"] * 3
+        sites = [{"key": k, "counted": "True"} for k in "abcd"]
+        pages = [{"key": k, "read": "True", "empty_tags": "1", "ratio": "0.5"} for k in "abcd"] * 3
         g = n.grade(sites, pages)
         self.assertEqual(g["pooled_share_with_empty"], 1.0)
         self.assertFalse(g["P4"])         # no copies without an empty tag
 
+    def test_blank_ratios(self):
+        sites = [{"key": k, "counted": True} for k in "abcd"]
+        pages = [{"key": k, "read": True, "empty_tags": 0, "ratio": ""} for k in "abcd"] * 3
+        g = n.grade(sites, pages)
+        self.assertEqual(g["copies_with_ratio"], 0)
+        self.assertFalse(g["P4"])
+        self.assertFalse(g["P5"])         # nothing measured: not a pass
+
+    def test_negotiation_summary(self):
+        pages = [{"key": "a", "read": True, "page_is_html": True, "neg_is_md": True, "neg_same_as_raw": False},
+                 {"key": "a", "read": "True", "page_is_html": "False", "neg_is_md": "True",
+                  "neg_same_as_raw": "True"},
+                 {"key": "a", "read": False}]
+        self.assertEqual(n.negotiation_summary(pages),
+                         {"a": {"copies": 2, "page_html": 1, "md_on_ask": 2, "md_same_as_raw": 1}})
+
 
 class Version(unittest.TestCase):
     def test_version(self):
-        self.assertEqual(n.VERSION, "0.1.0")
+        self.assertEqual(n.VERSION, "0.2.0")
         self.assertEqual(len(n.SITES), 20)
 
 

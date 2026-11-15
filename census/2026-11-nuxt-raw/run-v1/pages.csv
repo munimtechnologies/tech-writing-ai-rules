@@ -1,0 +1,194 @@
+key,raw_url,raw_status,raw_is_html,page_url,page_status,read,md_words,page_words,ratio,component_tags,empty_tags,empty_bare,empty_names,first_empty
+nuxt.com,https://nuxt.com/raw/blog/v3-15.md,200,False,https://nuxt.com/blog/v3-15,200,True,759,759,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/blog/v3-16.md,200,False,https://nuxt.com/blog/v3-16,200,True,1455,1455,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/blog/v3-8.md,200,False,https://nuxt.com/blog/v3-8,200,True,1748,1718,1.017,0,0,0,,
+nuxt.com,https://nuxt.com/raw/blog/v4-1.md,200,False,https://nuxt.com/blog/v4-1,200,True,1414,1397,1.012,0,0,0,,
+nuxt.com,https://nuxt.com/raw/deploy/deno-deploy.md,200,False,https://nuxt.com/deploy/deno-deploy,200,True,310,310,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/deploy/heroku.md,200,False,https://nuxt.com/deploy/heroku,200,True,141,141,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/deploy/zeabur.md,200,False,https://nuxt.com/deploy/zeabur,200,True,126,126,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/api/commands/dev.md,200,False,https://nuxt.com/docs/4.x/api/commands/dev,200,True,1560,1560,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/api/composables/use-head-safe.md,200,False,https://nuxt.com/docs/4.x/api/composables/use-head-safe,200,True,336,310,1.084,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/api/composables/use-layout.md,200,False,https://nuxt.com/docs/4.x/api/composables/use-layout,200,True,195,192,1.016,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/api/composables/use-request-header.md,200,False,https://nuxt.com/docs/4.x/api/composables/use-request-header,200,True,164,164,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/api/composables/use-runtime-config.md,200,False,https://nuxt.com/docs/4.x/api/composables/use-runtime-config,200,True,585,582,1.005,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/api/kit/runtime-config.md,200,False,https://nuxt.com/docs/4.x/api/kit/runtime-config,200,True,411,411,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/api/utils/refresh-nuxt-data.md,200,False,https://nuxt.com/docs/4.x/api/utils/refresh-nuxt-data,200,True,377,319,1.182,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/api/utils/show-error.md,200,False,https://nuxt.com/docs/4.x/api/utils/show-error,200,True,180,180,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/directory-structure/app/assets.md,200,False,https://nuxt.com/docs/4.x/directory-structure/app/assets,200,True,136,136,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/getting-started/upgrade.md,200,False,https://nuxt.com/docs/4.x/getting-started/upgrade,200,True,7870,7679,1.025,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/guide/going-further/hooks.md,200,False,https://nuxt.com/docs/4.x/guide/going-further/hooks,200,True,493,493,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/docs/4.x/migration/runtime-config.md,200,False,https://nuxt.com/docs/4.x/migration/runtime-config,200,True,302,283,1.067,0,0,0,,
+nuxt.com,https://nuxt.com/raw/modules/devtools.md,200,False,https://nuxt.com/modules/devtools,200,True,846,846,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/modules/fonts/contributing.md,200,False,https://nuxt.com/modules/fonts/contributing,200,True,251,251,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/modules/hints.md,200,False,https://nuxt.com/modules/hints,200,True,523,523,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/modules/icon.md,200,False,https://nuxt.com/modules/icon,200,True,570,570,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/modules/icon/bundles.md,200,False,https://nuxt.com/modules/icon/bundles,200,True,1166,1166,1.0,2,2,2,icon,<icon name>
+nuxt.com,https://nuxt.com/raw/modules/image.md,200,False,https://nuxt.com/modules/image,200,True,850,850,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/modules/image/advanced/static-images.md,200,False,https://nuxt.com/modules/image/advanced/static-images,200,True,135,135,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/modules/image/contributing.md,200,False,https://nuxt.com/modules/image/contributing,200,True,237,237,1.0,0,0,0,,
+nuxt.com,https://nuxt.com/raw/modules/image/providers/imagekit.md,200,False,https://nuxt.com/modules/image/providers/imagekit,200,True,1064,912,1.167,0,0,0,,
+nuxt.com,https://nuxt.com/raw/modules/image/providers/imgix.md,200,False,https://nuxt.com/modules/image/providers/imgix,200,True,586,566,1.035,0,0,0,,
+nuxt.com,https://nuxt.com/raw/modules/image/providers/vercel.md,200,False,https://nuxt.com/modules/image/providers/vercel,200,True,304,293,1.038,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components.md,200,False,https://ui.nuxt.com/docs/components,200,True,1943,1943,1.0,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/chat-reasoning.md,200,False,https://ui.nuxt.com/docs/components/chat-reasoning,200,True,1213,1062,1.142,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/chip.md,200,False,https://ui.nuxt.com/docs/components/chip,200,True,715,651,1.098,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/dashboard-navbar.md,200,False,https://ui.nuxt.com/docs/components/dashboard-navbar,200,True,573,523,1.096,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/dashboard-panel.md,200,False,https://ui.nuxt.com/docs/components/dashboard-panel,200,True,487,484,1.006,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/dashboard-sidebar-toggle.md,200,False,https://ui.nuxt.com/docs/components/dashboard-sidebar-toggle,200,True,608,605,1.005,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/dashboard-sidebar.md,200,False,https://ui.nuxt.com/docs/components/dashboard-sidebar,200,True,1435,1085,1.323,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/drawer.md,200,False,https://ui.nuxt.com/docs/components/drawer,200,True,1810,1604,1.128,3,1,1,nuxtpage,<nuxtpage >
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/empty.md,200,False,https://ui.nuxt.com/docs/components/empty,200,True,1075,729,1.475,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/file-upload.md,200,False,https://ui.nuxt.com/docs/components/file-upload,200,True,2909,1882,1.546,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/footer-columns.md,200,False,https://ui.nuxt.com/docs/components/footer-columns,200,True,557,470,1.185,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/input-number.md,200,False,https://ui.nuxt.com/docs/components/input-number,200,True,2024,1894,1.069,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/listbox.md,200,False,https://ui.nuxt.com/docs/components/listbox,200,True,3202,1894,1.691,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/page-aside.md,200,False,https://ui.nuxt.com/docs/components/page-aside,200,True,377,36,10.472,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/page-body.md,200,False,https://ui.nuxt.com/docs/components/page-body,200,True,296,263,1.125,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/page-cta.md,200,False,https://ui.nuxt.com/docs/components/page-cta,200,True,765,616,1.242,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/page-grid.md,200,False,https://ui.nuxt.com/docs/components/page-grid,200,True,535,225,2.378,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/sidebar.md,200,False,https://ui.nuxt.com/docs/components/sidebar,200,True,3243,1707,1.9,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/table.md,200,False,https://ui.nuxt.com/docs/components/table,200,True,12773,3851,3.317,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/toggle-group.md,200,False,https://ui.nuxt.com/docs/components/toggle-group,200,True,1202,913,1.317,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/components/toggle.md,200,False,https://ui.nuxt.com/docs/components/toggle,200,True,684,680,1.006,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/composables/use-scroll-shadow.md,200,False,https://ui.nuxt.com/docs/composables/use-scroll-shadow,200,True,308,234,1.316,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/getting-started.md,200,False,https://ui.nuxt.com/docs/getting-started,200,True,1193,1193,1.0,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/getting-started/ai/skills.md,200,False,https://ui.nuxt.com/docs/getting-started/ai/skills,200,True,527,527,1.0,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/getting-started/integrations/eslint/nuxt.md,200,False,https://ui.nuxt.com/docs/getting-started/integrations/eslint/nuxt,200,True,626,380,1.647,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/getting-started/theme/css-variables.md,200,False,https://ui.nuxt.com/docs/getting-started/theme/css-variables,200,True,1604,1576,1.018,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/getting-started/theme/design-system.md,200,False,https://ui.nuxt.com/docs/getting-started/theme/design-system,200,True,1080,1078,1.002,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/typography.md,200,False,https://ui.nuxt.com/docs/typography,200,True,1035,880,1.176,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/typography/collapsible.md,200,False,https://ui.nuxt.com/docs/typography/collapsible,200,True,244,244,1.0,0,0,0,,
+ui.nuxt.com,https://ui.nuxt.com/raw/docs/typography/kbd.md,200,False,https://ui.nuxt.com/docs/typography/kbd,200,True,156,156,1.0,0,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/blog/ai-assistant.md,200,False,https://content.nuxt.com/blog/ai-assistant,200,True,1108,1108,1.0,6,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/blog/docus-v3.md,200,False,https://content.nuxt.com/blog/docus-v3,200,True,774,774,1.0,9,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/blog/v3.md,200,False,https://content.nuxt.com/blog/v3,200,True,1106,1077,1.027,4,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/blog/visual-editor.md,200,False,https://content.nuxt.com/blog/visual-editor,200,True,956,956,1.0,0,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/changelog/frontmatter-form.md,200,False,https://content.nuxt.com/changelog/frontmatter-form,200,True,775,775,1.0,5,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/changelog/studio-customisation.md,200,False,https://content.nuxt.com/changelog/studio-customisation,200,True,517,517,1.0,4,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/advanced/hooks.md,200,False,https://content.nuxt.com/docs/advanced/hooks,200,True,240,240,1.0,1,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/advanced/transformers.md,200,False,https://content.nuxt.com/docs/advanced/transformers,200,True,511,511,1.0,0,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/collections/inherit-schema-from-component.md,200,False,https://content.nuxt.com/docs/collections/inherit-schema-from-component,200,True,321,321,1.0,1,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/collections/sources.md,200,False,https://content.nuxt.com/docs/collections/sources,200,True,687,687,1.0,2,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/components/content-renderer.md,200,False,https://content.nuxt.com/docs/components/content-renderer,200,True,274,224,1.223,1,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/deploy/nuxthub.md,200,False,https://content.nuxt.com/docs/deploy/nuxthub,200,True,132,132,1.0,1,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/deploy/serverless.md,200,False,https://content.nuxt.com/docs/deploy/serverless,200,True,578,578,1.0,4,1,1,code-group,<code-group >
+content.nuxt.com,https://content.nuxt.com/raw/docs/deploy/static.md,200,False,https://content.nuxt.com/docs/deploy/static,200,True,208,208,1.0,2,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/files/json.md,200,False,https://content.nuxt.com/docs/files/json,200,True,199,165,1.206,2,1,1,code-group,<code-group >
+content.nuxt.com,https://content.nuxt.com/raw/docs/files/yaml.md,200,False,https://content.nuxt.com/docs/files/yaml,200,True,173,139,1.245,1,1,1,code-group,<code-group >
+content.nuxt.com,https://content.nuxt.com/raw/docs/getting-started/configuration.md,200,False,https://content.nuxt.com/docs/getting-started/configuration,200,True,1806,1806,1.0,14,8,8,code-group,<code-group >
+content.nuxt.com,https://content.nuxt.com/raw/docs/getting-started/installation.md,200,False,https://content.nuxt.com/docs/getting-started/installation,200,True,597,576,1.036,10,4,4,code-group,<code-group >
+content.nuxt.com,https://content.nuxt.com/raw/docs/integrations/i18n.md,200,False,https://content.nuxt.com/docs/integrations/i18n,200,True,549,440,1.248,2,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/integrations/llms.md,200,False,https://content.nuxt.com/docs/integrations/llms,200,True,584,584,1.0,3,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/utils/query-collection-navigation.md,200,False,https://content.nuxt.com/docs/utils/query-collection-navigation,200,True,845,796,1.062,2,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/utils/query-collection-search-sections.md,200,False,https://content.nuxt.com/docs/utils/query-collection-search-sections,200,True,448,419,1.069,2,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/docs/utils/query-collection.md,200,False,https://content.nuxt.com/docs/utils/query-collection,200,True,1014,975,1.04,2,0,0,,
+content.nuxt.com,https://content.nuxt.com/raw/index.md,200,False,https://content.nuxt.com/,200,True,702,287,2.446,45,13,5,code-group;tabs;tabs-item;u-button;u-color-mode-image;u-input-copy,<code-group >
+content.nuxt.com,https://content.nuxt.com/raw/templates/docs.md,200,False,https://content.nuxt.com/templates/docs,200,True,226,226,1.0,2,1,0,template-features,<template-features a and by components. content content. customizable development empowered experience. fast features for full full-text fully fuse.js. label large markdown mdc modal module nuxt of offers optimal pages performances powered previews. search seo. set studio thanks to typed typescript ui updates use very with write your>
+content.nuxt.com,https://content.nuxt.com/raw/templates/docus-i18n.md,200,False,https://content.nuxt.com/templates/docus-i18n,200,True,427,427,1.0,2,1,0,template-features,<template-features a and by component. components. content customizable development empowered experience. fast features for framework full full-text fully fuse.js. i18n image internationalization label large modal nuxt of offers powerful previews. search set studio support. supported the typed typescript ui updates very web>
+content.nuxt.com,https://content.nuxt.com/raw/templates/docus.md,200,False,https://content.nuxt.com/templates/docus,200,True,281,281,1.0,2,1,0,template-features,<template-features a and by components. content content. customizable development empowered experience. fast features for full full-text fully fuse.js. label large markdown mdc modal nuxt of offers optimal pages performances powered previews. search seo. set studio supported thanks to typed typescript ui updates very with write your>
+content.nuxt.com,https://content.nuxt.com/raw/templates/landing.md,200,False,https://content.nuxt.com/templates/landing,200,True,172,172,1.0,2,1,0,template-features,<template-features a and by components. content customizable development experience. fast features files for full fully in label large markdown mdc nuxt of offers optimal or performances powered previews. seo. set studio supported syntax. the typed typescript ui updates use v3 very with write yaml your>
+content.nuxt.com,https://content.nuxt.com/raw/templates/portfolio.md,200,False,https://content.nuxt.com/templates/portfolio,200,True,246,246,1.0,2,1,0,template-features,<template-features a and by components. content content. customizable development experience. fast features for full fully label large markdown mdc module nuxt of offers optimal pages performances powered previews. seo. set studio thanks to typed typescript ui updates use very with write your>
+content.nuxt.com,https://content.nuxt.com/raw/templates/saas.md,200,False,https://content.nuxt.com/templates/saas,200,True,230,230,1.0,2,1,0,template-features,<template-features a and by components. content content. customizable development empowered experience. fast features for full full-text fully fuse.js. label large markdown mdc modal module nuxt of offers optimal pages performances powered previews. search seo. set studio thanks to typed typescript ui updates use very with write your>
+docus.dev,https://docus.dev/raw/en/ai/llms.md,200,False,https://docus.dev/en/ai/llms,200,True,1507,1507,1.0,4,0,0,,
+docus.dev,https://docus.dev/raw/en/concepts/customization.md,200,False,https://docus.dev/en/concepts/customization,200,True,1106,1106,1.0,16,0,0,,
+docus.dev,https://docus.dev/raw/en/concepts/edition.md,200,False,https://docus.dev/en/concepts/edition,200,True,859,859,1.0,11,4,1,tabs;tabs-item,<tabs >
+docus.dev,https://docus.dev/raw/en/concepts/internationalization.md,200,False,https://docus.dev/en/concepts/internationalization,200,True,572,572,1.0,5,0,0,,
+docus.dev,https://docus.dev/raw/en/concepts/nuxt.md,200,False,https://docus.dev/en/concepts/nuxt,200,True,534,516,1.035,7,2,0,tabs-item,<tabs-item classname icon label>
+docus.dev,https://docus.dev/raw/en/concepts/theme.md,200,False,https://docus.dev/en/concepts/theme,200,True,632,632,1.0,10,7,0,u-badge,<u-badge label variant>
+docus.dev,https://docus.dev/raw/en/essentials/components.md,200,False,https://docus.dev/en/essentials/components,200,True,1134,1081,1.049,51,10,3,code-preview;icon;tabs-item,<tabs-item icon label>
+docus.dev,https://docus.dev/raw/en/essentials/images-embeds.md,200,False,https://docus.dev/en/essentials/images-embeds,200,True,135,96,1.406,4,1,1,code-preview,<code-preview >
+docus.dev,https://docus.dev/raw/en/essentials/markdown-syntax.md,200,False,https://docus.dev/en/essentials/markdown-syntax,200,True,698,497,1.404,11,0,0,,
+docus.dev,https://docus.dev/raw/en/getting-started/installation.md,200,False,https://docus.dev/en/getting-started/installation,200,True,302,302,1.0,2,0,0,,
+docus.dev,https://docus.dev/raw/en/getting-started/migration.md,200,False,https://docus.dev/en/getting-started/migration,200,True,364,364,1.0,1,0,0,,
+docus.dev,https://docus.dev/raw/en/getting-started/project-structure.md,200,False,https://docus.dev/en/getting-started/project-structure,200,True,633,633,1.0,5,0,0,,
+docus.dev,https://docus.dev/raw/en/getting-started/studio.md,200,False,https://docus.dev/en/getting-started/studio,200,True,460,460,1.0,1,0,0,,
+docus.dev,https://docus.dev/raw/en/getting-started/troubleshooting.md,200,False,https://docus.dev/en/getting-started/troubleshooting,200,True,161,161,1.0,0,0,0,,
+docus.dev,https://docus.dev/raw/fr.md,200,False,https://docus.dev/fr,200,True,646,254,2.543,36,10,4,assistant-demo;browser-frame;color-mode-switch;floating-nuxt;tabs-item;u-color-mode-image,<floating-nuxt >
+docus.dev,https://docus.dev/raw/fr/ai/assistant.md,200,False,https://docus.dev/fr/ai/assistant,200,True,2218,2191,1.012,8,1,1,code-group,<code-group >
+docus.dev,https://docus.dev/raw/fr/ai/llms.md,200,False,https://docus.dev/fr/ai/llms,200,True,1653,1653,1.0,4,0,0,,
+docus.dev,https://docus.dev/raw/fr/ai/mcp.md,200,False,https://docus.dev/fr/ai/mcp,200,True,1158,1158,1.0,6,2,0,install-button,<install-button ide label url>
+docus.dev,https://docus.dev/raw/fr/ai/skills.md,200,False,https://docus.dev/fr/ai/skills,200,True,1051,1051,1.0,6,0,0,,
+docus.dev,https://docus.dev/raw/fr/concepts/configuration.md,200,False,https://docus.dev/fr/concepts/configuration,200,True,2087,2087,1.0,9,1,1,code-group,<code-group >
+docus.dev,https://docus.dev/raw/fr/concepts/edition.md,200,False,https://docus.dev/fr/concepts/edition,200,True,911,911,1.0,11,4,1,tabs;tabs-item,<tabs >
+docus.dev,https://docus.dev/raw/fr/concepts/theme.md,200,False,https://docus.dev/fr/concepts/theme,200,True,692,692,1.0,10,7,0,u-badge,<u-badge label variant>
+docus.dev,https://docus.dev/raw/fr/essentials/code-blocks.md,200,False,https://docus.dev/fr/essentials/code-blocks,200,True,889,712,1.249,12,1,1,code-group,<code-group classname>
+docus.dev,https://docus.dev/raw/fr/essentials/components.md,200,False,https://docus.dev/fr/essentials/components,200,True,1241,1188,1.045,51,10,3,code-preview;icon;tabs-item,<tabs-item icon label>
+docus.dev,https://docus.dev/raw/fr/essentials/images-embeds.md,200,False,https://docus.dev/fr/essentials/images-embeds,200,True,145,105,1.381,4,1,1,code-preview,<code-preview >
+docus.dev,https://docus.dev/raw/fr/getting-started/installation.md,200,False,https://docus.dev/fr/getting-started/installation,200,True,341,341,1.0,2,0,0,,
+docus.dev,https://docus.dev/raw/fr/getting-started/project-structure.md,200,False,https://docus.dev/fr/getting-started/project-structure,200,True,681,681,1.0,5,0,0,,
+docus.dev,https://docus.dev/raw/fr/getting-started/studio.md,200,False,https://docus.dev/fr/getting-started/studio,200,True,549,549,1.0,1,0,0,,
+docus.dev,https://docus.dev/raw/fr/getting-started/troubleshooting.md,200,False,https://docus.dev/fr/getting-started/troubleshooting,200,True,176,176,1.0,0,0,0,,
+docus.dev,https://docus.dev/raw/index.md,200,False,https://docus.dev/,200,True,190,190,1.0,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/api/nuxt.md,200,False,https://i18n.nuxtjs.org/docs/api/nuxt,200,True,203,194,1.046,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/api/options.md,200,False,https://i18n.nuxtjs.org/docs/api/options,200,True,3695,3476,1.063,25,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/api/runtime-config.md,200,False,https://i18n.nuxtjs.org/docs/api/runtime-config,200,True,268,262,1.023,3,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/api/vue-i18n.md,200,False,https://i18n.nuxtjs.org/docs/api/vue-i18n,200,True,297,299,0.993,1,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/api/vue.md,200,False,https://i18n.nuxtjs.org/docs/api/vue,200,True,206,214,0.963,1,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/compiler-macros/define-i18n-route.md,200,False,https://i18n.nuxtjs.org/docs/compiler-macros/define-i18n-route,200,True,176,203,0.867,1,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/components/switch-locale-path-link.md,200,False,https://i18n.nuxtjs.org/docs/components/switch-locale-path-link,200,True,127,170,0.747,2,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/components/vue-i18n-components.md,200,False,https://i18n.nuxtjs.org/docs/components/vue-i18n-components,200,True,107,131,0.817,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/composables/define-i18n-config.md,200,False,https://i18n.nuxtjs.org/docs/composables/define-i18n-config,200,True,139,171,0.813,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/composables/define-i18n-locale-detector.md,200,False,https://i18n.nuxtjs.org/docs/composables/define-i18n-locale-detector,200,True,339,346,0.98,1,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/composables/use-browser-locale.md,200,False,https://i18n.nuxtjs.org/docs/composables/use-browser-locale,200,True,57,88,0.648,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/composables/use-cookie-locale.md,200,False,https://i18n.nuxtjs.org/docs/composables/use-cookie-locale,200,True,73,99,0.737,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/composables/use-locale-route.md,200,False,https://i18n.nuxtjs.org/docs/composables/use-locale-route,200,True,72,118,0.61,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/composables/use-route-base-name.md,200,False,https://i18n.nuxtjs.org/docs/composables/use-route-base-name,200,True,64,112,0.571,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/composables/use-translation.md,200,False,https://i18n.nuxtjs.org/docs/composables/use-translation,200,True,78,122,0.639,1,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide.md,200,False,https://i18n.nuxtjs.org/docs/guide,200,True,384,402,0.955,3,1,1,code-group,<code-group >
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/custom-paths.md,200,False,https://i18n.nuxtjs.org/docs/guide/custom-paths,200,True,1465,1477,0.992,10,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/different-domains.md,200,False,https://i18n.nuxtjs.org/docs/guide/different-domains,200,True,1183,1161,1.019,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/extend-pages.md,200,False,https://i18n.nuxtjs.org/docs/guide/extend-pages,200,True,80,110,0.727,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/ignoring-localized-routes.md,200,False,https://i18n.nuxtjs.org/docs/guide/ignoring-localized-routes,200,True,172,198,0.869,4,2,2,code-group,<code-group >
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/install-module.md,200,False,https://i18n.nuxtjs.org/docs/guide/install-module,200,True,118,141,0.837,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/lang-switcher.md,200,False,https://i18n.nuxtjs.org/docs/guide/lang-switcher,200,True,598,628,0.952,1,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/lazy-load-translations.md,200,False,https://i18n.nuxtjs.org/docs/guide/lazy-load-translations,200,True,1304,1309,0.996,5,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/locale-fallback.md,200,False,https://i18n.nuxtjs.org/docs/guide/locale-fallback,200,True,97,128,0.758,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/migrating.md,200,False,https://i18n.nuxtjs.org/docs/guide/migrating,200,True,868,883,0.983,19,19,0,badge,<badge color label>
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/multi-domain-locales.md,200,False,https://i18n.nuxtjs.org/docs/guide/multi-domain-locales,200,True,1910,1737,1.1,0,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/new-features.md,200,False,https://i18n.nuxtjs.org/docs/guide/new-features,200,True,1135,1157,0.981,3,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/per-component-translations.md,200,False,https://i18n.nuxtjs.org/docs/guide/per-component-translations,200,True,151,182,0.83,2,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/docs/guide/server-side-translations.md,200,False,https://i18n.nuxtjs.org/docs/guide/server-side-translations,200,True,446,460,0.97,2,0,0,,
+i18n.nuxtjs.org,https://i18n.nuxtjs.org/raw/index.md,200,False,https://i18n.nuxtjs.org/,200,True,134,121,1.107,10,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/composables/usesupabaseclient.md,200,False,https://supabase.nuxtjs.org/composables/usesupabaseclient,200,True,633,464,1.364,1,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/composables/usesupabasecookieredirect.md,200,False,https://supabase.nuxtjs.org/composables/usesupabasecookieredirect,200,True,301,262,1.149,0,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/composables/usesupabasesession.md,200,False,https://supabase.nuxtjs.org/composables/usesupabasesession,200,True,274,271,1.011,2,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/composables/usesupabaseuser.md,200,False,https://supabase.nuxtjs.org/composables/usesupabaseuser,200,True,241,238,1.013,1,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/getting-started/authentication.md,200,False,https://supabase.nuxtjs.org/getting-started/authentication,200,True,916,706,1.297,6,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/getting-started/demo.md,200,False,https://supabase.nuxtjs.org/getting-started/demo,200,True,117,117,1.0,0,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/getting-started/introduction.md,200,False,https://supabase.nuxtjs.org/getting-started/introduction,200,True,1464,1464,1.0,14,1,0,u-badge,<u-badge color label>
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/getting-started/migration.md,200,False,https://supabase.nuxtjs.org/getting-started/migration,200,True,717,717,1.0,7,1,1,code-group,<code-group >
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/index.md,200,False,https://supabase.nuxtjs.org/,200,True,281,139,2.022,11,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/services/serversupabaseclient.md,200,False,https://supabase.nuxtjs.org/services/serversupabaseclient,200,True,231,231,1.0,1,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/services/serversupabaseservicerole.md,200,False,https://supabase.nuxtjs.org/services/serversupabaseservicerole,200,True,237,237,1.0,1,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/services/serversupabasesession.md,200,False,https://supabase.nuxtjs.org/services/serversupabasesession,200,True,251,251,1.0,2,0,0,,
+supabase.nuxtjs.org,https://supabase.nuxtjs.org/raw/services/serversupabaseuser.md,200,False,https://supabase.nuxtjs.org/services/serversupabaseuser,200,True,210,210,1.0,1,0,0,,
+directus.com/docs,https://directus.com/docs/raw/configuration/logging.md,200,False,https://directus.com/docs/configuration/logging,200,True,593,627,0.946,3,2,2,partial;product-link,<partial content>
+directus.com/docs,https://directus.com/docs/raw/guides/ai/mcp/oauth.md,200,False,https://directus.com/docs/guides/ai/mcp/oauth,200,True,1339,1357,0.987,2,0,0,,
+directus.com/docs,https://directus.com/docs/raw/guides/auth/email-login.md,200,False,https://directus.com/docs/guides/auth/email-login,200,True,785,800,0.981,12,8,8,code-group;partial,<code-group >
+directus.com/docs,https://directus.com/docs/raw/guides/connect/json/advanced-querying.md,200,False,https://directus.com/docs/guides/connect/json/advanced-querying,200,True,2405,2408,0.999,27,18,18,code-group,<code-group >
+directus.com/docs,https://directus.com/docs/raw/guides/content/collaborative-editing.md,200,False,https://directus.com/docs/guides/content/collaborative-editing,200,True,322,332,0.97,4,0,0,,
+directus.com/docs,https://directus.com/docs/raw/guides/content/editor.md,200,False,https://directus.com/docs/guides/content/editor,200,True,746,809,0.922,15,9,9,icon,<icon name>
+directus.com/docs,https://directus.com/docs/raw/guides/content/explore.md,200,False,https://directus.com/docs/guides/content/explore,200,True,985,1059,0.93,9,7,7,icon;video-embed,<icon name>
+directus.com/docs,https://directus.com/docs/raw/guides/content/layouts.md,200,False,https://directus.com/docs/guides/content/layouts,200,True,1411,1528,0.923,20,16,16,icon,<icon name>
+directus.com/docs,https://directus.com/docs/raw/guides/content/visual-editor/customization.md,200,False,https://directus.com/docs/guides/content/visual-editor/customization,200,True,650,658,0.988,1,0,0,,
+directus.com/docs,https://directus.com/docs/raw/guides/extensions/app-extensions/modules.md,200,False,https://directus.com/docs/guides/extensions/app-extensions/modules,200,True,654,849,0.77,5,3,3,partial,<partial content>
+directus.com/docs,https://directus.com/docs/raw/guides/extensions/cli.md,200,False,https://directus.com/docs/guides/extensions/cli,200,True,476,484,0.983,4,0,0,,
+directus.com/docs,https://directus.com/docs/raw/guides/files/access.md,200,False,https://directus.com/docs/guides/files/access,200,True,356,362,0.983,1,0,0,,
+directus.com/docs,https://directus.com/docs/raw/guides/integrations/n8n/directus-n8n-actions.md,200,False,https://directus.com/docs/guides/integrations/n8n/directus-n8n-actions,200,True,962,994,0.968,3,0,0,,
+directus.com/docs,https://directus.com/docs/raw/guides/integrations/n8n/directus-n8n-triggers.md,200,False,https://directus.com/docs/guides/integrations/n8n/directus-n8n-triggers,200,True,664,690,0.962,2,0,0,,
+directus.com/docs,https://directus.com/docs/raw/guides/integrations/zapier/triggers.md,200,False,https://directus.com/docs/guides/integrations/zapier/triggers,200,True,604,627,0.963,1,0,0,,
+directus.com/docs,https://directus.com/docs/raw/guides/realtime/actions.md,200,False,https://directus.com/docs/guides/realtime/actions,200,True,449,457,0.982,1,0,0,,
+directus.com/docs,https://directus.com/docs/raw/self-hosting/overview.md,200,False,https://directus.com/docs/self-hosting/overview,200,True,372,445,0.836,3,2,2,cta-cloud;partial,<partial content>
+directus.com/docs,https://directus.com/docs/raw/self-hosting/upgrading.md,200,False,https://directus.com/docs/self-hosting/upgrading,200,True,151,162,0.932,0,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/extensions/format-dates-in-a-custom-display-extension.md,200,False,https://directus.com/docs/tutorials/extensions/format-dates-in-a-custom-display-extension,200,True,948,903,1.05,1,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/extensions/integrate-elasticsearch-indexing-with-custom-hooks.md,200,False,https://directus.com/docs/tutorials/extensions/integrate-elasticsearch-indexing-with-custom-hooks,200,True,715,745,0.96,0,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/extensions/send-sms-messages-with-twilio-in-custom-operations.md,200,False,https://directus.com/docs/tutorials/extensions/send-sms-messages-with-twilio-in-custom-operations,200,True,1156,1117,1.035,1,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/migration/migrate-from-wordpress-to-directus.md,200,False,https://directus.com/docs/tutorials/migration/migrate-from-wordpress-to-directus,200,True,2754,1869,1.474,1,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/projects/build-a-multi-user-chat-with-react-and-directus-realtime.md,200,False,https://directus.com/docs/tutorials/projects/build-a-multi-user-chat-with-react-and-directus-realtime,200,True,1222,1257,0.972,0,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/projects/integrate-directus-with-esp-32-hardware-sensors.md,200,False,https://directus.com/docs/tutorials/projects/integrate-directus-with-esp-32-hardware-sensors,200,True,1649,1678,0.983,0,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/projects/use-directus-as-a-baby-health-tracker-with-owlet-and-ops-genie.md,200,False,https://directus.com/docs/tutorials/projects/use-directus-as-a-baby-health-tracker-with-owlet-and-ops-genie,200,True,3030,3064,0.989,0,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/self-hosting/deploy-directus-to-railway.md,200,False,https://directus.com/docs/tutorials/self-hosting/deploy-directus-to-railway,200,True,1318,1351,0.976,1,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/tips-and-tricks/build-a-monitoring-pipeline-for-flows-and-extensions.md,200,False,https://directus.com/docs/tutorials/tips-and-tricks/build-a-monitoring-pipeline-for-flows-and-extensions,200,True,1574,1604,0.981,0,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/tips-and-tricks/search-engine-optimization-best-practices.md,200,False,https://directus.com/docs/tutorials/tips-and-tricks/search-engine-optimization-best-practices,200,True,3394,3418,0.993,0,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/workflows/create-github-issues-with-directus-automate.md,200,False,https://directus.com/docs/tutorials/workflows/create-github-issues-with-directus-automate,200,True,610,641,0.952,1,0,0,,
+directus.com/docs,https://directus.com/docs/raw/tutorials/workflows/schedule-future-content-with-directus-automate.md,200,False,https://directus.com/docs/tutorials/workflows/schedule-future-content-with-directus-automate,200,True,1195,1223,0.977,3,0,0,,
