@@ -1,0 +1,26 @@
+# nuxtraw 0.2.0 (automatic, not hand-checked)
+
+- counted_sites: 7
+- copies_read: 193
+- G1: True
+- share_with_empty_by_site: {'content.nuxt.com': 0.233, 'directus.com/docs': 0.233, 'docus.dev': 0.2, 'i18n.nuxtjs.org': 0.033, 'nuxt.com': 0.033, 'supabase.nuxtjs.org': 0.077, 'ui.nuxt.com': 0.033}
+- pooled_share_with_empty: 0.124
+- copies_with_ratio: 192
+- median_ratio_with_empty: 1.034
+- median_ratio_without_empty: 1.029
+- median_ratio_by_site: {'content.nuxt.com': 1.051, 'directus.com/docs': 1.012, 'docus.dev': 1.032, 'i18n.nuxtjs.org': 0.954, 'nuxt.com': 1.156, 'supabase.nuxtjs.org': 1.209, 'ui.nuxt.com': 0.781}
+- P1: True
+- P2: False
+- P3: True
+- P4: False
+- P5: True
+
+## Exploratory: page URL asked for Markdown
+
+- content.nuxt.com: {'copies': 30, 'page_html': 30, 'md_on_ask': 30, 'md_same_as_raw': 30}
+- directus.com/docs: {'copies': 30, 'page_html': 30, 'md_on_ask': 30, 'md_same_as_raw': 0}
+- docus.dev: {'copies': 30, 'page_html': 30, 'md_on_ask': 30, 'md_same_as_raw': 30}
+- i18n.nuxtjs.org: {'copies': 30, 'page_html': 30, 'md_on_ask': 0, 'md_same_as_raw': 0}
+- nuxt.com: {'copies': 30, 'page_html': 29, 'md_on_ask': 30, 'md_same_as_raw': 30}
+- supabase.nuxtjs.org: {'copies': 13, 'page_html': 13, 'md_on_ask': 13, 'md_same_as_raw': 13}
+- ui.nuxt.com: {'copies': 30, 'page_html': 30, 'md_on_ask': 30, 'md_same_as_raw': 30}
