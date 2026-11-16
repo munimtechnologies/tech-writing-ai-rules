@@ -1,0 +1,31 @@
+{
+  "tool": "mintsnip",
+  "version": "0.1.0",
+  "grade": {
+    "counted_sites": 4,
+    "instances": 37,
+    "G1": true,
+    "tag_kept_share_by_location": {
+      "_snippets": {
+        "n": 35,
+        "tag_kept": 0.429
+      },
+      "snippets": {
+        "n": 2,
+        "tag_kept": 1.0
+      }
+    },
+    "P1": true,
+    "P2": false,
+    "P3": "too few (2 < 10)",
+    "P4": true,
+    "P5": true,
+    "n": {
+      "P1": 15,
+      "P2": 35,
+      "P3": 2,
+      "P4": 25,
+      "P5": 37
+    }
+  }
+}
